@@ -1,9 +1,12 @@
 import React from "react";
+import MainComp from "../../components/MainComp";
 
 export default function Comps() {
 
-    return(
-        
-        <h1>COMING SOON</h1>
+    return (
+
+        <MainComp>
+            <h1>COMING SOON</h1>
+        </MainComp>
     )
 }

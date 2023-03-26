@@ -1,23 +1,24 @@
 import React from "react";
 
+import MainComp from "../../components/MainComp";
+
 
 export default function Home() {
 
     return (
-        <>
-            <main>
 
-                <h1>Components made to help you build your websites!</h1>
+        <MainComp>
 
-                <button id="startBtn" className="defaultBtn">
-                    
-                    <a href="./resources/pages/exemples.html">
-                        Start
-                    </a>
+            <h1>Components made to help you build your websites!</h1>
 
-                </button>
+            <button id="startBtn" className="defaultBtn">
 
-            </main>
-        </>
+                <a href="./resources/pages/exemples.html">
+                    Start
+                </a>
+
+            </button>
+
+        </MainComp>
     )
 }
