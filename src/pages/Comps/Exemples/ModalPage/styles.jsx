@@ -14,11 +14,3 @@ export const GlobalStyle = createGlobalStyle`
         justify-content: space-between;
     }
 `
-
-
-export const CodeContainer = styled.div`
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
