@@ -14,6 +14,10 @@ export const CodeDiv = styled.div`
             margin-bottom: 0.625rem;
             font-size: 1.875rem;
         }
+
+        hr {
+            border-color: black;
+        }
     }
 
     #codeBody {

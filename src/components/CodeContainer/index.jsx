@@ -11,7 +11,7 @@ export default function CodeContainer(props) {
             <div id="codeHeader">
 
                 <p>{props.title}</p>
-                <hr />
+                <hr/>
 
             </div>
 

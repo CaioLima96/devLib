@@ -25,4 +25,19 @@ export const GlobalStyle = createGlobalStyle`
             cursor: pointer;
         }
     }
+
+    #codeBody {
+
+        pre {
+            font-size: 14px; 
+            /* line-height: 16px; */
+            font-family: arial;
+            text-align: left;
+            padding: 1rem;
+            overflow: auto;
+            color: #f7f7f7;
+        }
+    }
+
+    
 `
