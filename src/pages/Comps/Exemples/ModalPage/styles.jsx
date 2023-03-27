@@ -13,4 +13,16 @@ export const GlobalStyle = createGlobalStyle`
         flex-direction: column;
         justify-content: space-between;
     }
+
+    #openModalBtn {
+        display: flex;
+        justify-content: flex-start;
+        font-size: 1rem;
+        margin-bottom: 2.125rem;
+        background-color: #7981C7;
+
+        :hover {
+            cursor: pointer;
+        }
+    }
 `

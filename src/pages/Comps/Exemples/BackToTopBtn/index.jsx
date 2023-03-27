@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import MainComp from "../../../../components/MainComp";
 
-import { GlobalStyle, CodeContainer } from './styles'
+import { GlobalStyle } from './styles'
 
 export default function ModalPage() {
 
@@ -11,15 +10,9 @@ export default function ModalPage() {
         <>
             <GlobalStyle />
 
-            <MainComp>
+            <MainComp to={'/components'} style={{backgroundColor: '#D9D9D9'}}>
 
-                <CodeContainer>
-
-                    <Link to='/components'>Back</Link>
-
-                    <h1>COMING SOOOOOON</h1>    
-
-                </CodeContainer>
+                <h1>COMING SOOOOOON</h1>    
                 
             </MainComp>
         </>

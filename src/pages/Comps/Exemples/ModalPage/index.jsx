@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import MainComp from "../../../../components/MainComp";
 import CodeContainer from "../../../../components/CodeContainer";
 
@@ -16,7 +15,7 @@ export default function ModalPage() {
 
                 <CodeContainer title={'Modal'}>
 
-                    AAAAAAAAAAAAAAAAAAA
+                    <button id="openModalBtn" className="defaultBtn">Open Modal</button>
 
                 </CodeContainer>
                 
