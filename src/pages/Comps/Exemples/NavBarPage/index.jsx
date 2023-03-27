@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import MainComp from "../../MainComp";
+import MainComp from "../../../../components/MainComp";
 
 import { GlobalStyle, CodeContainer } from './styles'
 

@@ -5,9 +5,9 @@ import Layout from "./components/Layout";
 import Home from './pages/Home'
 import Comps from "./pages/Comps";
 
-import BackToTopBtn from "./components/CompsPage/BackToTopBtn";
-import ModalPage from "./components/CompsPage/ModalPage";
-import NavBarPage from "./components/CompsPage/NavBarPage";
+import BackToTopBtn from "./pages/Comps/Exemples/BackToTopBtn";
+import ModalPage from "./pages/Comps/Exemples/ModalPage";
+import NavBarPage from "./pages/Comps/Exemples/NavBarPage";
 
 
 function App() {
