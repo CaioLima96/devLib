@@ -1,16 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Header } from "./styles";
 
+import ImgContainer from "../ImgContainer";
 
 import SkullLogo from '../../assets/img/skull.png'
-import ImgContainer from "../ImgContainer";
+import MenuIcon from '../../assets/img/icon/menuIcon.png'
 
 
 export default function HeaderComp() {
 
     return (
 
-        <header>
+        <Header>
 
             <nav>
 
@@ -18,18 +20,16 @@ export default function HeaderComp() {
                     <div id="headerLogo">
 
                         <Link to='/home'>
-                            <ImgContainer src={SkullLogo} alt={'Icon'} style={{ width: '40px' }} />
+                            <ImgContainer src={SkullLogo} alt={'Icon'} style={{ width: '32px' }} />
                             <p>Comp Lib</p>
                         </Link>
 
                     </div>
 
-                    {/* <div className='imgContainer' onclick="myNavBar()">
-                            <img src={Hamburger} alt='menuIcon'/>
-                        </div> */}
+                    <ImgContainer src={MenuIcon} alt={'Menu Icon'} style={{width: '30px'}}/>
                 </div>
 
-                <span className="break"></span>
+                {/* <span className="break"></span> */}
 
                 <ul id="headerNavMenu">
                     <li><Link to='/home'>Home</Link></li>
@@ -50,6 +50,6 @@ export default function HeaderComp() {
                 </ul>
             </nav>
 
-        </header>
+        </Header>
     )
 }
