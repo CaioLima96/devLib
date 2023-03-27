@@ -11,7 +11,6 @@ export const GlobalStyle = createGlobalStyle`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        background-color: var(--grey1);
     }
 
     main {

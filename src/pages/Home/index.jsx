@@ -10,7 +10,7 @@ export default function Home() {
     return (
 
         <>
-            <GlobalStyle page={'home'} />
+            <GlobalStyle/>
 
             <MainComp>
 
