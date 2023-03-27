@@ -1,12 +1,33 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import MainComp from "../../components/MainComp";
 import ImgContainer from "../../components/ImgContainer";
 
 import { List } from './styles'
 
-import Teste from '../../assets/img/teste.png'
+import Data from '../../data/data'
 
 export default function Comps() {
+
+    function getData() {
+
+        return Data.map(item => {
+
+            return (
+                
+                <li key={item.id} className="card">
+
+                    <Link to={item.linkTo}>
+
+                        <ImgContainer src={item.src} alt={item.name} />
+                        <p>{item.name}</p>
+
+                    </Link>
+
+                </li>
+            )
+        })
+    }
 
     return (
 
@@ -14,23 +35,11 @@ export default function Comps() {
 
             <List>
 
-                <li className="card">
-                    <ImgContainer src={Teste} alt={'teste'}/>
-                    <p>Modal</p>
-                </li>
-
-                <li className="card">
-                    <ImgContainer src={Teste} alt={'teste'}/>
-                    <p>Navbar</p>
-                </li>
-
-                <li className="card">
-                    <ImgContainer src={Teste} alt={'teste'}/>
-                    <p>Back to Top Btn</p>
-                </li>
+                {getData()}
 
             </List>
 
         </MainComp>
+
     )
 }

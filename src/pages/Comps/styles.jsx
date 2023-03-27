@@ -16,12 +16,15 @@ export const List = styled.ul`
         border: 1px solid #A3A3A3;
         overflow: hidden;
 
-        > div:first-child {
+        a {
+            
+            > div:first-child {
 
-            background-color: #F8F8F8;
+                background-color: #F8F8F8;
 
-            img {
-                object-fit: scale-down;
+                img {
+                    object-fit: scale-down;
+                }
             }
         }
 
