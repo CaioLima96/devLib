@@ -24,9 +24,9 @@ function App() {
                         <Route path="/home" element={<Home/>}/>
                         <Route path="/components" element={<Comps/>}/>
 
-                        <Route path="/backtotopbtn" element={<BackToTopBtn/>}/>
-                        <Route path="/modal" element={<ModalPage/>}/>
-                        <Route path="/navbar" element={<NavBarPage/>}/>
+                        <Route path="/components/backtotopbtn" element={<BackToTopBtn/>}/>
+                        <Route path="/components/modal" element={<ModalPage/>}/>
+                        <Route path="/components/navbar" element={<NavBarPage/>}/>
 
                     </Routes>
 
