@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { GlobalStyle } from "./styles";
 
 import MainComp from "../../components/MainComp";
 
@@ -7,18 +9,20 @@ export default function Home() {
 
     return (
 
-        <MainComp>
+        <>
+            <GlobalStyle page={'home'} />
 
-            <h1>Components made to help you build your websites!</h1>
+            <MainComp>
 
-            <button id="startBtn" className="defaultBtn">
+                <h1>Components made to help you build your websites!</h1>
 
-                <a href="./resources/pages/exemples.html">
-                    Start
-                </a>
+                <button id="startBtn" className="defaultBtn">
 
-            </button>
+                    <Link to='/components'>Start</Link>
 
-        </MainComp>
+                </button>
+
+            </MainComp>
+        </>
     )
 }

@@ -1,11 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './styles/global.css'
 
+
+
 import Layout from "./components/Layout";
 import Home from './pages/Home'
 import Comps from "./pages/Comps";
 
 function App() {
+    
     return (
         <>
             <BrowserRouter>
