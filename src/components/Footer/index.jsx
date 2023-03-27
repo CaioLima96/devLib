@@ -1,5 +1,8 @@
 import React from "react";
 
+import ImgContainer from "../ImgContainer";
+import { Footer } from './styles'
+
 import GithubIcon from '../../assets/img/icon/githubIcon.png'
 import LinkedinIcon from '../../assets/img/icon/linkedinIcon.png'
 
@@ -8,23 +11,23 @@ export default function FooterComp() {
 
     return(
 
-        <footer>
+        <Footer>
 
             <p>Developed by: Caio Vieira Lima</p>
 
             <ul>
                 <li>
                     <a href="https://github.com/CaioLima96">
-                        <img src={GithubIcon} alt='Github icon'/>
+                        <ImgContainer src={GithubIcon} alt={'Github icon'} style={{width: '16px'}}/>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/caiovieiralima/">
-                        <img src={LinkedinIcon} alt='Linkedin icon'/>
+                        <ImgContainer src={LinkedinIcon} alt={'Linkedin icon'} style={{width: '16px'}}/>
                     </a>
                 </li>
             </ul>
 
-        </footer>
+        </Footer>
     )
 }
