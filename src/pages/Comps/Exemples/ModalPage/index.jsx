@@ -1,5 +1,5 @@
-import React from "react";
-import { ChakraProvider, ChakraBaseProvider, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
+import React, {useEffect} from "react";
+import { ChakraProvider, ChakraBaseProvider, Tabs, TabList, TabPanels, Tab, TabPanel,useTab, Button, } from '@chakra-ui/react'
 import chakraTheme from '@chakra-ui/theme'
 import MainComp from "../../../../components/MainComp";
 import CodeContainer from "../../../../components/CodeContainer";
@@ -9,28 +9,85 @@ import { GlobalStyle } from './styles'
 
 export default function ModalPage() {
 
+    let modal;
+	useEffect(() => {
+		modal = document.getElementsByClassName("modal")[0]
+		console.log(modal)
+	}, []);
+
+    function openModal() {
+		if(modal) {
+			document.getElementsByClassName("modal")[0].style.display = "block"
+			document.body.style.overflow = 'hidden'
+		}
+		console.log('open')
+		// modal.style.display = "block"
+		document.body.style.overflow = 'hidden'
+	}
+
+	function closeModal() {
+		modal.style.display = "none";
+		document.body.style.overflow = ''
+		console.log('close')
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function (event) {
+		// let modal = document.getElementsByClassName("modal")[0]
+		console.log('evento: ', event)
+		if (event.target == modal) {
+
+			closeModal()
+
+		}
+	}
+
+    const CustomTab = React.forwardRef((props, ref) => {
+
+        // 1. Reuse the `useTab` hook
+        const tabProps = useTab({ ...props, ref })
+        const isSelected = !!tabProps['aria-selected']
+    
+        return (
+            <Button 
+                className={'codeTabListTab ' + (isSelected ? 'selected' : 'notSelected')}
+                {...tabProps}
+            >
+                {tabProps.children}
+            </Button>
+        )
+    })
+
     return (
 
         <>
             <GlobalStyle />
-
+            {/* className={isSelected ? 'notSelected' : 'selected'} */}
             <ChakraBaseProvider>
 
                 <MainComp to={'/components'} style={{ backgroundColor: '#D9D9D9' }}>
 
                     <CodeContainer title={'Modal'} id="codeContainer">
 
-                        <button id="openModalBtn" className="defaultBtn">Open Modal</button>
+                        <button id="openModalBtn" className="defaultBtn" onClick={openModal}>Open Modal</button>
 
-                        <Tabs>
+                        <Tabs variant='unstyled' defaultIndex={0}>
+
                             <TabList>
-                                <Tab>Html</Tab>
-                                <Tab>Css</Tab>
-                                <Tab>Js</Tab>
+                                <CustomTab>
+                                    <p>Html</p>
+                                </CustomTab>
+                                <CustomTab >
+                                    <p>Css</p>
+                                </CustomTab>
+                                <CustomTab>
+                                    <p>Js</p>
+                                </CustomTab>
                             </TabList>
 
                             <TabPanels style={{backgroundColor: '#1E1E1E', color: '#f7f7f7'}}>
-
+                                
+                                {/* HTML */}
                                 <TabPanel>
 
 <pre>{
@@ -68,6 +125,7 @@ export default function ModalPage() {
 
                                 </TabPanel>
 
+                                {/* CSS */}
                                 <TabPanel>
 
 <pre>{
@@ -176,6 +234,7 @@ export default function ModalPage() {
                                      
                                 </TabPanel>
 
+                                {/* JS */}
                                 <TabPanel>
                                    
 <pre>{
@@ -213,6 +272,28 @@ function closeModal() {
                         </Tabs>
 
                     </CodeContainer>
+
+                    <div className="modal">
+
+                    <div className="modalBody">
+
+                            <div className="modalHeader">
+                                <span onClick={closeModal} className="closeModalBtn" >&times;</span>
+                            </div>
+
+                            <div className="modalContent">
+
+                                <p>Hello World</p>
+
+                            </div>
+
+                            <div className="modalFooter">
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </MainComp>
 
