@@ -1,5 +1,5 @@
-import React, {useEffect} from "react";
-import { ChakraProvider, ChakraBaseProvider, Tabs, TabList, TabPanels, Tab, TabPanel,useTab, Button, } from '@chakra-ui/react'
+import React, { useEffect } from "react";
+import { ChakraProvider, ChakraBaseProvider, Tabs, TabList, TabPanels, Tab, TabPanel, useTab, Button, } from '@chakra-ui/react'
 import chakraTheme from '@chakra-ui/theme'
 import MainComp from "../../../../components/MainComp";
 import CodeContainer from "../../../../components/CodeContainer";
@@ -9,47 +9,47 @@ import { GlobalStyle } from './styles'
 
 export default function ModalPage() {
 
+    //====================== MODAL
+
     let modal;
-	useEffect(() => {
-		modal = document.getElementsByClassName("modal")[0]
-		console.log(modal)
-	}, []);
+    let modalContent;
+    useEffect(() => {
+        modal = document.getElementsByClassName("modal")[0]
+        modalContent = modal.getElementsByClassName('modalContent')[0]
+        console.log(modal)
+    }, []);
 
     function openModal() {
-		if(modal) {
-			document.getElementsByClassName("modal")[0].style.display = "block"
-			document.body.style.overflow = 'hidden'
-		}
-		console.log('open')
-		// modal.style.display = "block"
-		document.body.style.overflow = 'hidden'
-	}
 
-	function closeModal() {
-		modal.style.display = "none";
-		document.body.style.overflow = ''
-		console.log('close')
-	}
+        // modalContent.innerHTML = ''
+        modal.style.display = "block"
+        document.body.style.overflow = 'hidden'
+    }
 
-	// When the user clicks anywhere outside of the modal, close it
-	window.onclick = function (event) {
-		// let modal = document.getElementsByClassName("modal")[0]
-		console.log('evento: ', event)
-		if (event.target == modal) {
+    function closeModal() {
 
-			closeModal()
+        // modalContent.innerHTML = ''
+        modal.style.display = "none";
+        document.body.style.overflow = ''
+    }
 
-		}
-	}
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+
+        if (event.target == modal) {
+
+            closeModal()
+        }
+    }
 
     const CustomTab = React.forwardRef((props, ref) => {
 
         // 1. Reuse the `useTab` hook
         const tabProps = useTab({ ...props, ref })
         const isSelected = !!tabProps['aria-selected']
-    
+
         return (
-            <Button 
+            <Button
                 className={'codeTabListTab ' + (isSelected ? 'selected' : 'notSelected')}
                 {...tabProps}
             >
@@ -85,43 +85,43 @@ export default function ModalPage() {
                                 </CustomTab>
                             </TabList>
 
-                            <TabPanels style={{backgroundColor: '#1E1E1E', color: '#f7f7f7'}}>
-                                
+                            <TabPanels style={{ backgroundColor: '#1E1E1E', color: '#f7f7f7' }}>
+
                                 {/* HTML */}
                                 <TabPanel>
 
-<pre>{
-`<div id="myModal" class="modal">
+<pre>
+{
+`<!-- The Modal -->
+<div class="modal">
 
-    <div class="modal-body">
+    <!-- Modal body -->
+    <div class="modalBody">
 
-        <div class="modal-header">;
+        <div class="modalHeader">
 
-            <span class="close" onclick="closeModal()">x</span>;
-            <h2>4 Braços</h2>;
+            <p>Modal Header</p>
+            <span class="closeModalBtn" onclick="closeModal()">&times;</span>
+
+        </div>
+        
+        <div class="modalContent">
+
+            <p>Hello World</p>
 
         </div>
 
-        <ul id="primeBenOsFourArmsModal" class="modal-card-list">
+        <div class="modalFooter">
 
-            <li> class="modal-card" id="primeBenOsFourArms1">
-
-                <img src="./assets/img/aliens/ben-prime/classico/4-bracos-(classico)-1.png" alt="primeBenOsFourArms">
-
-            </li>
-
-            <li> class="modal-card" id="primeBenOsFourArms1">
-
-                <img src="./assets/img/aliens/ben-prime/classico/4-bracos-(classico)-1.png" alt="primeBenOsFourArms">
-
-            </li>
-
-        </ul>
+            <p>Modal Footer</p>
+            
+        </div>
 
     </div>
 
 </div>`
-}</pre>
+}
+</pre>
 
                                 </TabPanel>
 
@@ -147,7 +147,7 @@ export default function ModalPage() {
     width: 0;
     background: transparent;
 }
-
+  
 
 
 /* ========= Modal Body =========*/
@@ -173,9 +173,9 @@ export default function ModalPage() {
 @-webkit-keyframes animatetop {
     from {top:-300px; opacity:0} 
     to {top:0; opacity:1}
-    }
+}
 
-    @keyframes animatetop {
+@keyframes animatetop {
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
 }
@@ -192,72 +192,57 @@ export default function ModalPage() {
 }
 
 .modalHeader {
+    font-size: 1.25rem;
     padding: 0 0.75rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid var(--grey3);
+    border-bottom: 1px solid #cecece;
     text-align: right;
 }
 
 .modalFooter {
-    padding: 2px 16px;
-    color: white;
+    padding: 0.188rem 0;
+    font-size: 0.813rem;
+    border-top: 1px solid #cecece;
 }
 
-.modalContent #containerList, .modalContent #ideasList {
-    margin: 0 auto;
-    max-width: none
-}
-
-.modalContent #listMenu > button:last-child {
-    display: none;
-}
-
-.modalContent #ideasList li {
-    color: black !important;
-}
-
-.modalHeader #listMenu {
-    display: flex;
+.modalContent {
+    margin: 2.5rem auto;
 }
 
 
 
 /* ========================= @MEDIA ========================= */
 
-@media (max-width: 699px) {
-
-    .modalContent #ideasList li {
-        width: 100% !important;
-    }
-}`
+/* Do your media queries here  */`
 }</pre>
-                                     
+
                                 </TabPanel>
 
                                 {/* JS */}
                                 <TabPanel>
-                                   
+
 <pre>{
 `//====================== MODAL
 
 let modal = document.querySelector(".modal");
+let modalContent = modal.getElementsByClassName('modalContent')[0]
 
 function openModal() {
 
-    modal.getElementsByClassName('modalContent')[0].innerHTML = ''
+    modalContent.innerHTML = ''
     modal.style.display = "block"
     document.body.style.overflow = 'hidden'
 }
 
 function closeModal() {
 
-    modal.getElementsByClassName('modalContent')[0].innerHTML = ''
-        modal.style.display = "none";
-        document.body.style.overflow = ''
-    }
+    modalContent.innerHTML = ''
+    modal.style.display = "none";
+    document.body.style.overflow = ''  
+}
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
 
     if (event.target == modal) {
 
@@ -275,24 +260,27 @@ function closeModal() {
 
                     <div className="modal">
 
-                    <div className="modalBody">
+                        <div className="modalBody">
 
                             <div className="modalHeader">
-                                <span onClick={closeModal} className="closeModalBtn" >&times;</span>
+                                <p>Modal Header</p>
+                                <span className="closeModalBtn" onClick={closeModal}>&times;</span>
                             </div>
-
+                            
                             <div className="modalContent">
-
+                    
                                 <p>Hello World</p>
+
+                                <img style={{margin:'10px auto 0'}} src='https://media.tenor.com/Z6gmDPeM6dgAAAAM/dance-moves.gif' alt='NGGYU'/>
 
                             </div>
 
                             <div className="modalFooter">
-
+                                <p>Modal Footer</p>
                             </div>
 
                         </div>
-
+                    
                     </div>
 
                 </MainComp>

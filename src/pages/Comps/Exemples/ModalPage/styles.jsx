@@ -42,8 +42,7 @@ export const GlobalStyle = createGlobalStyle`
 
         .notSelected {
             background-color: rgb(77 77 77);
-            /* color: gainsboro; */
-            color: #d3d3d3;
+            color: gainsboro;
         }
 
         .selected {
@@ -51,7 +50,7 @@ export const GlobalStyle = createGlobalStyle`
             background-color: #1E1E1E;
         }
 
-        .chakra-tabs__tab:nth-child(2), .chakra-button:nth-child(2) {
+        .codeTabListTab:nth-child(2) {
             margin: 0 5px
         }
 
@@ -66,105 +65,80 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
-    
+    .modal {
 
-    /* ========= Modal Background =========*/
+        display: none;
+        position: fixed;
+        z-index: 100;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
 
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 100;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.4);
-}
+        .modal::-webkit-scrollbar {
+            width: 0;
+            background: transparent;
+        }
 
-.modal::-webkit-scrollbar {
-  width: 0;
-  background: transparent;
-}
+        .modalBody {
+            max-width: 1140px;
+            width: 90%;
+            overflow: hidden;
 
+            position: relative;
+            background-color: #fefefe;
+            margin: 1.75rem auto;
+            border-radius: 0.3rem;
 
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
 
-/* ========= Modal Body =========*/
+        /* Animation */
+        @-webkit-keyframes animatetop {
+            from {top:-300px; opacity:0} 
+            to {top:0; opacity:1}
+        }
 
-.modalBody {
-  max-width: 1140px;
-  width: 90%;
-  overflow: hidden;
+        @keyframes animatetop {
+            from {top:-300px; opacity:0}
+            to {top:0; opacity:1}
+        }
 
-  position: relative;
-  background-color: #fefefe;
-  margin: 1.75rem auto;
-  border-radius: 0.3rem;
+        .closeModalBtn {
+            color: black;
+            font-size: 28px;
+            font-weight: bold;
 
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s
-}
+            :hover, :focus {
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
 
-/* Animation */
-@-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
-  to {top:0; opacity:1}
-}
+        .modalHeader {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.25rem;
+            padding: 0 0.75rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #cecece;
+        }
 
-@keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
-}
+        .modalFooter {
+            padding: 0.188rem 0;
+            font-size: 0.813rem;
+            border-top: 1px solid #cecece;
+        }
 
-.closeModalBtn {
-  color: black;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.closeModalBtn:hover, .closeModalBtn:focus {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modalHeader {
-  padding: 0 0.75rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid var(--grey3);
-  text-align: right;
-}
-
-.modalFooter {
-  padding: 2px 16px;
-  color: white;
-}
-
-.modalContent #containerList, .modalContent #ideasList {
-  margin: 0 auto;
-  max-width: none
-}
-
-.modalContent #listMenu > button:last-child {
-  display: none;
-}
-
-.modalContent #ideasList li {
-  color: black !important;
-}
-
-.modalHeader #listMenu {
-  display: flex;
-}
-
-/* ========================= @MEDIA ========================= */
-
-@media (max-width: 699px) {
-
-  .modalContent #ideasList li {
-      width: 100% !important;
-  }
-}
+        .modalContent {
+            margin: 2.5rem auto;
+        }
+    }
 `
