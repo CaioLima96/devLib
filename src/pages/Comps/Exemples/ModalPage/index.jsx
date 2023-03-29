@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import { ChakraProvider, ChakraBaseProvider, Tabs, TabList, TabPanels, Tab, TabPanel, useTab, Button, } from '@chakra-ui/react'
-import chakraTheme from '@chakra-ui/theme'
+import { TabPanel } from '@chakra-ui/react'
 import MainComp from "../../../../components/MainComp";
 import CodeContainer from "../../../../components/CodeContainer";
+import CodeTabs from "../../../../components/CodeTabs";
 
 import { GlobalStyle } from './styles'
 
@@ -12,23 +12,18 @@ export default function ModalPage() {
     //====================== MODAL
 
     let modal;
-    let modalContent;
     useEffect(() => {
         modal = document.getElementsByClassName("modal")[0]
-        modalContent = modal.getElementsByClassName('modalContent')[0]
-        console.log(modal)
     }, []);
 
     function openModal() {
 
-        // modalContent.innerHTML = ''
         modal.style.display = "block"
         document.body.style.overflow = 'hidden'
     }
 
     function closeModal() {
 
-        // modalContent.innerHTML = ''
         modal.style.display = "none";
         document.body.style.overflow = ''
     }
@@ -42,91 +37,58 @@ export default function ModalPage() {
         }
     }
 
-    const CustomTab = React.forwardRef((props, ref) => {
-
-        // 1. Reuse the `useTab` hook
-        const tabProps = useTab({ ...props, ref })
-        const isSelected = !!tabProps['aria-selected']
-
-        return (
-            <Button
-                className={'codeTabListTab ' + (isSelected ? 'selected' : 'notSelected')}
-                {...tabProps}
-            >
-                {tabProps.children}
-            </Button>
-        )
-    })
-
     return (
 
         <>
             <GlobalStyle />
-            {/* className={isSelected ? 'notSelected' : 'selected'} */}
-            <ChakraBaseProvider>
+            
+            <MainComp to={'/components'} style={{ backgroundColor: '#D9D9D9' }}>
 
-                <MainComp to={'/components'} style={{ backgroundColor: '#D9D9D9' }}>
+                <CodeContainer title={'Modal'} id="codeContainer">
 
-                    <CodeContainer title={'Modal'} id="codeContainer">
+                    <button id="openModalBtn" className="defaultBtn" onClick={openModal}>Open Modal</button>
+                    
+                    {/* tabs={['Html', 'Css', 'Js']} */}
+                    <CodeTabs>
+                        
+                        {/* HTML */}
+                        <TabPanel>
 
-                        <button id="openModalBtn" className="defaultBtn" onClick={openModal}>Open Modal</button>
-
-                        <Tabs variant='unstyled' defaultIndex={0}>
-
-                            <TabList>
-                                <CustomTab>
-                                    <p>Html</p>
-                                </CustomTab>
-                                <CustomTab >
-                                    <p>Css</p>
-                                </CustomTab>
-                                <CustomTab>
-                                    <p>Js</p>
-                                </CustomTab>
-                            </TabList>
-
-                            <TabPanels style={{ backgroundColor: '#1E1E1E', color: '#f7f7f7' }}>
-
-                                {/* HTML */}
-                                <TabPanel>
-
-<pre>
-{
+<pre>{
 `<!-- The Modal -->
 <div class="modal">
 
-    <!-- Modal body -->
-    <div class="modalBody">
+<!-- Modal body -->
+<div class="modalBody">
 
-        <div class="modalHeader">
+    <div class="modalHeader">
 
-            <p>Modal Header</p>
-            <span class="closeModalBtn" onclick="closeModal()">&times;</span>
+        <p>Modal Header</p>
+        <span class="closeModalBtn" onclick="closeModal()">&times;</span>
 
-        </div>
-        
-        <div class="modalContent">
+    </div>
+    
+    <div class="modalContent">
 
-            <p>Hello World</p>
-
-        </div>
-
-        <div class="modalFooter">
-
-            <p>Modal Footer</p>
-            
-        </div>
+        <p>Hello World</p>
 
     </div>
 
+    <div class="modalFooter">
+
+        <p>Modal Footer</p>
+        
+    </div>
+
+</div>
+
 </div>`
-}
-</pre>
+}</pre>
 
-                                </TabPanel>
+                        </TabPanel>
 
-                                {/* CSS */}
-                                <TabPanel>
+                        {/* CSS */}
+                        <TabPanel>
 
 <pre>{
 `/* ========= Modal Background =========*/
@@ -147,7 +109,7 @@ export default function ModalPage() {
     width: 0;
     background: transparent;
 }
-  
+
 
 
 /* ========= Modal Body =========*/
@@ -170,7 +132,7 @@ export default function ModalPage() {
 }
 
 /* Animation */
-@-webkit-keyframes animatetop {
+    @-webkit-keyframes animatetop {
     from {top:-300px; opacity:0} 
     to {top:0; opacity:1}
 }
@@ -215,28 +177,24 @@ export default function ModalPage() {
 
 /* Do your media queries here  */`
 }</pre>
+                        </TabPanel>
 
-                                </TabPanel>
-
-                                {/* JS */}
-                                <TabPanel>
-
+                        {/* JS */}
+                        <TabPanel>
+                            
 <pre>{
 `//====================== MODAL
 
 let modal = document.querySelector(".modal");
-let modalContent = modal.getElementsByClassName('modalContent')[0]
 
 function openModal() {
 
-    modalContent.innerHTML = ''
     modal.style.display = "block"
     document.body.style.overflow = 'hidden'
 }
 
 function closeModal() {
 
-    modalContent.innerHTML = ''
     modal.style.display = "none";
     document.body.style.overflow = ''  
 }
@@ -251,41 +209,38 @@ window.onclick = function (event) {
 }`
 }</pre>
 
-                                </TabPanel>
+                        </TabPanel>
 
-                            </TabPanels>
-                        </Tabs>
+                    </CodeTabs>
 
-                    </CodeContainer>
+                </CodeContainer>
 
-                    <div className="modal">
+                <div className="modal">
 
-                        <div className="modalBody">
+                    <div className="modalBody">
 
-                            <div className="modalHeader">
-                                <p>Modal Header</p>
-                                <span className="closeModalBtn" onClick={closeModal}>&times;</span>
-                            </div>
-                            
-                            <div className="modalContent">
-                    
-                                <p>Hello World</p>
+                        <div className="modalHeader">
+                            <p>Modal Header</p>
+                            <span className="closeModalBtn" onClick={closeModal}>&times;</span>
+                        </div>
+                        
+                        <div className="modalContent">
+                
+                            <p>Hello World</p>
 
-                                <img style={{margin:'10px auto 0'}} src='https://media.tenor.com/Z6gmDPeM6dgAAAAM/dance-moves.gif' alt='NGGYU'/>
-
-                            </div>
-
-                            <div className="modalFooter">
-                                <p>Modal Footer</p>
-                            </div>
+                            <img style={{margin:'10px auto 0'}} src='https://media.tenor.com/Z6gmDPeM6dgAAAAM/dance-moves.gif' alt='NGGYU'/>
 
                         </div>
-                    
+
+                        <div className="modalFooter">
+                            <p>Modal Footer</p>
+                        </div>
+
                     </div>
+                
+                </div>
 
-                </MainComp>
-
-            </ChakraBaseProvider>
+            </MainComp>
         </>
     )
 }
