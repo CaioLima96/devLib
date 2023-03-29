@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const Button = styled.button`
 
-    align-self: end;
+    align-self: ${ props => (props.alignSelf ? props.alignSelf : 'end') };
     margin: 0.75rem 0.75rem 0 0;
     background-color: #A4A709;
     line-height: 1;

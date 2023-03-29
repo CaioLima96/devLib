@@ -5,9 +5,9 @@ import Layout from "./components/Layout";
 import Home from './pages/Home'
 import Comps from "./pages/Comps";
 
-import BackToTopBtn from "./pages/Comps/Exemples/BackToTopBtn";
+import BackToTopBtnPage from "./pages/Comps/Exemples/BackToTopBtnPage";
 import ModalPage from "./pages/Comps/Exemples/ModalPage";
-import NavBarPage from "./pages/Comps/Exemples/NavBarPage";
+import LoadingPage from "./pages/Comps/Exemples/LoadingPage";
 
 
 function App() {
@@ -24,9 +24,9 @@ function App() {
                         <Route path="/home" element={<Home/>}/>
                         <Route path="/components" element={<Comps/>}/>
 
-                        <Route path="/components/backtotopbtn" element={<BackToTopBtn/>}/>
+                        <Route path="/components/backtotopbtn" element={<BackToTopBtnPage/>}/>
                         <Route path="/components/modal" element={<ModalPage/>}/>
-                        <Route path="/components/navbar" element={<NavBarPage/>}/>
+                        <Route path="/components/loading" element={<LoadingPage/>}/>
 
                     </Routes>
 

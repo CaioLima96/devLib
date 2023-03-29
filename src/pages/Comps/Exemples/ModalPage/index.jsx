@@ -10,7 +10,6 @@ import { GlobalStyle } from './styles'
 
 export default function ModalPage() {
 
-    const [isCopied, setIsCopied] = useState(false);
     let copyHtmlRef = useRef()
     let copyCssRef = useRef()
     let copyJsRef = useRef()

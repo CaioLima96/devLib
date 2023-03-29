@@ -3,7 +3,7 @@ import MainComp from "../../../../components/MainComp";
 
 import { GlobalStyle } from './styles'
 
-export default function ModalPage() {
+export default function LoadingPage() {
 
     return (
 

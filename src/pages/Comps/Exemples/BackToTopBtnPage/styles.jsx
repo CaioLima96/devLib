@@ -13,4 +13,8 @@ export const GlobalStyle = createGlobalStyle`
         flex-direction: column;
         justify-content: space-between;
     }
+
+    /* .chakra-tabs__tab-panel {
+        flex-direction: initial !important;
+    } */
 `

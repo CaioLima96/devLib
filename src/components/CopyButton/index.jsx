@@ -7,7 +7,7 @@ export default function CopyButton(props) {
 
     return (
 
-        <Button className="defaultBtn"
+        <Button className="defaultBtn" {...props}
 
             // className={`defaultBtn ${isCopied ? '' : ''}`}
 
@@ -19,6 +19,7 @@ export default function CopyButton(props) {
                 }, 1000);
                 navigator.clipboard.writeText(props.copyRef.current.innerText)
             }}
+
         >
 
             {isCopied ? 'Copied!' : 'Copy'}
