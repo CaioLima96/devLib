@@ -54,5 +54,10 @@ export const GlobalStyle = createGlobalStyle`
         .codeTabListTab:nth-child(2) {
             margin: 0 5px
         }
+
+        .chakra-tabs__tab-panel {
+            display: flex;
+            flex-direction: column;
+        }
     }
 `

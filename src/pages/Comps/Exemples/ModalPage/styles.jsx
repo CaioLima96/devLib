@@ -92,14 +92,16 @@ export const GlobalStyle = createGlobalStyle`
             border-bottom: 1px solid #cecece;
         }
 
-        .modalFooter {
-            padding: 0.188rem 0;
-            font-size: 0.813rem;
-            border-top: 1px solid #cecece;
-        }
-
         .modalContent {
             margin: 2.5rem auto;
+            padding: 0 0.75rem;
+        }
+
+        .modalFooter {
+            padding: 0.188rem 0.75rem;
+            font-size: 0.813rem;
+            border-top: 1px solid #cecece;
+            text-align: center;
         }
     }
 `

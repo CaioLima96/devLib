@@ -1,13 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { TabPanel } from '@chakra-ui/react'
 import MainComp from "../../../../components/MainComp";
 import CodeContainer from "../../../../components/CodeContainer";
 import CodeTabs from "../../../../components/CodeTabs";
+import CopyButton from "../../../../components/CopyButton";
 
 import { GlobalStyle } from './styles'
 
 
 export default function ModalPage() {
+
+    const [isCopied, setIsCopied] = useState(false);
+    let copyHtmlRef = useRef()
+    let copyCssRef = useRef()
+    let copyJsRef = useRef()
+
 
     //====================== MODAL
 
@@ -54,33 +61,35 @@ export default function ModalPage() {
                         {/* HTML */}
                         <TabPanel>
 
-<pre>{
+                            <CopyButton  copyRef={copyHtmlRef}/>
+
+<pre ref={copyHtmlRef}>{
 `<!-- The Modal -->
 <div class="modal">
 
-<!-- Modal body -->
-<div class="modalBody">
+    <!-- Modal body -->
+    <div class="modalBody">
 
-    <div class="modalHeader">
+        <div class="modalHeader">
 
-        <p>Modal Header</p>
-        <span class="closeModalBtn" onclick="closeModal()">&times;</span>
+            <p>Modal Header</p>
+            <span class="closeModalBtn" onclick="closeModal()">&times;</span>
 
-    </div>
-    
-    <div class="modalContent">
-
-        <p>Hello World</p>
-
-    </div>
-
-    <div class="modalFooter">
-
-        <p>Modal Footer</p>
+        </div>
         
-    </div>
+        <div class="modalContent">
 
-</div>
+            <p style='text-align: center;'>Hello World</p>
+
+        </div>
+
+        <div class="modalFooter">
+
+            <p>Modal Footer</p>
+            
+        </div>
+
+    </div>
 
 </div>`
 }</pre>
@@ -90,7 +99,9 @@ export default function ModalPage() {
                         {/* CSS */}
                         <TabPanel>
 
-<pre>{
+                            <CopyButton  copyRef={copyCssRef}/>
+
+<pre ref={copyCssRef}>{
 `/* ========= Modal Background =========*/
 
 .modal {
@@ -154,21 +165,25 @@ export default function ModalPage() {
 }
 
 .modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 1.25rem;
     padding: 0 0.75rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid #cecece;
-    text-align: right;
-}
-
-.modalFooter {
-    padding: 0.188rem 0;
-    font-size: 0.813rem;
-    border-top: 1px solid #cecece;
 }
 
 .modalContent {
     margin: 2.5rem auto;
+    padding: 0 0.75rem;
+}
+
+.modalFooter {
+    padding: 0.188rem 0.75rem;
+    font-size: 0.813rem;
+    border-top: 1px solid #cecece;
+    text-align: center;
 }
 
 
@@ -181,8 +196,12 @@ export default function ModalPage() {
 
                         {/* JS */}
                         <TabPanel>
+
+                            {/* <button className="defaultBtn copyBtn" onClick={() =>  navigator.clipboard.writeText(copyTextRef3.current.innerText)}><p>Copy</p></button> */}
+
+                            <CopyButton  copyRef={copyJsRef}/>
                             
-<pre>{
+<pre ref={copyJsRef}>{
 `//====================== MODAL
 
 let modal = document.querySelector(".modal");
@@ -226,7 +245,7 @@ window.onclick = function (event) {
                         
                         <div className="modalContent">
                 
-                            <p>Hello World</p>
+                            <p style={{textAlign: 'center'}}>Hello World</p>
 
                             <img style={{margin:'10px auto 0'}} src='https://media.tenor.com/Z6gmDPeM6dgAAAAM/dance-moves.gif' alt='NGGYU'/>
 
