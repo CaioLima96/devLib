@@ -45,7 +45,8 @@ export default function CodeTabs(props) {
                     </TabList>
 
                     <TabPanels style={{ 
-                        backgroundColor: props.bgColor  || '#1E1E1E'
+                        backgroundColor: props.bgColor  || '#1E1E1E',
+                        borderRadius: props.radius || '0 5px 5px 5px'
                     }}>
 
                         {props.children}

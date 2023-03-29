@@ -10,12 +10,15 @@ export const Main = styled.main`
     border: 1px solid red;
 
     ${props => (props.to ? `
-        > a:first-child p {
-                font-size: 0.75rem;
-                margin: 0 0 1.313rem 0.375rem;
-                text-align: left;
+        > a:first-child { 
+            display: inline-block;
+            margin: 0.375rem 0 1.313rem 0.625rem;
 
+            p {
+                font-size: 0.875rem;
+                text-align: left;
             }
+        }
     `
     : '')}
 `

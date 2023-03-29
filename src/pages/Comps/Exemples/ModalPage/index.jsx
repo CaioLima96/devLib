@@ -169,7 +169,7 @@ export default function ModalPage() {
     justify-content: space-between;
     align-items: center;
     font-size: 1.25rem;
-    padding: 0 0.75rem;
+    padding: 0.25rem 0.75rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid #cecece;
 }
@@ -180,7 +180,7 @@ export default function ModalPage() {
 }
 
 .modalFooter {
-    padding: 0.188rem 0.75rem;
+    padding: 0.313rem 0.75rem;
     font-size: 0.813rem;
     border-top: 1px solid #cecece;
     text-align: center;

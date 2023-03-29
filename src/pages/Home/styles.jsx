@@ -15,6 +15,8 @@ export const GlobalStyle = createGlobalStyle`
 
     main {
 
+        text-align: center;
+
         h1 {
             font-size: 3.5rem;
             font-weight: 600;

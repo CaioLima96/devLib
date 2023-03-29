@@ -15,6 +15,7 @@ export const List = styled.ul`
         border-radius: 5px;
         border: 1px solid #A3A3A3;
         overflow: hidden;
+        text-align: center;
 
         a {
             

@@ -37,6 +37,7 @@ export const GlobalStyle = createGlobalStyle`
         height: 100%;
         overflow: auto;
         background-color: rgba(0,0,0,0.4);
+        line-height: normal;
 
         .modal::-webkit-scrollbar {
             width: 0;
@@ -87,7 +88,7 @@ export const GlobalStyle = createGlobalStyle`
             justify-content: space-between;
             align-items: center;
             font-size: 1.25rem;
-            padding: 0 0.75rem;
+            padding: 0.25rem 0.75rem;
             margin-bottom: 1rem;
             border-bottom: 1px solid #cecece;
         }
@@ -98,7 +99,7 @@ export const GlobalStyle = createGlobalStyle`
         }
 
         .modalFooter {
-            padding: 0.188rem 0.75rem;
+            padding: 0.313rem 0.75rem;
             font-size: 0.813rem;
             border-top: 1px solid #cecece;
             text-align: center;
