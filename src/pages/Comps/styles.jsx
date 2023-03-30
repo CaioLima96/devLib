@@ -27,6 +27,7 @@ export const List = styled.ul`
             display: flex;
             flex-direction: column;
             height: 100%;
+            user-select: none;
 
             > div:first-child {
 

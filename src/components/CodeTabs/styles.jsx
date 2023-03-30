@@ -4,13 +4,15 @@ export const GlobalStyle = createGlobalStyle`
 
     .codeTabListTab {
                 
-        display: flex;
+        /* display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: center; */
         width: 70px;
         height: 30px;
         border-radius: 5px 5px 0 0;
         font-size: 1rem;
+
+        align-self: flex-end;
     }
 
     .notSelected {
@@ -18,9 +20,14 @@ export const GlobalStyle = createGlobalStyle`
         color: gainsboro;
     }
 
+    .notSelected:hover {
+        height: 40px !important;
+    }
+
     .selected {
         color: white;
         background-color: #1E1E1E;
+        height: 40px !important;
     }
 
     .codeTabListTab:nth-child(2) {
@@ -39,16 +46,6 @@ export const GlobalStyle = createGlobalStyle`
             height: 30px;
             border-radius: 5px 5px 0 0;
             font-size: 1rem;
-        }
-
-        .notSelected {
-            background-color: rgb(77 77 77);
-            color: gainsboro;
-        }
-
-        .selected {
-            color: white;
-            background-color: #1E1E1E;
         }
 
         .codeTabListTab:nth-child(2) {
