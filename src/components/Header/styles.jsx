@@ -3,7 +3,8 @@ import styled from 'styled-components'
 
 export const Header = styled.header`
 
-    background-color: wheat;
+    /* background-color: wheat; */
+    background-color: #96b060;
 
     nav {
         
@@ -11,6 +12,10 @@ export const Header = styled.header`
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
+
+        a {
+            color: black;
+        }
 
         > div:first-child {
 
@@ -52,13 +57,22 @@ export const Header = styled.header`
                 font-weight: bold;
             }
 
+            /* a {
+                padding: 1rem;
+            } */
+
+            /* li a {
+                color: black;
+            } */
+
             li:hover {
                 cursor: pointer;
                 background-color: black;
             }
 
-            li:hover a, #headerNavMenu li:hover p{
-                color: #5391ED;
+            li:hover a, li:hover p{
+                /* color: #5391ED; */
+                color: #96b060;
             }
         }
 

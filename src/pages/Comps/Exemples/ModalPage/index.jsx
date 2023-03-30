@@ -47,8 +47,8 @@ export default function ModalPage() {
 
         <>
             <GlobalStyle />
-            
-            <MainComp to={'/components'} style={{ backgroundColor: '#D9D9D9' }}>
+            {/* style={{ backgroundColor: 'rgb(217 217 217 / 37%)' }} */}
+            <MainComp to={'/components'} >
 
                 <CodeContainer title={'Modal'} id="codeContainer">
 

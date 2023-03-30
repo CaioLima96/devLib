@@ -7,6 +7,7 @@ export const Main = styled.main`
     margin: 5rem auto;
     /* text-align: center; */
 
+
     border: 1px solid red;
 
     ${props => (props.to ? `

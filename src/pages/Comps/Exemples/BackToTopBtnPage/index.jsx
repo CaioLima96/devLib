@@ -18,8 +18,8 @@ export default function BackToTopBtnPage() {
 
         <>
             <GlobalStyle />
-
-            <MainComp to={'/components'} style={{backgroundColor: '#D9D9D9'}}>
+            {/* style={{backgroundColor: '#D9D9D9'}} */}
+            <MainComp to={'/components'}>
 
                 <CodeContainer title={'Back to Top Button'} id="codeContainer">
 

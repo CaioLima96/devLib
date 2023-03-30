@@ -33,6 +33,8 @@ export default function Comps() {
 
         <MainComp>
 
+            <p style={{fontSize:'26px'}}>Components</p>
+
             <List>
 
                 {getData()}
