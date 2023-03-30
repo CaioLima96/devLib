@@ -15,7 +15,7 @@ export default function Comps() {
 
             return (
                 
-                <li key={item.id} className="card">
+                <li key={item.id} id={item.id} className="card">
 
                     <Link to={item.linkTo}>
 
@@ -33,7 +33,7 @@ export default function Comps() {
 
         <MainComp>
 
-            <p style={{fontSize:'26px'}}>Components</p>
+            {/* <p style={{fontSize:'26px'}}>Components</p> */}
 
             <List>
 

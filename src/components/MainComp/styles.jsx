@@ -8,7 +8,7 @@ export const Main = styled.main`
     /* text-align: center; */
 
 
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
     ${props => (props.to ? `
         > a:first-child { 

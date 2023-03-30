@@ -17,15 +17,27 @@ export const List = styled.ul`
         border: 1px solid #A3A3A3;
         overflow: hidden;
         text-align: center;
+        transition: .4s ease;
+
+        :hover {
+            transform: scale(1.05);
+        }
 
         a {
-            
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
             > div:first-child {
 
-                background-color: #F8F8F8;
+                /* width: 90%; */
+                align-self: center;
+                flex: 1;
+                padding: 0.625rem;
+                /* background-color: #F8F8F8; */
 
                 img {
-                    object-fit: scale-down;
+                    object-fit: contain;
                 }
             }
         }
@@ -37,4 +49,10 @@ export const List = styled.ul`
         }
     }
 
+    /* #comp1 {
+
+        img {
+            object-fit: none;
+        }
+    } */
 `
