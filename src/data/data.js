@@ -11,7 +11,7 @@ export default [
 
     { id: 'comp4', name: 'Modal', src: `${Teste}`, linkTo: '/components/modal'},
 
-    { id: 'comp5', name: 'NavBar', src: `${Teste}`, linkTo: '/components/header'},
+    { id: 'comp5', name: 'NavBar', src: `${Teste}`, linkTo: '/components/navbar'},
 
 
     // { id: 'comp', name: '', src: `${}`, linkTo: '/components/'},

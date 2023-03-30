@@ -9,7 +9,8 @@ export const List = styled.ul`
 
     .card {
 
-        max-width: 300px;
+        /* max-width: 300px; */
+        max-width: 270px;
         width: 100%;
         margin: 10px;
         border-radius: 5px;

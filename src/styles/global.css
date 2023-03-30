@@ -70,3 +70,7 @@ body::-webkit-scrollbar-thumb:hover {
     padding: 0.375rem 0.563rem;
     border-radius: 5px;
 }
+
+.defaultBtn:hover {
+    cursor: pointer;
+}

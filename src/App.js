@@ -8,6 +8,7 @@ import Comps from "./pages/Comps";
 import BackToTopBtnPage from "./pages/Comps/Exemples/BackToTopBtnPage";
 import ModalPage from "./pages/Comps/Exemples/ModalPage";
 import LoadingPage from "./pages/Comps/Exemples/LoadingPage";
+import CommingSoon from "./components/ComingSoon";
 
 
 function App() {
@@ -26,7 +27,9 @@ function App() {
 
                         <Route path="/components/backtotopbtn" element={<BackToTopBtnPage/>}/>
                         <Route path="/components/modal" element={<ModalPage/>}/>
-                        <Route path="/components/loading" element={<LoadingPage/>}/>
+                        <Route path="/components/loading" element={<CommingSoon/>}/>
+                        <Route path="/components/footer" element={<CommingSoon/>}/>
+                        <Route path="/components/navbar" element={<CommingSoon/>}/>
 
                     </Routes>
 

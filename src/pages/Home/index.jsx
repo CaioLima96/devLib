@@ -16,11 +16,13 @@ export default function Home() {
 
                 <h1>Components made to help you build your websites!</h1>
 
-                <button id="startBtn" className="defaultBtn">
+                <Link to='/components'>
+                    <button id="startBtn" className="defaultBtn">
 
-                    <Link to='/components'>Start</Link>
+                        Start
 
-                </button>
+                    </button>
+                </Link>
 
             </MainComp>
         </>

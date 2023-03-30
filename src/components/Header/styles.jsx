@@ -53,13 +53,14 @@ export const Header = styled.header`
             text-transform: uppercase;
 
             li {
-                padding: 1rem;
+                /* padding: 1rem; */
                 font-weight: bold;
             }
 
-            /* a {
+            a {
                 padding: 1rem;
-            } */
+                display: inline-block;
+            }
 
             /* li a {
                 color: black;

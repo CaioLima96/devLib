@@ -24,12 +24,15 @@ export const GlobalStyle = createGlobalStyle`
         }
 
         #startBtn {
-            padding: 18px 33px;
-            background-color: gray;
-
-            a {
+            padding: 16px 33px;
+            /* background-color: #7fad20; */
+            background-color: rgb(155 183 95);
+            font-size: 1.625rem;
+                color: black;
+            /* a {
                 font-size: 1.625rem;
-            }
+                color: black;
+            } */
         }
     }
 `
