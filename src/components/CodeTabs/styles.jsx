@@ -55,6 +55,7 @@ export const GlobalStyle = createGlobalStyle`
         .chakra-tabs__tab-panel {
             display: flex;
             flex-direction: column;
+            padding: 0 0.313rem;
         }
     }
 `

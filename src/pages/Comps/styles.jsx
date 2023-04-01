@@ -12,6 +12,7 @@ export const List = styled.ul`
         /* max-width: 300px; */
         max-width: 270px;
         width: 100%;
+        height: 250px;
         margin: 10px;
         border-radius: 5px;
         border: 1px solid #A3A3A3;
