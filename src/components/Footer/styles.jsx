@@ -7,7 +7,6 @@ export const Footer = styled.footer `
     flex-wrap: wrap;
     justify-content: center;
     padding: 0.5rem;
-    /* background-color: wheat; */
     background-color: #96b060;
 
     p {

@@ -7,11 +7,11 @@ import GithubIcon from '../../assets/img/icon/githubIcon.png'
 import LinkedinIcon from '../../assets/img/icon/linkedinIcon.png'
 
 
-export default function FooterComp() {
+export default function FooterComp(props) {
 
     return(
 
-        <Footer>
+        <Footer onClick={props.onClick}>
 
             <p>Developed by: Caio Vieira Lima</p>
 
