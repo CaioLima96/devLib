@@ -2,7 +2,7 @@ import {styled, createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
 
-    html, body, #root {
+    /* html, body, #root {
         width: 100%;
         height: 100%;
     }
@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-    }
+    } */
 
     main {
 
