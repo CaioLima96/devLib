@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import MainComp from "../../components/MainComp";
 import ImgContainer from "../../components/ImgContainer";
 
-import { List } from './styles'
+import { GlobalStyle, List } from './styles'
 
 import Data from '../../data/data'
 
@@ -15,7 +15,7 @@ export default function Comps() {
 
             return (
                 
-                <li key={item.id} id={item.id} className="card">
+                <li key={item.id} id={item.id} className='card'>
 
                     <Link to={item.linkTo}>
 
@@ -25,23 +25,26 @@ export default function Comps() {
                     </Link>
 
                 </li>
-            )
+        )
         })
     }
 
     return (
 
-        <MainComp>
+        <>
+            <GlobalStyle/>
+            
+            <MainComp>
 
-            {/* <p style={{fontSize:'26px'}}>Components</p> */}
+                {/* <p style={{fontSize:'26px'}}>Components</p> */}
 
-            <List>
+                <List>
 
-                {getData()}
+                    {getData()}
 
-            </List>
+                </List>
 
-        </MainComp>
-
+            </MainComp>
+        </>
     )
 }

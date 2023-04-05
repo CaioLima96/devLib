@@ -5,7 +5,7 @@ export default function ImgContainer(props) {
 
     return(
 
-        <ImgDiv {...props}>
+        <ImgDiv {...props} className={props.rotate ? 'imgContainer rotate' : 'imgContainer'}>
             <img src={props.src} alt={props.alt}/>
         </ImgDiv>
     )

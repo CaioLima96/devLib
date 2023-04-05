@@ -5,6 +5,7 @@ import MainComp from "../../../../components/MainComp";
 import CodeContainer from "../../../../components/CodeContainer";
 import CodeTabs from "../../../../components/CodeTabs";
 import CopyButton from "../../../../components/CopyButton";
+import LoadingComp from "../../../../components/LoadingComp";
 import ImgContainer from "../../../../components/ImgContainer";
 
 import LoadingImg from "../../../../assets/img/icon/loading.png"
@@ -28,13 +29,15 @@ export default function LoadingPage() {
 
                     <p>If you don't want your Loading icon to rotate, just remove the <strong>rotate class</strong> from imgContainer.</p>
 
-                    <div className="loading">
+                    {/* <div className="loading">
 
                         <ImgContainer src={LoadingImg} alt={"Loading Icon"} className='rotate' />
 
                         <p>Loading...</p>
 
-                    </div>
+                    </div> */}
+
+                    <LoadingComp/>
 
                     <CodeTabs>
 

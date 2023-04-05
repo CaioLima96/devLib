@@ -1,4 +1,25 @@
+import { createGlobalStyle } from 'styled-components'
 import styled from 'styled-components'
+
+
+export const GlobalStyle = createGlobalStyle`
+
+    #loadingCard {
+        
+        div {
+            animation: rotation 2.5s infinite linear;
+        }
+    }
+
+    @keyframes rotation {
+        from {
+        transform: rotate(0deg);
+        }
+        to {
+        transform: rotate(359deg);
+        }
+    }   
+`
 
 export const List = styled.ul`
 
@@ -51,10 +72,10 @@ export const List = styled.ul`
         }
     }
 
-    /* #comp1 {
-
-        img {
-            object-fit: none;
+    #loadingCard {
+        
+        .imgContainer {
+            max-width: 200px !important;
         }
-    } */
+    }
 `
