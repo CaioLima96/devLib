@@ -27,7 +27,7 @@ function App() {
 
                         <Route path="/components/backtotopbtn" element={<BackToTopBtnPage/>}/>
                         <Route path="/components/modal" element={<ModalPage/>}/>
-                        <Route path="/components/loading" element={<CommingSoon/>}/>
+                        <Route path="/components/loading" element={<LoadingPage/>}/>
                         <Route path="/components/footer" element={<CommingSoon/>}/>
                         <Route path="/components/navbar" element={<CommingSoon/>}/>
 
