@@ -103,7 +103,7 @@ export default function LoadingPage() {
 
 //====================== LOADING
 
-//change loading img according to the selected theme
+//change loading img according to the selected value
 function loading(value) {
 
 	let loading = document.getElementsByClassName('loading')[0]

@@ -1,23 +1,14 @@
-import {createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 import styled from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
 
-    /* header nav {
-
-        position: relative;
-    } */
-`
-
-export const Header = styled.header`
-
-    background-color: #96b060;
-
-    nav {
+    .navMenu {
 
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 2.125rem;
 
         a {
             color: black;
@@ -27,7 +18,7 @@ export const Header = styled.header`
 
             margin-left: 0.625rem;
 
-            #headerLogo {
+            .navMenuLogo {
 
                 font-size: 1.563rem;
 
@@ -53,35 +44,35 @@ export const Header = styled.header`
 
     }
 
-    #headerNavMenu {
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 1rem;
-        text-transform: uppercase;
+    .navMenuList {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    text-transform: uppercase;
 
-        li {
-            /* padding: 1rem; */
-            font-weight: bold;
-        }
+    li {
+        /* padding: 1rem; */
+        font-weight: bold;
+    }
 
-        a {
-            padding: 1rem;
-            display: inline-block;
-        }
+    a {
+        padding: 1rem;
+        display: inline-block;
+    }
 
-        li:hover {
-            cursor: pointer;
-            background-color: black;
-        }
+    li:hover {
+        cursor: pointer;
+        background-color: black;
+    }
 
-        li:hover a, li:hover p{
-            color: #96b060;
-        }
+    li:hover a, li:hover p{
+        color: #96b060;
+    }
     }
 
     @media (max-width: 600px) {
 
-        nav {
+        .navMenu {
 
             position: relative;
 
@@ -99,7 +90,7 @@ export const Header = styled.header`
             }
         }
 
-        #headerNavMenu {
+        .navMenuList {
             display: none;
             width: 100%;
             padding: 0.625rem 0;
@@ -113,8 +104,9 @@ export const Header = styled.header`
             }
         }
 
-        .hideShowHeaderNavMenu {
+        .hideShowNavMenu {
             display: block !important;
         }
     }
-`   
+
+`
