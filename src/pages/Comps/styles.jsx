@@ -52,12 +52,10 @@ export const List = styled.ul`
             user-select: none;
 
             > div:first-child {
-
-                /* width: 90%; */
                 align-self: center;
                 flex: 1;
                 padding: 0.625rem;
-                /* background-color: #F8F8F8; */
+                height: 206px;
 
                 img {
                     object-fit: contain;

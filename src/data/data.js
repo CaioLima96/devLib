@@ -26,6 +26,7 @@ import Teste from '../assets/img/teste.png'
 import Modal from '../assets/img/screenshots/modal.png'
 import BTTBTN from '../assets/img/screenshots/backToTopBtn2.png'
 import Loading from '../assets/img/icon/loading.png'
+import NavBar from '../assets/img/screenshots/navbar.png'
 
 
 export default [
@@ -38,7 +39,7 @@ export default [
 
     { id: 'modalCard', name: 'Modal', src: `${Modal}`, linkTo: '/components/modal'},
 
-    { id: 'navbarCard', name: 'NavBar', src: `${Teste}`, linkTo: '/components/navbar'},
+    { id: 'navbarCard', name: 'NavBar', src: `${NavBar}`, linkTo: '/components/navbar'},
 
 
     // { id: 'comp', name: '', src: `${}`, linkTo: '/components/'},
