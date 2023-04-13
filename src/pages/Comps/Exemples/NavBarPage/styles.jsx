@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
         justify-content: space-between;
         align-items: center;
         margin-bottom: 2.125rem;
+        background-color: rgb(150, 176, 96);
 
         > div:first-child {
 

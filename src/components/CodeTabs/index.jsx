@@ -53,8 +53,6 @@ export default function CodeTabs(props) {
 
                     </TabPanels>
 
-                    
-
                 </Tabs>
                 
             </ChakraBaseProvider>

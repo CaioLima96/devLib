@@ -5,11 +5,12 @@ import Layout from "./components/Layout";
 import Home from './pages/Home'
 import Comps from "./pages/Comps";
 
+// import CommingSoon from "./components/ComingSoon";
 import BackToTopBtnPage from "./pages/Comps/Exemples/BackToTopBtnPage";
 import LoadingPage from "./pages/Comps/Exemples/LoadingPage";
 import ModalPage from "./pages/Comps/Exemples/ModalPage";
 import NavBarPage from "./pages/Comps/Exemples/NavBarPage";
-import CommingSoon from "./components/ComingSoon";
+import FooterPage from "./pages/Comps/Exemples/FooterPage";
 
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
                         <Route path="/components/backtotopbtn" element={<BackToTopBtnPage/>}/>
                         <Route path="/components/modal" element={<ModalPage/>}/>
                         <Route path="/components/loading" element={<LoadingPage/>}/>
-                        <Route path="/components/footer" element={<CommingSoon/>}/>
+                        <Route path="/components/footer" element={<FooterPage/>}/>
                         <Route path="/components/navbar" element={<NavBarPage/>}/>
 
                     </Routes>

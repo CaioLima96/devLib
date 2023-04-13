@@ -99,11 +99,11 @@ export default function NavBarPage() {
 
 <pre ref={copyCssRef}>{
 `.navMenu {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2.125rem;
+    background-color: rgb(150, 176, 96);
 }
 
 .navMenu > div:first-child {
@@ -132,10 +132,11 @@ export default function NavBarPage() {
 }
 
 .navMenuList {
-display: flex;
-flex-wrap: wrap;
-font-size: 1rem;
-text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
 
 li {
     /* padding: 1rem; */

@@ -26,7 +26,7 @@ import Teste from '../assets/img/teste.png'
 import Modal from '../assets/img/screenshots/modal.png'
 import BTTBTN from '../assets/img/screenshots/backToTopBtn2.png'
 import Loading from '../assets/img/icon/loading.png'
-import NavBar from '../assets/img/screenshots/navbar.png'
+import NavBar from '../assets/img/screenshots/navbarMobile.png'
 
 
 export default [

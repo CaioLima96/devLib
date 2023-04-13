@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { TabPanel } from '@chakra-ui/react'
 import MainComp from "../../../../components/MainComp";
 import CodeContainer from "../../../../components/CodeContainer";
