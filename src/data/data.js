@@ -27,13 +27,14 @@ import Modal from '../assets/img/screenshots/modal.png'
 import BTTBTN from '../assets/img/screenshots/backToTopBtn2.png'
 import Loading from '../assets/img/icon/loading.png'
 import NavBar from '../assets/img/screenshots/navbarMobile.png'
+import Footer from '../assets/img/screenshots/footer.png'
 
 
 export default [
 
     { id: 'bttbtnCard', name: 'Back to Top Btn', src: `${BTTBTN}`, linkTo: '/components/backtotopbtn'},
 
-    { id: 'footerCard', name: 'Footer', src: `${Teste}`, linkTo: '/components/footer'},
+    { id: 'footerCard', name: 'Footer', src: `${Footer}`, linkTo: '/components/footer'},
 
     { id: 'loadingCard', name: 'Loading', src: `${Loading}`, linkTo: '/components/loading'},
 
