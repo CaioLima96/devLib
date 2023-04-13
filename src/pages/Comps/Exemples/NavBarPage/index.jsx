@@ -64,22 +64,24 @@ export default function NavBarPage() {
                             <CopyButton copyRef={copyHtmlRef} />
 
 <pre ref={copyHtmlRef}>{
-`<nav className="navMenu">
+`<nav class="navMenu">
 
     <div>
-        <div className="navMenuLogo">
+        <div class="navMenuLogo">
 
             <a href="">
-                <ImgContainer src={SkullLogo} alt={'Icon'} style={{ width: '32px' }} />
+                <div class='imgContainer'><img src="YOURLOGOHERE" alt="Logo" style="width: 32px;"></div>
                 <p>Comp Lib</p>
             </a>
 
         </div>
 
-        <ImgContainer src={MenuIcon} alt={'Menu Icon'} style={{width: '30px'}} onClick={openNavBar}/>
+        <div class='imgContainer'>
+            <img src="assets/img/icon/menuIcon.png" alt="Menu Icon" style="width: 30px;" onClick="openNavBar()">
+        </div>
     </div>
 
-    <ul className="navMenuList">
+    <ul class="navMenuList">
         <li><a href="">Home</a></li>
         <li><a href="">About</a></li>
         <li><a href="">Contact Us</a></li>
@@ -96,8 +98,105 @@ export default function NavBarPage() {
                             <CopyButton copyRef={copyCssRef} />
 
 <pre ref={copyCssRef}>{
-`
-`
+`.navMenu {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.125rem;
+}
+
+.navMenu > div:first-child {
+    margin-left: 0.625rem;
+}
+
+.navMenu > div:first-child .navMenuLogo a {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1.563rem;
+    color: black;
+}
+
+.navMenu > div:first-child .navMenuLogo a div {
+    margin-right: 0.438rem
+}
+
+.navMenu > div:first-child .navMenuLogo a p:hover {
+    font-style: italic;
+}
+
+
+.navMenu > div:first-child > div:last-child {
+    display: none;
+}
+
+.navMenuList {
+display: flex;
+flex-wrap: wrap;
+font-size: 1rem;
+text-transform: uppercase;
+
+li {
+    /* padding: 1rem; */
+    font-weight: bold;
+}
+
+a {
+    padding: 1rem;
+    display: inline-block;
+}
+
+li:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
+li:hover a, li:hover p{
+    color: #96b060;
+}
+
+
+
+/* ========================= @MEDIA ========================= */
+
+@media (max-width: 600px) {
+
+    .navMenu {
+        position: relative;
+    }
+
+    .navMenu > div:first-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0.625rem;
+        margin-left: 0;
+    }
+
+    .navMenu > div:first-child > div:last-child {
+        display: block;
+    }
+
+    .navMenuList {
+        display: none;
+        width: 100%;
+        padding: 0.625rem 0;
+        background-color: #333333 !important;
+        position: absolute;
+        top: 98%;
+        z-index: 3;
+    }
+        
+    .navMenuList a {
+        color: white;
+    }
+    
+    .hideShowNavMenu {
+        display: block !important;
+    }
+}`
 }</pre>
 
                         </TabPanel>
@@ -108,8 +207,13 @@ export default function NavBarPage() {
                             <CopyButton copyRef={copyJsRef} />
 
 <pre ref={copyJsRef}>{
-`
-`
+`//====================== RESPONSIVE MENU
+
+function openNavBar() {
+    
+    let headerNavMenu = document.getElementById("headerNavMenu")
+    headerNavMenu.classList.toggle('hideShowHeaderNavMenu')
+}`
 }</pre>
 
                         </TabPanel>

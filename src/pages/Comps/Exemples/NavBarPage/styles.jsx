@@ -10,22 +10,18 @@ export const GlobalStyle = createGlobalStyle`
         align-items: center;
         margin-bottom: 2.125rem;
 
-        a {
-            color: black;
-        }
-
         > div:first-child {
 
             margin-left: 0.625rem;
 
             .navMenuLogo {
 
-                font-size: 1.563rem;
-
                 a {
                     display: flex;
                     align-items: center;
                     flex-wrap: wrap;
+                    font-size: 1.563rem;
+                    color: black;
 
                     div {
                         margin-right: 0.438rem
