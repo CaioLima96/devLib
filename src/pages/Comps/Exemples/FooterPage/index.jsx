@@ -6,8 +6,9 @@ import CodeContainer from "../../../../components/CodeContainer";
 import CodeTabs from "../../../../components/CodeTabs";
 import CopyButton from "../../../../components/CopyButton";
 import ImgContainer from "../../../../components/ImgContainer";
+import Summary from "../../../../components/Summary";
 
-import { Footer1, Footer2 } from './styles'
+import { GlobalStyle, Footer1, Footer2 } from './styles'
 
 import GithubIcon from '../../../../assets/img/icon/githubIcon.png'
 import LinkedinIcon from '../../../../assets/img/icon/linkedinIcon.png'
@@ -20,9 +21,16 @@ export default function FooterPage() {
     return(
 
         <>
+            <GlobalStyle/>
+
             <MainComp to={'/components'}>
 
                 <CodeContainer title={'Footer'} id="footerContainer">
+
+                    <Summary list={[
+                        {name:'Simple Footer', anchor: '#footer1'},
+                        {name:'About/ContactUs Footer', anchor: '#footer2'},
+                    ]}/>
 
                     <Footer1>
 
@@ -117,7 +125,7 @@ footer ul {
 
                     </CodeTabs>
 
-                    <Footer2>
+                    <Footer2 id="footer2">
 
                         <ul>
                             <li id="about">
