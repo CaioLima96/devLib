@@ -27,7 +27,6 @@ export default function BackToTopBtnPage() {
                   
                     <div style={{
                         display: 'flex',
-                        // flexDirection: 'column',
                         justifyContent: 'space-between', 
                         backgroundColor:'#1E1E1E',
                         margin: '10px 0 67px',
@@ -41,7 +40,7 @@ export default function BackToTopBtnPage() {
 <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>`
 }</pre>
                     
-                        <CopyButton copyRef={copyFontAweRef} alignSelf={'self-start'} style={{ marginLeft: '0.625rem' }}/>
+                        <CopyButton copyRef={copyFontAweRef} alignSelf={'self-start'} style={{ marginLeft: '0.625rem', marginTop: '0.5rem'}}/>
 
                     </div>
 
@@ -141,7 +140,6 @@ function topFunction() {
 }</pre>
 
                         </TabPanel>
-
 
                     </CodeTabs>
 

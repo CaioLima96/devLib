@@ -8,12 +8,19 @@ export default function CodeContainer(props) {
 
         <CodeDiv>
 
-            <div id="codeHeader">
+            {
+                props.title ? 
+   
+                    <div id="codeHeader">
 
-                <p>{props.title}</p>
-                <hr/>
+                        <p>{props.title}</p>
+                        <hr/>
 
-            </div>
+                    </div>
+                :
+
+                ''
+            }
 
             <div id="codeBody">
                 {props.children}
