@@ -30,7 +30,7 @@ export default function HeaderComp(props) {
 
                             <Link to='/home'>
                                 <ImgContainer src={SkullLogo} alt={'Logo'} style={{ width: '32px' }} />
-                                <p>Comp Lib</p>
+                                <p>Dev Lib</p>
                             </Link>
 
                         </div>
