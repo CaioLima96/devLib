@@ -47,14 +47,13 @@ export default function ModalPage() {
 
         <>
             <GlobalStyle />
-            {/* style={{ backgroundColor: 'rgb(217 217 217 / 37%)' }} */}
+
             <MainComp to={'/components'} >
 
                 <CodeContainer title={'Modal'} id="codeContainer">
 
                     <button id="openModalBtn" className="defaultBtn" onClick={openModal}>Open Modal</button>
                     
-                    {/* tabs={['Html', 'Css', 'Js']} */}
                     <CodeTabs>
                         
                         {/* HTML */}
@@ -63,7 +62,15 @@ export default function ModalPage() {
                             <CopyButton  copyRef={copyHtmlRef}/>
 
 <pre ref={copyHtmlRef}>{
-`<!-- The Modal -->
+`<button 
+    id="openModalBtn" 
+    onclick="openModal()" 
+    style="border: none; background-color: rgb(121, 129, 199); 
+        padding: 0.375rem 0.563rem; border-radius: 
+        5px; font-size: 1rem;  margin: 10px auto;"
+>Open Modal</button>
+
+<!-- The Modal -->
 <div class="modal">
 
     <!-- Modal body -->
@@ -79,6 +86,8 @@ export default function ModalPage() {
         <div class="modalContent">
 
             <p style='text-align: center;'>Hello World</p>
+                    
+            <img src='https://media.tenor.com/Z6gmDPeM6dgAAAAM/dance-moves.gif' alt='NGGYU' style="margin: 10px auto; display: block;">
 
         </div>
 
@@ -174,7 +183,7 @@ export default function ModalPage() {
 }
 
 .modalContent {
-    margin: 2.5rem auto;
+    margin: 2.5rem 0;
     padding: 0 0.75rem;
 }
 
@@ -195,8 +204,6 @@ export default function ModalPage() {
 
                         {/* JS */}
                         <TabPanel>
-
-                            {/* <button className="defaultBtn copyBtn" onClick={() =>  navigator.clipboard.writeText(copyTextRef3.current.innerText)}><p>Copy</p></button> */}
 
                             <CopyButton  copyRef={copyJsRef}/>
                             
@@ -246,7 +253,7 @@ window.onclick = function (event) {
                 
                             <p style={{textAlign: 'center'}}>Hello World</p>
 
-                            <img style={{margin:'10px auto 0'}} src='https://media.tenor.com/Z6gmDPeM6dgAAAAM/dance-moves.gif' alt='NGGYU'/>
+                            <img style={{margin:'10px auto'}} src='https://media.tenor.com/Z6gmDPeM6dgAAAAM/dance-moves.gif' alt='NGGYU'/>
 
                         </div>
 
