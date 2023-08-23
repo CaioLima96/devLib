@@ -13,7 +13,6 @@ export const Footer1 = styled.div `
     justify-content: center;
     padding: 0.5rem;
     background-color: #96b060;
-
     margin-bottom: 2.125rem;
 
     p {
@@ -35,52 +34,65 @@ export const Footer1 = styled.div `
 
 export const Footer2 = styled.div `
 
-    padding: 1.313rem 0 0.5rem;
-    background-color: #96b060;
+    padding: 1.313rem 0.5rem 0.5rem;
+    margin-top: 3.125rem;
+    margin-bottom: 2.125rem;
     text-align: center;
-    margin: 4.375rem 0 2.125rem;
-
-    a:hover {
-        font-weight: bold;
-        font-style: italic;
+    background-color: #96b060;
+    
+    a {
         color: black;
     }
-
-    ul {
+    
+    > span {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         flex-wrap: wrap;
-        
-        max-width: 95%;
-        width: 463px;
-        margin: 0 auto 2.25rem;
-
-        li p:first-child {
-            margin-bottom: 0.75rem;
-            font-size: 1.25rem;
-        }
-
-        li:not(p:first-child) {
-            font-size: 0.875rem;
-        }
+        max-width: 463px;
+        width: 95%;
+        margin: 0 auto;
     }
-
+    
     #about {
         width: 163px;
         text-align: left;
-    }
 
+        p:first-child {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+    }
+    
     #contactUs {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #contactUs a {
+        align-self: flex-start;
         text-align: left;
-    }
 
-    > p:last-child {
-        font-size: 0.813rem;
-    }
+        :before{
+            content:attr(aria-label);
+            font-size: 1.25rem;
+        }
 
+        li {
+            font-size: 0.875rem;
+        }
+
+        li:first-child {
+            margin-top: 0.75rem;
+        }
+
+        li:hover {
+            font-style: italic;
+            font-weight: bold;
+        }
+    }
+    
+    span span {
+        width: 100%;
+    }
+    
+    span > p:last-child {
+        margin: 2.25rem auto 0;
+        align-self: center;
+    }
 `

@@ -130,21 +130,36 @@ footer ul {
 
                     <Footer2 id="footer2">
 
-                        <ul>
-                            <li id="about">
+                        <span>
+
+                            <div id="about">
+
                                 <p>About</p>
-                                <p>Ye lord! Mask of blood and flesh, all creation, flutter of wings, ye who bears the name of Man! Inferno and pandemonium, the sea barrier surges, march on to the south!</p>
-                            </li>
 
-                            <li id="contactUs">
-                                <p>Contact Us</p>
-                                <a href="" target="_blank">Linkedin</a>
-                                <a href="" target="_blank">Instagram</a>
-                                <a href="" target="_blank">DeviantArt</a>
-                            </li>
-                        </ul>
+                                <p>Ye lord! Mask of blood and flesh, all creation, flutter of wings, 
+                                ye who bears the name of Man! Inferno and pandemonium, the sea barrier surges, 
+                                march on to the south!</p>
 
-                        <p>Developed by: <a href="" target="_blank">Izuru Kira</a></p>
+                            </div>
+
+                            <ul id="contactUs" aria-label="Contact Us:">
+
+                                <li >
+                                    <a href="" target="_blank">Linkedin</a>
+                                </li>
+                                <li >
+                                    <a href="" target="_blank">Instagram</a>
+                                </li>
+                                <li >
+                                    <a href="" target="_blank">DeviantArt</a>
+                                </li>
+                            </ul>
+
+                            <span></span>
+
+                            <p>Developed by: Izuru Kira</p>
+
+                        </span>
 
                     </Footer2>
 
@@ -158,23 +173,36 @@ footer ul {
 <pre ref={copyHtmlRef}>{
 `<footer>
 
-    <ul>
-        <li id="about">
+    <span>
+
+        <div id="about">
+
             <p>About</p>
+
             <p>Ye lord! Mask of blood and flesh, all creation, flutter of wings, 
             ye who bears the name of Man! Inferno and pandemonium, the sea barrier surges, 
             march on to the south!</p>
-        </li>
 
-        <li id="contactUs">
-            <p>Contact Us</p>
-            <a href="" target="_blank">Linkedin</a>
-            <a href="" target="_blank">Instagram</a>
-            <a href="" target="_blank">DeviantArt</a>
-        </li>
-    </ul>
+        </div>
 
-    <p>Developed by: <a href="" target="_blank">Izuru Kira</a></p>
+        <ul id="contactUs" aria-label="Contact Us:">
+
+            <li >
+                <a href="" target="_blank">Linkedin</a>
+            </li>
+            <li >
+                <a href="" target="_blank">Instagram</a>
+            </li>
+            <li >
+                <a href="" target="_blank">DeviantArt</a>
+            </li>
+        </ul>
+        
+        <span></span>
+
+        <p>Developed by: Izuru Kira</p>
+        
+    </span>
 
 </footer>`
 }</pre>
@@ -187,28 +215,69 @@ footer ul {
                             <CopyButton copyRef={copyCssRef} />
 
 <pre ref={copyCssRef}>{
-`footer {display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0.5rem;
+`/* ========================= FOOTER ========================= */
+
+footer {
+    padding: 1.313rem 0.5rem 0.5rem;
+    margin-top: 3.125rem;
+    text-align: center;
     background-color: #96b060;
 }
 
-footer p {
-    margin-right: 0.75rem;
-    font-size: 0.875rem;
+footer a {
+    color: black;
 }
 
-footer ul {
-
+footer > span {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    max-width: 463px;
+    width: 95%;
+    margin: 0 auto;
+}
 
-    li:not(li:last-child) {
-        margin-right: 0.375rem;
-    }
+#about {
+    width: 163px;
+    text-align: left;
+}
+
+#about p:first-child {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+#contactUs {
+    align-self: flex-start;
+    text-align: left;
+}
+
+#contactUs li {
+    font-size: 0.875rem;
+}
+
+#contactUs li:hover {
+    font-style: italic;
+    font-weight: bold;
+}
+
+#contactUs li:first-child {
+    margin-top: 0.75rem;
+}
+
+#contactUs:before{
+    content:attr(aria-label);
+    font-size: 1.25rem;
+}
+
+footer span span {
+    width: 100%;
+}
+
+footer span > p:last-child {
+    margin: 2.25rem auto 0;
+    align-self: center;
 }
 `
 }</pre>
