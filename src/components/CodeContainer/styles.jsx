@@ -16,19 +16,13 @@ export const CodeDiv = styled.div`
         }
 
         hr {
-            border-color: black;
+            // border-color: black;
+            background-color: black;
+            height: 1px;
         }
     }
 
     #codeBody {
-
-        /* .copyBtn {
-            align-self: end;
-            margin: 0.75rem 0.75rem 0 0;
-            background-color: #A4A709;
-            line-height: 1;
-            font-size: 0.875rem;
-        } */
         
         pre {
             font-size: 14px; 

@@ -23,6 +23,7 @@
 
 
 import Teste from '../assets/img/teste.png'
+import Main from '../assets/img/screenshots/main1.png'
 import Modal from '../assets/img/screenshots/modal.png'
 import BTTBTN from '../assets/img/screenshots/backToTopBtn2.png'
 import Loading from '../assets/img/icon/loading.png'
@@ -37,6 +38,8 @@ export default [
     { id: 'footerCard', name: 'Footer', src: `${Footer}`, linkTo: '/components/footer'},
 
     { id: 'loadingCard', name: 'Loading', src: `${Loading}`, linkTo: '/components/loading'},
+
+    { id: 'mainCard', name: 'Main', src: `${Main}`, linkTo: '/components/main'},
 
     { id: 'modalCard', name: 'Modal', src: `${Modal}`, linkTo: '/components/modal'},
 
