@@ -23,24 +23,17 @@ export default function LoadingPage() {
         <>
             <GlobalStyle />
 
-            <MainComp to={'/components'} style={{ backgroundColor: '#D9D9D9' }}>
+            <MainComp to={'/components'}>
 
                 <CodeContainer title={'Loading'} id="codeContainer">
 
                     <p>If you don't want your Loading icon to rotate, just remove the <strong>rotate class</strong> from imgContainer.</p>
 
-                    {/* <div className="loading">
-
-                        <ImgContainer src={LoadingImg} alt={"Loading Icon"} className='rotate' />
-
-                        <p>Loading...</p>
-
-                    </div> */}
+                    <p>You can right click and download this loading png.</p>
 
                     <LoadingComp/>
 
                     <CodeTabs>
-
 
                         {/* HTML */}
                         <TabPanel>
@@ -50,7 +43,7 @@ export default function LoadingPage() {
 <pre ref={copyHtmlRef}>{
 `<div class="loading">
 
-    <div class='imgContainer rotate'><img src='./assets/img/icons/loading.png' alt="Loading Icon"</div>
+    <div class='imgContainer rotate'><img src='./assets/img/icons/loading.png' alt="Loading Icon"></div>
     <p>Loading...</p>
 
 </div>`
@@ -64,7 +57,9 @@ export default function LoadingPage() {
                             <CopyButton copyRef={copyCssRef} />
 
 <pre ref={copyCssRef}>{
-`.loading {
+`/*============ LOADING ============*/
+
+.loading {
     width: 180px;
     margin: 4.125rem auto;
     text-align: center;
@@ -98,7 +93,7 @@ export default function LoadingPage() {
                             <CopyButton copyRef={copyJsRef} />
 
 <pre ref={copyJsRef}>{
-`//These codes only serve to change the loading icon according to a value, this isnt necessary for the "default" loading to work.
+`//This codes only serve to change the loading icon according to a value, this isnt necessary for the "default" loading to work.
 
 
 //====================== LOADING

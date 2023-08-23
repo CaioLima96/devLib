@@ -3,28 +3,10 @@ import styled from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
 
-    .loading {
-        width: 180px;
-        margin: 4.125rem auto;
-        text-align: center;
-        user-select: none;
+    #codeBody {
 
-        p {
-            margin-top: 1rem;
-            font-size: 1.5rem;
-        }
-    }
-
-    .rotate {
-        animation: rotation 2.5s infinite linear;
-    }
-
-    @keyframes rotation {
-        from {
-        transform: rotate(0deg);
-        }
-        to {
-        transform: rotate(359deg);
+        > p:first-child {
+            margin-bottom: 5px;
         }
     }
 `
