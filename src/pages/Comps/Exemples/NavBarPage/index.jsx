@@ -131,29 +131,28 @@ export default function NavBarPage() {
     display: none;
 }
 
-.navMenuList {
+.navMenu .navMenuList {
     display: flex;
     flex-wrap: wrap;
     font-size: 1rem;
     text-transform: uppercase;
 }
 
-li {
-    /* padding: 1rem; */
+.navMenu li {
     font-weight: bold;
 }
 
-a {
+.navMenu .navMenuList a {
     padding: 1rem;
     display: inline-block;
 }
 
-li:hover {
+.navMenu li:hover {
     cursor: pointer;
     background-color: black;
 }
 
-li:hover a, li:hover p{
+.navMenu li:hover a, .navMenu li:hover p{
     color: #96b060;
 }
 

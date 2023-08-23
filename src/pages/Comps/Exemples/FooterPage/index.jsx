@@ -17,6 +17,8 @@ export default function FooterPage() {
 
     let copyHtmlRef = useRef()
     let copyCssRef = useRef()
+    let copyHtmlRef2 = useRef()
+    let copyCssRef2 = useRef()
 
     return(
 
@@ -56,9 +58,9 @@ export default function FooterPage() {
                         {/* HTML */}
                         <TabPanel>
 
-                            <CopyButton copyRef={copyHtmlRef} />
+                            <CopyButton copyRef={copyHtmlRef2} />
 
-<pre ref={copyHtmlRef}>{
+<pre ref={copyHtmlRef2}>{
 `<footer>
 
     <p>Developed by: Butters Stotch</p>
@@ -92,10 +94,11 @@ export default function FooterPage() {
                         {/* CSS */}
                         <TabPanel>
 
-                            <CopyButton copyRef={copyCssRef} />
+                            <CopyButton copyRef={copyCssRef2} />
 
-<pre ref={copyCssRef}>{
-`footer {display: flex;
+<pre ref={copyCssRef2}>{
+`footer {
+    display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;

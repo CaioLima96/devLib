@@ -23,7 +23,7 @@ export default function BackToTopBtnPage() {
 
                 <CodeContainer title={'Back to Top Button'} id="codeContainer">
 
-                    <p>To use this component arrow-up icon, you will need Font Awesome library, just copy the link below and paste it in your &lt;head&gt;.</p>
+                    <p>To use this component's arrow-up icon, you will need Font Awesome library, just copy the link below and paste it in your &lt;head&gt;.</p>
                   
                     <div style={{
                         display: 'flex',

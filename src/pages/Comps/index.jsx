@@ -42,7 +42,7 @@ export default function Comps() {
                 
                 <CodeContainer>
 
-                    <p>To use these components, you will need a reset css. Use the one provided below</p>
+                    <p>To use these components, you will need a reset css and some classes. Use the one provided below</p>
 
                     <div style={{
                         display: 'flex',
@@ -57,6 +57,16 @@ export default function Comps() {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.imgContainer {
+    line-height: 0%;
+}
+
+.imgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }`
 }</pre>
 
