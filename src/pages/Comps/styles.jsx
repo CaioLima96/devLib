@@ -30,7 +30,6 @@ export const List = styled.ul`
 
     .card {
 
-        /* max-width: 300px; */
         max-width: 270px;
         width: 100%;
         height: 250px;

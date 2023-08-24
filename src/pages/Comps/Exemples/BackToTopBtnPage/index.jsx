@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
 import { TabPanel } from '@chakra-ui/react'
+
 import MainComp from "../../../../components/MainComp";
 import CodeContainer from "../../../../components/CodeContainer";
 import CodeTabs from "../../../../components/CodeTabs";
 import CopyButton from "../../../../components/CopyButton";
 
-import { GlobalStyle } from './styles'
 
 export default function BackToTopBtnPage() {
 
@@ -17,8 +17,6 @@ export default function BackToTopBtnPage() {
     return (
 
         <>
-            <GlobalStyle />
-            {/* style={{backgroundColor: '#D9D9D9'}} */}
             <MainComp to={'/components'}>
 
                 <CodeContainer title={'Back to Top Button'} id="codeContainer">
@@ -33,7 +31,6 @@ export default function BackToTopBtnPage() {
                         borderRadius: '5px'
                     }}>
 
-                        {/* <CopyButton copyRef={copyFontAweRef}/> */}
 
 <pre ref={copyFontAweRef}>{
 ` <!-- Font Awesome icons (free version)-->
@@ -118,7 +115,7 @@ export default function BackToTopBtnPage() {
 `//=========== BACK TO THE TOP BTN
 
 //Get the button
-let mybutton = document.getElementById("backToTopButton");
+let backTopBtn = document.getElementById("backToTopButton");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () { scrollFunction() };
@@ -126,9 +123,9 @@ window.onscroll = function () { scrollFunction() };
 function scrollFunction() {
 
 	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-		mybutton.style.display = "block";
+		backTopBtn.style.display = "block";
 	} else {
-		mybutton.style.display = "none";
+		backTopBtn.style.display = "none";
 	}
 }
 

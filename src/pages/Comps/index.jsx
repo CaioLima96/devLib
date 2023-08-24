@@ -76,8 +76,6 @@ export default function Comps() {
 
                 </CodeContainer>
 
-                {/* <p style={{fontSize:'26px'}}>Components</p> */}
-
                 <List>
 
                     {getData()}

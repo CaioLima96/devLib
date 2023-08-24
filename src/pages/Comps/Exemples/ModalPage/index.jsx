@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { TabPanel } from '@chakra-ui/react'
+
 import MainComp from "../../../../components/MainComp";
 import CodeContainer from "../../../../components/CodeContainer";
 import CodeTabs from "../../../../components/CodeTabs";
@@ -14,8 +15,6 @@ export default function ModalPage() {
     let copyCssRef = useRef()
     let copyJsRef = useRef()
 
-
-    //====================== MODAL
 
     let modal;
     useEffect(() => {
@@ -192,13 +191,7 @@ export default function ModalPage() {
     font-size: 0.813rem;
     border-top: 1px solid #cecece;
     text-align: center;
-}
-
-
-
-/* ========================= @MEDIA ========================= */
-
-/* Do your media queries here  */`
+}`
 }</pre>
                         </TabPanel>
 

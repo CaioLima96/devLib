@@ -8,7 +8,7 @@ import CopyButton from "../../../../components/CopyButton";
 import ImgContainer from "../../../../components/ImgContainer";
 import Summary from "../../../../components/Summary";
 
-import { GlobalStyle, Footer1, Footer2 } from './styles'
+import { Footer1, Footer2 } from './styles'
 
 import GithubIcon from '../../../../assets/img/icon/githubIcon.png'
 import LinkedinIcon from '../../../../assets/img/icon/linkedinIcon.png'
@@ -23,7 +23,6 @@ export default function FooterPage() {
     return(
 
         <>
-            <GlobalStyle/>
 
             <MainComp to={'/components'}>
 
@@ -34,7 +33,7 @@ export default function FooterPage() {
                         {name:'About/ContactUs Footer', anchor: '#footer2'},
                     ]}/>
 
-                    <Footer1>
+                    <Footer1 id="footer1">
 
                         <p>Developed by: Butters Stotch</p>
 

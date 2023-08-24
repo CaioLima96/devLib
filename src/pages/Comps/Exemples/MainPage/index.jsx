@@ -5,7 +5,6 @@ import MainComp from "../../../../components/MainComp";
 import CodeContainer from "../../../../components/CodeContainer";
 import CodeTabs from "../../../../components/CodeTabs";
 import CopyButton from "../../../../components/CopyButton";
-import ImgContainer from "../../../../components/ImgContainer";
 
 import { Main } from "./styles";
 

@@ -6,9 +6,6 @@ import CodeContainer from "../../../../components/CodeContainer";
 import CodeTabs from "../../../../components/CodeTabs";
 import CopyButton from "../../../../components/CopyButton";
 import LoadingComp from "../../../../components/LoadingComp";
-import ImgContainer from "../../../../components/ImgContainer";
-
-import LoadingImg from "../../../../assets/img/icon/loading.png"
 
 import { GlobalStyle } from './styles'
 
