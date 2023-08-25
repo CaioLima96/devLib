@@ -71,13 +71,13 @@ export default function NavBarPage() {
 
             <a href="">
                 <div class='imgContainer'><img src="YOURLOGOHERE" alt="Logo" style="width: 32px;"></div>
-                <p>Comp Lib</p>
+                <p>Dev Lib</p>
             </a>
 
         </div>
 
         <div class='imgContainer'>
-            <img src="assets/img/icon/menuIcon.png" alt="Menu Icon" style="width: 30px;" onClick="openNavBar()">
+            <img src="assets/img/icon/menuIcon.png" alt="Menu Icon" style="width: 30px;" onclick="openNavBar()">
         </div>
     </div>
 
@@ -98,7 +98,9 @@ export default function NavBarPage() {
                             <CopyButton copyRef={copyCssRef} />
 
 <pre ref={copyCssRef}>{
-`.navMenu {
+`/*============ NAVBAR ============*/
+
+.navMenu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -156,10 +158,6 @@ export default function NavBarPage() {
     color: #96b060;
 }
 
-
-
-/* ========================= @MEDIA ========================= */
-
 @media (max-width: 600px) {
 
     .navMenu {
@@ -211,8 +209,14 @@ export default function NavBarPage() {
 
 function openNavBar() {
     
-    let headerNavMenu = document.getElementById("headerNavMenu")
-    headerNavMenu.classList.toggle('hideShowHeaderNavMenu')
+    let headerNavMenu = document.getElementsByClassName("navMenuList")[0]
+    headerNavMenu.classList.toggle('hideShowNavMenu')
+}
+
+function closeNavBar() {
+
+    let headerNavMenu = document.getElementsByClassName("navMenuList")[0]
+    headerNavMenu.classList.remove('hideShowNavMenu')
 }`
 }</pre>
 
