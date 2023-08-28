@@ -42,28 +42,28 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     .navMenuList {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 1rem;
-    text-transform: uppercase;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 1rem;
+        text-transform: uppercase;
 
-    li {
-        font-weight: bold;
-    }
+        li {
+            font-weight: bold;
+        }
 
-    a {
-        padding: 1rem;
-        display: inline-block;
-    }
+        a {
+            padding: 1rem;
+            display: inline-block;
+        }
 
-    li:hover {
-        cursor: pointer;
-        background-color: black;
-    }
+        li:hover {
+            cursor: pointer;
+            background-color: black;
+        }
 
-    li:hover a, li:hover p{
-        color: #96b060;
-    }
+        li:hover a, li:hover p{
+            color: #96b060;
+        }
     }
 
     @media (max-width: 600px) {

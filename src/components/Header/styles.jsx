@@ -1,4 +1,4 @@
-import {createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 import styled from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
@@ -11,38 +11,30 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Header = styled.header`
 
-    background-color: #96b060;
-
-    nav {
-
+    .navMenu {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        a {
-            color: black;
-        }
+        margin-bottom: 2.125rem;
+        background-color: rgb(150, 176, 96);
 
         > div:first-child {
 
             margin-left: 0.625rem;
 
-            #headerLogo {
-
+            .navMenuLogo a {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
                 font-size: 1.563rem;
+                color: black;
 
-                a {
-                    display: flex;
-                    align-items: center;
-                    flex-wrap: wrap;
+                p:hover {
+                    font-style: italic;
+                }
 
-                    div {
-                        margin-right: 0.438rem
-                    }
-
-                    p:hover {
-                        font-style: italic;
-                    }
+                div {
+                    margin-right: 0.438rem
                 }
             }
 
@@ -51,38 +43,36 @@ export const Header = styled.header`
             }
         }
 
-    }
+        .navMenuList {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 1rem;
+            text-transform: uppercase;
 
-    #headerNavMenu {
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 1rem;
-        text-transform: uppercase;
+            li {
+                font-weight: bold;
+            }
 
-        li {
-            /* padding: 1rem; */
-            font-weight: bold;
-        }
+            a {
+                padding: 1rem;
+                display: inline-block;
+                color: black;
+            }
 
-        a {
-            padding: 1rem;
-            display: inline-block;
-        }
+            li:hover {
+                cursor: pointer;
+                background-color: black;
+            }
 
-        li:hover {
-            cursor: pointer;
-            background-color: black;
-        }
-
-        li:hover a, li:hover p{
-            color: #96b060;
+            li:hover a, li:hover p{
+                color: #96b060;
+            }
         }
     }
 
     @media (max-width: 600px) {
 
-        nav {
-
+        .navMenu {
             position: relative;
 
             > div:first-child {
@@ -97,23 +87,24 @@ export const Header = styled.header`
                     display: block;
                 }
             }
-        }
 
-        #headerNavMenu {
-            display: none;
-            width: 100%;
-            padding: 0.625rem 0;
-            background-color: #333333 !important;
-            position: absolute;
-            top: 98%;
-            z-index: 3;
-            
-            a {
-                color: white;
+            .navMenuList {
+                display: none;
+                width: 100%;
+                padding: 0.625rem 0;
+                background-color: #333333 !important;
+                position: absolute;
+                top: 98%;
+                z-index: 3;
+
+                a {
+                    color: white;
+                    width: 100%;
+                }
             }
         }
 
-        .hideShowHeaderNavMenu {
+        .hideShowNavMenu {
             display: block !important;
         }
     }

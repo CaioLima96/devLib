@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Header, GlobalStyle } from "./styles";
 
@@ -10,23 +10,39 @@ import MenuIcon from '../../assets/img/icon/menuIcon.png'
 
 export default function HeaderComp(props) {
 
-    function openNavBar() {
+    let menuBtnRef = useRef(null)
+    let menuRef = useRef(null)
 
-        let headerNavMenu = document.getElementById("headerNavMenu")
-        headerNavMenu.classList.toggle('hideShowHeaderNavMenu')
+    const toggleMenu = () => {
+        menuRef.current.classList.toggle("hideShowNavMenu")
     }
+
+    useEffect(() => {
+        const handleClick = event => {
+         
+            if(event.target.classList[1] != "hideShowNavMenu" && event.target.classList[0] != 'menuBtn') {
+                menuRef.current.classList.remove("hideShowNavMenu")
+            }
+        };
+    
+        window.addEventListener('click', handleClick);
+    
+        return () => {
+            window.removeEventListener('click', handleClick);
+        };
+    }, []);
 
     return (
 
         <>
             <GlobalStyle/>
-            
+
             <Header>
 
-                <nav>
+                <nav className="navMenu">
 
                     <div>
-                        <div id="headerLogo">
+                        <div className="navMenuLogo">
 
                             <Link to='/home'>
                                 <ImgContainer src={SkullLogo} alt={'Logo'} style={{ width: '32px' }} />
@@ -35,12 +51,15 @@ export default function HeaderComp(props) {
 
                         </div>
 
-                        <ImgContainer src={MenuIcon} alt={'Menu Icon'} style={{width: '30px'}} onClick={openNavBar}/>
+                        <div className="imgContainer" ref={menuBtnRef} style={{ width: '30px' }} 
+                        onClick={toggleMenu}
+                        >
+                            <img src={MenuIcon} className="menuBtn" />
+                        </div>
+
                     </div>
 
-                    {/* <span className="break"></span> */}
-
-                    <ul id="headerNavMenu">
+                    <ul className="navMenuList" ref={menuRef}>
                         <li><Link to='/home'>Home</Link></li>
                         <li><Link to='/components'>Components</Link></li>
                         <li><a href="#about">About</a></li>
@@ -57,8 +76,9 @@ export default function HeaderComp(props) {
                                 </div>
                         </li> */}
                     </ul>
-                </nav>
 
+                </nav>
+                
             </Header>
         </>
     )

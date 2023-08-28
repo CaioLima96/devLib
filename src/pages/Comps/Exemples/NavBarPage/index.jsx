@@ -17,18 +17,18 @@ export default function NavBarPage() {
     let copyHtmlRef = useRef()
     let copyCssRef = useRef()
     let copyJsRef = useRef()
-    let menuBtnRef = useRef(null)
-    let menuRef = useRef(null)
+    let menuBtnRef2 = useRef(null)
+    let menuRef2 = useRef(null)
 
     const toggleMenu = () => {
-        menuRef.current.classList.toggle("hideShowNavMenu")
+        menuRef2.current.classList.toggle("hideShowNavMenu")
     }
 
     useEffect(() => {
         const handleClick = event => {
          
-            if(event.target.classList[1] != "hideShowNavMenu" && event.target.classList[0] != 'menuBtn') {
-                menuRef.current.classList.remove("hideShowNavMenu")
+            if(event.target.classList[1] != "hideShowNavMenu" && event.target.classList[0] != 'menuBtn2') {
+                menuRef2.current.classList.remove("hideShowNavMenu")
             }
         };
     
@@ -60,13 +60,13 @@ export default function NavBarPage() {
 
                             </div>
 
-                            <div className="imgContainer" ref={menuBtnRef} style={{width: '30px'}} onClick={toggleMenu}>
-                                <img src={MenuIcon} className="menuBtn"/>
+                            <div className="imgContainer" ref={menuBtnRef2} style={{width: '30px'}} onClick={toggleMenu}>
+                                <img src={MenuIcon} className="menuBtn2"/>
                             </div>
                             
                         </div>
 
-                        <ul className="navMenuList" ref={menuRef}>
+                        <ul className="navMenuList" ref={menuRef2}>
                             <li><a href="#">Home</a></li>
                             <li><a href="#">About</a></li>
                             <li><a href="#">Contact Us</a></li>
@@ -151,28 +151,29 @@ export default function NavBarPage() {
     display: none;
 }
 
-.navMenu .navMenuList {
+.navMenuList {
     display: flex;
     flex-wrap: wrap;
     font-size: 1rem;
     text-transform: uppercase;
 }
 
-.navMenu li {
+.navMenuList li {
     font-weight: bold;
 }
 
-.navMenu .navMenuList a {
+.navMenuList a {
     padding: 1rem;
     display: inline-block;
+    color: black;
 }
 
-.navMenu li:hover {
+.navMenuList li:hover {
     cursor: pointer;
     background-color: black;
 }
 
-.navMenu li:hover a, .navMenu li:hover p{
+.navMenuList li:hover a, .navMenuList li:hover p{
     color: #96b060;
 }
 

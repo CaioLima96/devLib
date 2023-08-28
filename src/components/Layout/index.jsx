@@ -5,17 +5,19 @@ import FooterComp from "../Footer";
 
 export default function Layout(props) {
 
-    function closeNavBar() {
+    // function closeNavBar() {
 
-        let headerNavMenu = document.getElementById("headerNavMenu")
-        headerNavMenu.classList.remove('hideShowHeaderNavMenu')
-    }
+    //     let headerNavMenu = document.getElementById("headerNavMenu")
+    //     headerNavMenu.classList.remove('hideShowHeaderNavMenu')
+    // }
 
     return (
         <>
             <HeaderComp/>
                 { props.children }
-            <FooterComp onClick={closeNavBar}/>
+            <FooterComp 
+            // onClick={closeNavBar}
+            />
         </>
     )
 }

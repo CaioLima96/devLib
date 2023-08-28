@@ -2,6 +2,10 @@ import {createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
 
+    .navMenu {
+        margin-bottom: 0px !important;
+    }
+
     main {
 
         text-align: center;
