@@ -41,7 +41,16 @@ export const List = styled.ul`
         transition: .4s ease;
 
         :hover {
+
             transform: scale(1.05);
+
+            a {
+                color: black !important;
+            }
+
+            p {
+                background-color: rgb(150, 176, 96);
+            }
         }
 
         a {
@@ -49,6 +58,7 @@ export const List = styled.ul`
             flex-direction: column;
             height: 100%;
             user-select: none;
+            color: black;
 
             > div:first-child {
                 align-self: center;
@@ -60,6 +70,10 @@ export const List = styled.ul`
                     object-fit: contain;
                 }
             }
+        }
+
+        a:visited {
+            color: #6036f3;
         }
 
         p {
