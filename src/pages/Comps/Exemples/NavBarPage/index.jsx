@@ -76,8 +76,8 @@ export default function NavBarPage() {
 
         </div>
 
-        <div class='imgContainer'>
-            <img src="assets/img/icon/menuIcon.png" alt="Menu Icon" style="width: 30px;" onclick="openNavBar()">
+        <div class='imgContainer navMenuBtn'>
+            <img src="assets/img/icon/menuIcon.png" alt="Menu Icon" style="width: 30px;">
         </div>
     </div>
 
@@ -207,17 +207,18 @@ export default function NavBarPage() {
 <pre ref={copyJsRef}>{
 `//====================== RESPONSIVE MENU
 
-function openNavBar() {
-    
-    let headerNavMenu = document.getElementsByClassName("navMenuList")[0]
-    headerNavMenu.classList.toggle('hideShowNavMenu')
-}
+let menuBtn = document.getElementsByClassName('navMenuBtn')[0]
+let menu = document.getElementsByClassName('navMenuList')[0]
 
-function closeNavBar() {
+menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('hideShowNavMenu')
+})
 
-    let headerNavMenu = document.getElementsByClassName("navMenuList")[0]
-    headerNavMenu.classList.remove('hideShowNavMenu')
-}`
+document.addEventListener('click', (event) => {
+    if (!menu.contains(event.target) && !menuBtn.contains(event.target)) {
+      menu.classList.remove('hideShowNavMenu')
+    }
+});`
 }</pre>
 
                         </TabPanel>
