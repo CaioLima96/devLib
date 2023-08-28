@@ -48,7 +48,6 @@ export const GlobalStyle = createGlobalStyle`
     text-transform: uppercase;
 
     li {
-        /* padding: 1rem; */
         font-weight: bold;
     }
 
@@ -98,6 +97,7 @@ export const GlobalStyle = createGlobalStyle`
             
             a {
                 color: white;
+                width: 100%;
             }
         }
 

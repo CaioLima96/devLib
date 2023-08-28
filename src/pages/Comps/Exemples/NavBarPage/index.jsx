@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { TabPanel } from '@chakra-ui/react'
 
 import MainComp from "../../../../components/MainComp";
@@ -17,12 +17,27 @@ export default function NavBarPage() {
     let copyHtmlRef = useRef()
     let copyCssRef = useRef()
     let copyJsRef = useRef()
+    let menuBtnRef = useRef(null)
+    let menuRef = useRef(null)
 
-    function openNavBar() {
-
-        let navMenu = document.getElementsByClassName("navMenuList")[0]
-        navMenu.classList.toggle('hideShowNavMenu')
+    const toggleMenu = () => {
+        menuRef.current.classList.toggle("hideShowNavMenu")
     }
+
+    useEffect(() => {
+        const handleClick = event => {
+         
+            if(event.target.classList[1] != "hideShowNavMenu" && event.target.classList[0] != 'menuBtn') {
+                menuRef.current.classList.remove("hideShowNavMenu")
+            }
+        };
+    
+        window.addEventListener('click', handleClick);
+    
+        return () => {
+            window.removeEventListener('click', handleClick);
+        };
+    }, []);
 
     return(
         <>
@@ -45,13 +60,16 @@ export default function NavBarPage() {
 
                             </div>
 
-                            <ImgContainer src={MenuIcon} alt={'Menu Icon'} style={{width: '30px'}} onClick={openNavBar}/>
+                            <div className="imgContainer" ref={menuBtnRef} style={{width: '30px'}} onClick={toggleMenu}>
+                                <img src={MenuIcon} className="menuBtn"/>
+                            </div>
+                            
                         </div>
 
-                        <ul className="navMenuList">
-                            <li><a href="">Home</a></li>
-                            <li><a href="">About</a></li>
-                            <li><a href="">Contact Us</a></li>
+                        <ul className="navMenuList" ref={menuRef}>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact Us</a></li>
                         </ul>
 
                     </nav>
@@ -189,6 +207,7 @@ export default function NavBarPage() {
         
     .navMenuList a {
         color: white;
+        width: 100%;
     }
     
     .hideShowNavMenu {
