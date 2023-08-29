@@ -9,24 +9,35 @@ import LinkedinIcon from '../../assets/img/icon/linkedinIcon.png'
 
 export default function FooterComp(props) {
 
-    return(
+    return (
 
-        <Footer onClick={props.onClick}>
+        <Footer id="footer">
 
-            <p>Developed by: Caio Vieira Lima</p>
+            <span>
 
-            <ul>
-                <li>
-                    <a href="https://github.com/CaioLima96">
-                        <ImgContainer src={GithubIcon} alt={'Github icon'} style={{width: '16px'}}/>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/caiovieiralima/">
-                        <ImgContainer src={LinkedinIcon} alt={'Linkedin icon'} style={{width: '16px'}}/>
-                    </a>
-                </li>
-            </ul>
+                <div id="about">
+
+                    <p>About</p>
+
+                    <p>I created this website to gather in one place the codes I usually use, in addition to helping anyone who wants a ready-made component.</p>
+
+                </div>
+
+                <ul id="contactUs" aria-label="Contact Us:">
+
+                    <li >
+                        <a href="https://www.linkedin.com/in/caiovieiralima" target="_blank">Linkedin</a>
+                    </li>
+                    <li >
+                        <a href="https://github.com/CaioLima96" target="_blank">Github</a>
+                    </li>
+                </ul>
+
+                <span></span>
+
+                <p>Developed by: Caio Vieira Lima</p>
+
+            </span>
 
         </Footer>
     )

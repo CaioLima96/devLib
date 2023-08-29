@@ -247,6 +247,10 @@ footer > span {
     margin-bottom: 0.75rem;
 }
 
+#about p:last-child {
+    font-size: 0.875rem;
+}
+
 #contactUs {
     align-self: flex-start;
     text-align: left;
@@ -277,6 +281,7 @@ footer span span {
 footer span > p:last-child {
     margin: 2.25rem auto 0;
     align-self: center;
+    font-size: 0.813rem;
 }
 `
 }</pre>
