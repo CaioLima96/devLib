@@ -11,7 +11,7 @@ export default function FooterComp(props) {
 
     return (
 
-        <Footer id="footer">
+        <Footer>
 
             <span>
 
