@@ -1,14 +1,24 @@
+import { createGlobalStyle } from 'styled-components'
 import styled from 'styled-components'
+
+export const GlobalStyle = createGlobalStyle`
+
+    .darkMode {
+
+        main > a:first-child {
+
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+`
 
 export const Main = styled.main`
 
     width: 90%;
     max-width: 960px;
     margin: 5rem auto;
-    /* text-align: center; */
-
-
-    /* border: 1px solid red; */
 
     ${props => (props.to ? `
         > a:first-child { 

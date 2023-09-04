@@ -30,7 +30,7 @@ export default function Comps() {
                     </Link>
 
                 </li>
-        )
+            )
         })
     }
 
@@ -45,13 +45,15 @@ export default function Comps() {
 
                     <p>To use these components, you will need a reset css and some classes. Use the ones provided below</p>
 
-                    <div style={{
-                        display: 'flex',
-                        justifyContent: 'space-between', 
-                        backgroundColor:'#1E1E1E',
-                        margin: '10px 0',
-                        borderRadius: '5px'
-                    }}>
+                    <div  className="preContainer"
+                        // style={{
+                        //     display: 'flex',
+                        //     justifyContent: 'space-between', 
+                        //     backgroundColor:'#1E1E1E',
+                        //     margin: '10px 0',
+                        //     borderRadius: '5px'
+                        // }}
+                    >
 
 <pre ref={copyResetCss}>{
 `*, *::after, *::before {

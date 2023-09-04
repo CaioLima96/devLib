@@ -23,13 +23,9 @@ export default function BackToTopBtnPage() {
 
                     <p>To use this component's arrow-up icon, you will need Font Awesome library, just copy the link below and paste it in your &lt;head&gt;.</p>
                   
-                    <div style={{
-                        display: 'flex',
-                        justifyContent: 'space-between', 
-                        backgroundColor:'#1E1E1E',
-                        margin: '10px 0 67px',
-                        borderRadius: '5px'
-                    }}>
+                    <div className='preContainer' 
+                        style={{marginBottom: '67px'}}
+                    >
 
 <pre ref={copyFontAweRef}>{
 ` <!-- Font Awesome icons (free version)-->

@@ -1,0 +1,85 @@
+.darkMode {
+    background-color: var(--darkModeGray2);
+}
+
+.darkMode .darkModeBtn {
+    color: white;
+}
+
+.darkMode .darkModeBtn:hover p{
+    color: black !important;
+}
+
+.darkMode .darkModeBtn:hover img{
+    filter: brightness(0%);
+}
+
+.darkMode .navMenu {
+    background-color: var(--darkModeGray1) !important;
+}
+
+.darkMode .navMenu > div:first-child > div:last-child {
+    filter: brightness(0) invert(1);
+}
+
+.darkMode .navMenuList li:hover {
+    background-color: white !important;
+}
+
+.darkMode .navMenuList li:hover a{
+    color: black !important;
+}
+
+.darkMode .navMenuList a, .darkMode header p {
+    color: white !important;
+}
+
+.darkMode main p:not(#codeBody .codeTabListTab p, .card a p, .modal p) {
+    color: white !important;
+}
+
+.darkMode .card {
+    border-color: black !important;
+}
+
+.darkMode .card a{
+    color:white !important;
+}
+
+.darkMode .card a:visited {
+    color: #07c907 !important;
+}
+
+.darkMode .card a p {
+    background-color: black;
+}
+
+.darkMode .card:hover a {
+    color: black !important;
+}
+
+.darkMode .card:hover p {
+    background-color: white !important;
+}
+
+.darkMode .preContainer {
+    background-color: black !important;
+}
+
+.darkMode #codeBody .selected {
+    background-color: black !important;
+    color: white !important;
+}
+
+.darkMode #codeBody .chakra-tabs__tab-panels {
+    background-color: black !important;   
+}
+
+.darkMode footer {
+    background-color: var(--darkModeGray1) !important;
+    color: var(--darkModeGray3);
+}
+
+.darkMode footer a {
+    color: var(--darkModeGray3);
+}

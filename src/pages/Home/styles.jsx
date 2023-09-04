@@ -23,5 +23,9 @@ export const GlobalStyle = createGlobalStyle`
             color: black;
         }
     }
+
+    .darkMode main h1 {
+        color: white;
+    }
 `
 

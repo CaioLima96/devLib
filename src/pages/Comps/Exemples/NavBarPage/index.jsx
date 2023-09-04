@@ -55,7 +55,7 @@ export default function NavBarPage() {
 
                                 <a href="">
                                     <ImgContainer src={SkullLogo} alt={'Icon'} style={{ width: '32px' }} />
-                                    <p>Comp Lib</p>
+                                    <p>Dev Lib</p>
                                 </a>
 
                             </div>

@@ -1,27 +1,51 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useState } from 'react';
+
+import ImgContainer from '../ImgContainer';
+import { GlobalStyle } from './styles';
+
+import MoonIcon from '../../assets/img/icon/moon3.png'
+import SunIcon from '../../assets/img/icon/sun1.png'
 
 export default function DarkModeBtn() {
 
-    const [theme, setTheme] = useState('light');
+    const [isTheme, setTheme] = useState('light');
 
-    let ruti = document.getElementById('root')
-    console.log(ruti.classList)
+    let body = document.body;
+    console.log(body.classList)
     
-    const toggleTheme = () => {
-        if (theme === 'light') {
+    const toggleDarkMode = () => {
+
+        if (isTheme === 'light') {
+
             setTheme('dark');
-            ruti.classList.add('darkMode')
-            console.log('dark')
+            body.classList = 'darkMode'
+
         } else {
+
             setTheme('light');
-            ruti.classList.remove('darkMode')
-            console.log('light')
+            body.classList = ''
         }
-    };
+    }
 
     return (
-        <div onClick={toggleTheme}>
-            <p>{theme == 'light' ? 'Dark' : 'Light'}</p>
-        </div>
+        <>
+            <GlobalStyle/>
+            
+            <li className='darkModeBtn' onClick={toggleDarkMode}>
+
+                {isTheme == 'light' ? 
+                    <>
+                        <p>Dark Mode</p> 
+                        {/* <ImgContainer src={MoonIcon} style={{ width: '20px' }}/> */}
+                    </>
+                    : 
+                    <>
+                        <p>Light Mode</p> 
+                        {/* <ImgContainer src={SunIcon} style={{ width: '20px' }}/> */}
+                    </>
+                }
+
+            </li>
+        </>
     );
 }

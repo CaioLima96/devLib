@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,7 +18,9 @@
     --darkModeGray3: #BDBDBD;
 }
 
-html, body, #root {
+html,
+body,
+#root {
     width: 100%;
     height: 100%;
 }
@@ -41,17 +45,17 @@ body {
 body::-webkit-scrollbar {
     width: 5px;
 }
-  
+
 body::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px transparent;
 }
-   
+
 body::-webkit-scrollbar-thumb {
     background: #bfbfbf;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-    background: #a4a4a4; 
+    background: #a4a4a4;
 }
 
 
@@ -89,64 +93,10 @@ body::-webkit-scrollbar-thumb:hover {
     cursor: pointer;
 }
 
-
-
-/* ========================= DARK MODE ========================= */
-
-.darkMode {
-    background-color: var(--darkModeGray2);
-}
-
-.darkMode .navMenu {
-    background-color: var(--darkModeGray1) !important;
-}
-
-.darkMode header a {
-    color: white !important;
-}
-
-.darkMode main p:not(#codeBody .notSelected, .card a p) {
-    color: white !important;
-}
-
-.darkMode footer {
-    background-color: var(--darkModeGray1) !important;
-    color: var(--darkModeGray3);
-}
-
-.darkMode footer a {
-    color: var(--darkModeGray3);
-}
-
-.darkMode #codeBody .chakra-tabs__tab-panels {
-    background-color: black !important;   
-}
-
-.darkMode #codeBody .selected {
-    background-color: black !important;
-    color: white !important;
-}
-
-.darkMode .card {
-    border-color: black !important;
-}
-
-.darkMode .card a{
-    color:white !important;
-}
-
-.darkMode .card a:visited {
-    color: #07c907 !important;
-}
-
-.darkMode .card a p {
-    background-color: black;
-}
-
-.darkMode .card:hover a {
-    color: black !important;
-}
-
-.darkMode .card:hover p {
-    background-color: white !important;
+.preContainer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1E1E1E;
+    margin: 10px 0;
+    border-radius: 5px;
 }

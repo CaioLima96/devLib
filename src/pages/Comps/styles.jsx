@@ -22,14 +22,10 @@ export const GlobalStyle = createGlobalStyle`
     
     .darkMode {
 
-        #codeBody > div {
-            background-color: black !important;
-        }
-
         #loadingCard {
             
             div {
-                filter: invert(85%);
+                filter: brightness(0) invert(1);
             }
         }
     }

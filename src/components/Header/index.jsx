@@ -76,7 +76,7 @@ export default function HeaderComp(props) {
 
                                 </div>
                         </li> */}
-                        {/* <DarkModeBtn/> */}
+                        <DarkModeBtn/>
                     </ul>
 
                 </nav>

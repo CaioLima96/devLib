@@ -38,7 +38,7 @@ export default function CodeTabs(props) {
                             props.tabs.map((tab, i) => <CustomTab key={i}><p>{tab}</p></CustomTab>) 
 
                             : 
-
+                            
                             ['Html', 'Css', 'Js'].map((tab, i) => <CustomTab key={i}><p>{tab}</p></CustomTab>)
                         }
 

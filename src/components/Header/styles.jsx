@@ -44,6 +44,7 @@ export const Header = styled.header`
 
         .navMenuList {
             display: flex;
+            align-items: center;
             flex-wrap: wrap;
             font-size: 1rem;
             text-transform: uppercase;
