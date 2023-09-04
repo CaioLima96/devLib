@@ -18,7 +18,21 @@ export const GlobalStyle = createGlobalStyle`
         to {
         transform: rotate(359deg);
         }
-    }   
+    }  
+    
+    .darkMode {
+
+        #codeBody > div {
+            background-color: black !important;
+        }
+
+        #loadingCard {
+            
+            div {
+                filter: invert(85%);
+            }
+        }
+    }
 `
 
 export const List = styled.ul`

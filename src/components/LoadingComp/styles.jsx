@@ -14,7 +14,17 @@ export const GlobalStyle = createGlobalStyle`
         to {
         transform: rotate(359deg);
         }
-    }   
+    }
+    
+    .darkMode {
+
+        .loading {
+
+            .imgContainer {
+                filter: invert(85%);
+            }
+        }
+    }
 `
 
 export const Load = styled.div`

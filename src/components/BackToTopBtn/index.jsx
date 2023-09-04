@@ -60,7 +60,7 @@ export default function BackToTopBtn () {
 
                 <div>
 
-                    <i class="fas fa-arrow-up"></i>
+                    <i className="fas fa-arrow-up"></i>
 
                 </div>
 

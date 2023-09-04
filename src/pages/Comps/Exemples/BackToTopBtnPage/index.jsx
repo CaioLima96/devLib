@@ -31,7 +31,6 @@ export default function BackToTopBtnPage() {
                         borderRadius: '5px'
                     }}>
 
-
 <pre ref={copyFontAweRef}>{
 ` <!-- Font Awesome icons (free version)-->
 <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>`

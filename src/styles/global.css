@@ -11,6 +11,9 @@
 
 :root {
     --grey1: #F2F2F2;
+    --darkModeGray1: #121212;
+    --darkModeGray2: #202020;
+    --darkModeGray3: #BDBDBD;
 }
 
 html, body, #root {
@@ -84,4 +87,66 @@ body::-webkit-scrollbar-thumb:hover {
 
 .defaultBtn:hover {
     cursor: pointer;
+}
+
+
+
+/* ========================= DARK MODE ========================= */
+
+.darkMode {
+    background-color: var(--darkModeGray2);
+}
+
+.darkMode .navMenu {
+    background-color: var(--darkModeGray1) !important;
+}
+
+.darkMode header a {
+    color: white !important;
+}
+
+.darkMode main p:not(#codeBody .notSelected, .card a p) {
+    color: white !important;
+}
+
+.darkMode footer {
+    background-color: var(--darkModeGray1) !important;
+    color: var(--darkModeGray3);
+}
+
+.darkMode footer a {
+    color: var(--darkModeGray3);
+}
+
+.darkMode #codeBody .chakra-tabs__tab-panels {
+    background-color: black !important;   
+}
+
+.darkMode #codeBody .selected {
+    background-color: black !important;
+    color: white !important;
+}
+
+.darkMode .card {
+    border-color: black !important;
+}
+
+.darkMode .card a{
+    color:white !important;
+}
+
+.darkMode .card a:visited {
+    color: #07c907 !important;
+}
+
+.darkMode .card a p {
+    background-color: black;
+}
+
+.darkMode .card:hover a {
+    color: black !important;
+}
+
+.darkMode .card:hover p {
+    background-color: white !important;
 }

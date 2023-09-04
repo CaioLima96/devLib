@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Header, GlobalStyle } from "./styles";
 
 import ImgContainer from "../ImgContainer";
+import DarkModeBtn from "../DarkModeBtn";
 
 import SkullLogo from '../../assets/img/skull.png'
 import MenuIcon from '../../assets/img/icon/menuIcon.png'
@@ -75,6 +76,7 @@ export default function HeaderComp(props) {
 
                                 </div>
                         </li> */}
+                        {/* <DarkModeBtn/> */}
                     </ul>
 
                 </nav>
