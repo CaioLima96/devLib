@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 export const Div = styled.div`
 
-    display: none;
     position: fixed;
     bottom: 20px;
     right: 24px;

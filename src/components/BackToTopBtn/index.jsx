@@ -1,71 +1,44 @@
-import React, { useRef, useEffect } from "react";
+import React, { useState } from "react";
 
 import { Div } from './styles'
 
-export default function BackToTopBtn () {
+export default function BackToTopBtn() {
 
-    //Get the button
-    // let backTopBtn = document.getElementById("backToTopButton");
+    const [visible, setVisible] = useState(false)
 
-    // When the user scrolls down 20px from the top of the document, show the button
-    // window.onscroll = function () { scrollFunction() };
+    const toggleVisible = () => {
+        const scrolled = document.documentElement.scrollTop;
+        if (scrolled > 20) {
+            setVisible(true)
+        }
+        else if (scrolled <= 20) {
+            setVisible(false)
+        }
+    };
 
-    // function scrollFunction() {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
 
-    //     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    //         bttbRef.style.display = "block";
-    //     } else {
-    //         bttbRef.style.display = "none";
-    //     }
-    // }
-
-
-    // let bttbRef = useRef(null)
-
-    // useEffect(() => {
-
-    //     const scrollFunction = event => {
-
-    //         if (event.target.body.scrollTop > 20 || event.target.documentElement.scrollTop > 20) {
-    //             bttbRef.style.display = "block";
-    //         } else {
-    //             bttbRef.style.display = "none";
-    //         }
-
-    //     }
-
-    //     window.addEventListener('onscroll', scrollFunction)
-
-    //     return () => {
-    //         window.removeEventListener('click', scrollFunction);
-    //     };
-
-    // })
-
-    // // When the user clicks on the button, scroll to the top of the document
-    // function topFunction() {
-    //     document.body.scrollTop = 0;
-    //     document.documentElement.scrollTop = 0;
-    // }
-
-    // https://www.geeksforgeeks.org/how-to-create-a-scroll-to-top-button-in-react-js/
+    window.addEventListener('scroll', toggleVisible);
 
     return (
         <>
-        
-            <Div id="backToTopButton" title="Back to top" 
-            // ref={bttbRef} 
-            // onClick={topFunction}
+
+            <Div id="backToTopButton" title="Back to top"
+                onClick={scrollToTop} 
+                style={{display: visible ? 'block' : 'none'}}
             >
 
                 <div>
-
                     <i className="fas fa-arrow-up"></i>
-
                 </div>
 
             </Div>
-        
+
         </>
     )
 }
