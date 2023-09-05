@@ -34,7 +34,7 @@
     color: white !important;
 }
 
-.darkMode main p:not(#codeBody .codeTabListTab p, .card a p, .modal p) {
+.darkMode main p:not(#codeBody .codeTabListTab p, .card a p, .modal p, #footer1 p, #footer2 p) {
     color: white !important;
 }
 
@@ -73,6 +73,15 @@
 
 .darkMode #codeBody .chakra-tabs__tab-panels {
     background-color: black !important;   
+}
+
+.darkMode .summary {
+    border-color: white;
+    box-shadow: 4px 4px 0px -1px white;
+}
+
+.darkMode .summary p, .darkMode .summary li a {
+    color: white !important;
 }
 
 .darkMode footer {
