@@ -10,6 +10,8 @@ export const GlobalStyle = createGlobalStyle`
 
         text-align: center;
 
+        margin: 9.375rem auto !important;
+
         h1 {
             font-size: 3.5rem;
             font-weight: 600;
@@ -21,6 +23,7 @@ export const GlobalStyle = createGlobalStyle`
             background-color: rgb(155 183 95);
             font-size: 1.625rem;
             color: black;
+            margin-bottom: 1rem;
         }
     }
 

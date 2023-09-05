@@ -13,6 +13,7 @@ import MainPage from "./pages/Comps/Exemples/MainPage";
 import ModalPage from "./pages/Comps/Exemples/ModalPage";
 import NavBarPage from "./pages/Comps/Exemples/NavBarPage";
 import FooterPage from "./pages/Comps/Exemples/FooterPage";
+import SummaryPage from "./pages/Comps/Exemples/SummaryPage";
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
                         <Route path="/components/loading" element={<LoadingPage/>}/>
                         <Route path="/components/footer" element={<FooterPage/>}/>
                         <Route path="/components/navbar" element={<NavBarPage/>}/>
+                        <Route path="/components/summary" element={<SummaryPage/>}/>
 
                     </Routes>
 
