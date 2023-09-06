@@ -11,7 +11,7 @@ export default function DarkModeBtn() {
     const [isTheme, setTheme] = useState('light');
 
     let body = document.body;
-    console.log(body.classList)
+    // console.log(body.classList)
     
     const toggleDarkMode = () => {
 

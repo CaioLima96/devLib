@@ -12,9 +12,9 @@ export const GlobalStyle = createGlobalStyle`
             pointer-events: none;
         }
 
-        :hover img {
+        /*:hover img {
             filter: invert(70%) sepia(13%) saturate(1166%) hue-rotate(38deg) brightness(93%) contrast(89%);
-        }
+        }*/
     }
 `
 

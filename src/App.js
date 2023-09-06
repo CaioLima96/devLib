@@ -14,6 +14,7 @@ import ModalPage from "./pages/Comps/Exemples/ModalPage";
 import NavBarPage from "./pages/Comps/Exemples/NavBarPage";
 import FooterPage from "./pages/Comps/Exemples/FooterPage";
 import SummaryPage from "./pages/Comps/Exemples/SummaryPage";
+import DarkModePage from "./pages/Comps/Exemples/DarkModePage";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                         <Route path="/components" element={<Comps/>}/>
 
                         <Route path="/components/backtotopbtn" element={<BackToTopBtnPage/>}/>
+                        <Route path="/components/darkmode" element={<DarkModePage/>}/>
                         <Route path="/components/main" element={<MainPage/>}/>
                         <Route path="/components/modal" element={<ModalPage/>}/>
                         <Route path="/components/loading" element={<LoadingPage/>}/>

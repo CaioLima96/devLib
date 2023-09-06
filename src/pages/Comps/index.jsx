@@ -43,7 +43,7 @@ export default function Comps() {
                 
                 <CodeContainer>
 
-                    <p>To use these components, you will need a reset css and some classes. Use the ones provided below</p>
+                    <p>To use these components, you will need a reset css and some classes. Use the ones provided below.</p>
 
                     <div  className="preContainer"
                         // style={{

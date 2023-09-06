@@ -40,7 +40,7 @@ export default function LoadingPage() {
 <pre ref={copyHtmlRef}>{
 `<div class="loading">
 
-    <div class='imgContainer rotate'><img src='./assets/img/icons/loading.png' alt="Loading Icon"></div>
+    <div class='imgContainer rotate'><img src='YOUR IMAGE HERE' alt="Loading Icon"></div>
     <p>Loading...</p>
 
 </div>`

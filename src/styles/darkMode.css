@@ -10,9 +10,9 @@
     color: black !important;
 }
 
-.darkMode .darkModeBtn:hover img{
+/* .darkMode .darkModeBtn:hover img{
     filter: brightness(0%);
-}
+} */
 
 .darkMode .navMenu {
     background-color: var(--darkModeGray1) !important;

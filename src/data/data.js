@@ -6,11 +6,14 @@ import Loading from '../assets/img/icon/loading.png'
 import NavBar from '../assets/img/screenshots/navbarMobile.png'
 import Footer from '../assets/img/screenshots/footer.png'
 import Summary from '../assets/img/screenshots/summary.png'
+import DarkMode from '../assets/img/screenshots/darkModeBtn.png'
 
 
 export default [
 
     { id: 'bttbtnCard', name: 'Back to Top Btn', src: `${BTTBTN}`, linkTo: '/components/backtotopbtn'},
+
+    { id: 'darkModeCard', name: 'Dark Mode', src: `${DarkMode}`, linkTo: '/components/darkmode'},
 
     { id: 'footerCard', name: 'Footer', src: `${Footer}`, linkTo: '/components/footer'},
 
