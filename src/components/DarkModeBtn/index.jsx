@@ -1,17 +1,11 @@
 import React, { useState } from 'react';
-
-import ImgContainer from '../ImgContainer';
 import { GlobalStyle } from './styles';
-
-import MoonIcon from '../../assets/img/icon/moon3.png'
-import SunIcon from '../../assets/img/icon/sun1.png'
 
 export default function DarkModeBtn() {
 
     const [isTheme, setTheme] = useState('light');
 
     let body = document.body;
-    // console.log(body.classList)
     
     const toggleDarkMode = () => {
 
@@ -36,12 +30,10 @@ export default function DarkModeBtn() {
                 {isTheme == 'light' ? 
                     <>
                         <p>Dark Mode</p> 
-                        {/* <ImgContainer src={MoonIcon} style={{ width: '20px' }}/> */}
                     </>
                     : 
                     <>
                         <p>Light Mode</p> 
-                        {/* <ImgContainer src={SunIcon} style={{ width: '20px' }}/> */}
                     </>
                 }
 

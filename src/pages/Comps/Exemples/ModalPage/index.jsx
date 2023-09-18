@@ -15,7 +15,6 @@ export default function ModalPage() {
     let copyCssRef = useRef()
     let copyJsRef = useRef()
 
-
     let modal;
     useEffect(() => {
         modal = document.getElementsByClassName("modal")[0]
@@ -36,7 +35,7 @@ export default function ModalPage() {
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
 
-        if (event.target == modal) {
+        if (event.target === modal) {
 
             closeModal()
         }

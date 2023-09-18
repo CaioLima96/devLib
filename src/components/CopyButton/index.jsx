@@ -9,8 +9,6 @@ export default function CopyButton(props) {
 
         <Button className="defaultBtn" {...props}
 
-            // className={`defaultBtn ${isCopied ? '' : ''}`}
-
             onClick={() => {  
                                         
                 setIsCopied(true)

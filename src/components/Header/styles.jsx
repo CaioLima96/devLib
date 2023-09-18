@@ -1,13 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
 import styled from 'styled-components'
-
-export const GlobalStyle = createGlobalStyle`
-
-    /* header nav {
-
-        position: relative;
-    } */
-`
 
 export const Header = styled.header`
 

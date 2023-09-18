@@ -7,7 +7,7 @@ import CodeTabs from "../../../../components/CodeTabs";
 import CopyButton from "../../../../components/CopyButton";
 import ImgContainer from "../../../../components/ImgContainer";
 
-import { GlobalStyle, DivDarkBtn } from './styles'
+import { GlobalStyle } from './styles'
 import Sun from '../../../../assets/img/icon/sun.png'
 import Moon from '../../../../assets/img/icon/moon.png'
 
@@ -18,7 +18,6 @@ export default function DarkModePage() {
     let copyCssRef = useRef()
     let copyJsRef = useRef()
     let sunMonRef = useRef()
-    let darkBtnRef = useRef()
 
     const toggleSunMoon = () => {
         sunMonRef.current.classList.toggle('toggleSunMoon')

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Header, GlobalStyle } from "./styles";
+import { Header } from "./styles";
 
 import ImgContainer from "../ImgContainer";
 import DarkModeBtn from "../DarkModeBtn";
@@ -36,7 +36,6 @@ export default function HeaderComp(props) {
     return (
 
         <>
-            <GlobalStyle/>
 
             <Header>
 
@@ -65,17 +64,6 @@ export default function HeaderComp(props) {
                         <li><Link to='/components'>Components</Link></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#contactUs">Contact Us</a></li>
-                        {/* <li id="darkModeBtn" >
-                            onclick="darkModeFunc()"
-                            <p>Dark Mode</p>
-
-                            <div>
-
-                                    <div id='dmMoon' className="imgContainer"><img src='./assets/img/icons/moon1.png' alt='moon'></div>
-                                    <div id='dmSun' className="imgContainer"><img src='./assets/img/icons/sun1.png' alt='sun'></div>
-
-                                </div>
-                        </li> */}
                         <DarkModeBtn/>
                     </ul>
 

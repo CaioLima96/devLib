@@ -1,5 +1,5 @@
 import React from "react";
-import { ChakraBaseProvider, Tabs, TabList, TabPanels, Tab, TabPanel, useTab, Button, } from '@chakra-ui/react'
+import { ChakraBaseProvider, Tabs, TabList, TabPanels, useTab, Button, } from '@chakra-ui/react'
 
 import { GlobalStyle } from './styles'
 
