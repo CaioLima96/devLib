@@ -84,6 +84,10 @@
     color: white !important;
 }
 
+.darkMode #backToTopButton:hover {
+    border-color: white;
+}
+
 .darkMode footer {
     background-color: var(--darkModeGray1) !important;
     color: var(--darkModeGray3);

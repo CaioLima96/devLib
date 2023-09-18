@@ -54,7 +54,7 @@ export default function LoadingPage() {
                             <CopyButton copyRef={copyCssRef} />
 
 <pre ref={copyCssRef}>{
-`/*============ LOADING ============*/
+`/* ========================= LOADING ========================= */
 
 .loading {
     width: 180px;
@@ -93,7 +93,7 @@ export default function LoadingPage() {
 `//This codes only serve to change the loading icon according to a value, this isnt necessary for the "default" loading to work.
 
 
-//====================== LOADING
+/* ========================= LOADING ========================= */
 
 //change loading img according to the selected value
 function loading(value) {

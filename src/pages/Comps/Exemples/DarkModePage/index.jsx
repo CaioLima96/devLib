@@ -33,38 +33,6 @@ export default function DarkModePage() {
 
                 <CodeContainer title={'Dark Mode'}>
 
-                    {/* <div className='preContainer' 
-                        style={{marginBottom: '67px'}}
-                    >
-
-<pre ref={darkBtnRef}>{
-`.darkModeBtn {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    padding: 1rem;
-
-    width: 149px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: bold;
-
-    border: 1px solid black;
-}
-
-.darkModeBtn:hover {
-    background-color: black;
-}
-
-.darkModeBtn:hover p {
-    color: #96B060;
-}`
-}</pre>
-                    
-                        <CopyButton copyRef={darkBtnRef} alignSelf={'self-start'} style={{ marginLeft: '0.625rem', marginTop: '0.5rem'}}/>
-
-                    </div> */}
-
                     <div className='darkModeBtn2' onClick={toggleSunMoon}>
                         <p>Dark Mode</p>
 
@@ -104,7 +72,7 @@ export default function DarkModePage() {
                             <CopyButton copyRef={copyCssRef} />
 
 <pre ref={copyCssRef}>{
-`/* ============ DARK MODE BTN ============ */
+`/*======================== DARK MODE BTN ========================*/
 
 .darkModeBtn {
     display: flex;
@@ -166,7 +134,7 @@ export default function DarkModePage() {
                             <CopyButton copyRef={copyJsRef} />
 
 <pre ref={copyJsRef}>{
-`//====================== DARK MODE BTN
+`//======================== DARK MODE BTN ========================
 
 let darkModeBtn = document.getElementsByClassName('darkModeBtn')[0]
 let dmBtnText = darkModeBtn.getElementsByTagName('p')[0]
@@ -194,9 +162,29 @@ darkModeBtn.addEventListener('click', darkModeFunc)`
 
                     </CodeTabs>
 
-                    <p style={{margin: '4.375rem 0 2.5rem'}}>I usually use this btn in the navbar, if you want to use it somewhere else, copy the codes given below.</p>
+                    <p style={{margin: '4.375rem 0 2.5rem'}}>I usually use this btn inside &lt;ul&gt; in the navbar, if you want to use it somewhere else, copy the Html and Css given below.</p>
 
-                    <CodeTabs tabs={['Css']}>
+                    <CodeTabs tabs={['Html','Css']}>
+
+                        {/* HTML */}
+                        <TabPanel>
+
+                            <CopyButton copyRef={copyHtmlRef} />
+
+<pre ref={copyHtmlRef}>{
+`<div class='darkModeBtn'>
+    <p>Dark Mode</p>
+
+    <div>
+
+        <div class="dmMoon imgContainer"><img src='./assets/img/icon/moon1.png' alt='moon'></div>
+        <div class="dmSun imgContainer"><img src='./assets/img/icon/sun1.png' alt='sun'></div>
+
+    </div>
+</div>`
+}</pre>
+
+                        </TabPanel>
 
                         {/* CSS */}
                         <TabPanel>
@@ -204,7 +192,7 @@ darkModeBtn.addEventListener('click', darkModeFunc)`
                             <CopyButton copyRef={copyCssRef} />
 
 <pre ref={copyCssRef}>{
-`/* ============ DARK MODE BTN ============ */
+`/*======================== DARK MODE BTN ========================*/
 
 .darkModeBtn {
     display: flex;

@@ -57,7 +57,7 @@ export default function SummaryPage () {
                             <CopyButton copyRef={copyCssRef} />
 
 <pre ref={copyCssRef}>{
-`/*============ SUMMARY ============*/
+`/* ========================= SUMMARY ========================= */
 
 .summary {
     display: inline-block;

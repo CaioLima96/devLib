@@ -63,7 +63,7 @@ export default function BackToTopBtnPage() {
                             <CopyButton  copyRef={copyCssRef}/>
 
 <pre ref={copyCssRef}>{
-`/*============ BACK TO TOP BTN ============*/
+`/*======================== BACK TO TOP BTN ========================*/
 
 #backToTopButton {
     display: none;
@@ -82,12 +82,13 @@ export default function BackToTopBtnPage() {
     color: black;
     box-shadow: 0px 0px 7px -3px ;
     transition: .5s ease;
+    border: 1px solid #c0c0c0;
 }
 
 #backToTopButton:hover {
     background-color: black;
     color: white;
-    box-shadow: none;
+    border-color: black;
 }
 
 @media (max-width: 850px) {
@@ -107,7 +108,7 @@ export default function BackToTopBtnPage() {
                             <CopyButton  copyRef={copyJsRef}/>
 
 <pre ref={copyJsRef}>{
-`//=========== BACK TO THE TOP BTN
+`//======================== BACK TO TOP BTN ========================
 
 //Get the button
 let backTopBtn = document.getElementById("backToTopButton");

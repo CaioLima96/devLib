@@ -96,7 +96,9 @@ export default function FooterPage() {
                             <CopyButton copyRef={copyCssRef2} />
 
 <pre ref={copyCssRef2}>{
-`footer {
+`/* ========================= FOOTER ========================= */
+
+footer {
     display: flex;
     align-items: center;
     flex-wrap: wrap;

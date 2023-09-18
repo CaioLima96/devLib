@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
 
-    #openModalBtn {
+    .openModalBtn {
         display: flex;
         justify-content: flex-start;
         font-size: 1rem;

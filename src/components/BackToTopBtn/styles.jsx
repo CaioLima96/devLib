@@ -18,11 +18,12 @@ export const Div = styled.div`
     color: black;
     box-shadow: 0px 0px 7px -3px ;
     transition: .5s ease;
+    border: 1px solid #c0c0c0;
 
     :hover {
         background-color: black;
         color: white;
-        box-shadow: none;
+        border-color: black;
     }
 
     @media (max-width: 850px) {

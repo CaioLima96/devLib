@@ -116,7 +116,7 @@ export default function NavBarPage() {
                             <CopyButton copyRef={copyCssRef} />
 
 <pre ref={copyCssRef}>{
-`/*============ NAVBAR ============*/
+`/* ========================= NAVBAR ========================= */
 
 .navMenu {
     display: flex;
@@ -225,7 +225,7 @@ export default function NavBarPage() {
                             <CopyButton copyRef={copyJsRef} />
 
 <pre ref={copyJsRef}>{
-`//====================== RESPONSIVE MENU
+`// ========================= NAVBAR =========================
 
 let menuBtn = document.getElementsByClassName('navMenuBtn')[0]
 let menu = document.getElementsByClassName('navMenuList')[0]

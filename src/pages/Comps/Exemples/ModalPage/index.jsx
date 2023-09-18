@@ -51,7 +51,7 @@ export default function ModalPage() {
 
                 <CodeContainer title={'Modal'} id="codeContainer">
 
-                    <button id="openModalBtn" className="defaultBtn" onClick={openModal}>Open Modal</button>
+                    <button className="defaultBtn openModalBtn" onClick={openModal}>Open Modal</button>
                     
                     <CodeTabs>
                         
@@ -109,7 +109,25 @@ export default function ModalPage() {
                             <CopyButton  copyRef={copyCssRef}/>
 
 <pre ref={copyCssRef}>{
-`/* ========= Modal Background =========*/
+`/*======================== MODAL ========================*/
+
+.openModalBtn {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1rem;
+    background-color: #7981C7;
+    border: none;
+    padding: 0.375rem 0.563rem;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+.openModalBtn:hover {
+    cursor: pointer;
+}
+
+
+/* ========= Modal Background =========*/
 
 .modal {
     display: none;
@@ -127,7 +145,6 @@ export default function ModalPage() {
     width: 0;
     background: transparent;
 }
-
 
 
 /* ========= Modal Body =========*/
@@ -201,7 +218,8 @@ export default function ModalPage() {
                             <CopyButton  copyRef={copyJsRef}/>
                             
 <pre ref={copyJsRef}>{
-`//====================== MODAL
+`//======================== MODAL ========================
+
 
 let modal = document.querySelector(".modal");
 

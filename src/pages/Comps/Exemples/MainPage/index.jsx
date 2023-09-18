@@ -47,7 +47,7 @@ export default function MainPage() {
                             <CopyButton copyRef={copyCssRef} />
 
 <pre ref={copyCssRef}>{
-`/*======================== MAIN ========================*/
+`/* ========================= MAIN ========================= */
 
 main {
     width: 90%;
