@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# Dev Lib
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I've created this website to gather the codes/components I usually use and help who want some already made codes/components.
 
-## Available Scripts
 
-In the project directory, you can run:
+<br>
 
-### `npm start`
+## Table of contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [About](#about)
+    - [How it works](#how-it-works)
+    - [What users can do](#what-users-can-do)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Screenshots](#screenshots)
+    - [Desktop](#desktop)
+        - [Light Mode](#dLightMode)
+        - [Dark Mode](#dDarkMode)
 
-### `npm test`
+    - [Mobile](#mobile)
+        - [Light Mode](#mLightMode)
+        - [Dark Mode](#mDarkMode)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Used Libs](#used-libs)
 
-### `npm run build`
+- [Author](#author)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+***
+<br>
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## About
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### How it works
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### What users can do
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+<br>
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Screenshots
 
-### Making a Progressive Web App
+### Desktop
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- #### <p id="dLightMode">Light Mode</p>
 
-### Advanced Configuration
+<!-- <img src="./assets/img/screenshots/homeLightMode1.jpg" width="80%" alt="Home Light Mode"> -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- #### <p id="dDarkMode">Dark Mode</p>
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<br>
+
+### Mobile
+
+- #### <p id="mLightMode">Light Mode</p>
+
+<!-- <img src="./assets/img/screenshots/mobileHomeLightMode2.jpg" width="200px" alt="Home Light Mode"> -->
+
+
+<br>
+
+- #### <p id="mDarkMode">Dark Mode</p>
+
+
+<br>
+<br>
+
+## Used Libs 
+
+[Chackra Ui](https://chakra-ui.com/)<br>
+[Styled Components](https://styled-components.com/)
+
+<br>
+<br>
+
+## Link
+
+<a href = "https://devlib.vercel.app/" target="_blank">Link</a>
+
+<br>
+<br>
+
+## Author
+
+- [Caio Vieira de Castro Lima](https://www.linkedin.com/in/caiovieiralima/)
