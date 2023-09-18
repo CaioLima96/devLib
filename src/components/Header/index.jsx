@@ -21,7 +21,7 @@ export default function HeaderComp(props) {
     useEffect(() => {
         const handleClick = event => {
          
-            if(event.target.classList[1] != "hideShowNavMenu" && event.target.classList[0] != 'menuBtn') {
+            if(event.target.classList[1] !== "hideShowNavMenu" && event.target.classList[0] !== 'menuBtn') {
                 menuRef.current.classList.remove("hideShowNavMenu")
             }
         };
@@ -54,7 +54,7 @@ export default function HeaderComp(props) {
                         <div className="imgContainer" ref={menuBtnRef} style={{ width: '30px' }} 
                         onClick={toggleMenu}
                         >
-                            <img src={MenuIcon} className="menuBtn" />
+                            <img src={MenuIcon} className="menuBtn" alt="menu icon"/>
                         </div>
 
                     </div>

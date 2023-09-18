@@ -27,7 +27,7 @@ export default function DarkModeBtn() {
             
             <li className='darkModeBtn' onClick={toggleDarkMode}>
 
-                {isTheme == 'light' ? 
+                {isTheme === 'light' ? 
                     <>
                         <p>Dark Mode</p> 
                     </>

@@ -27,7 +27,7 @@ export default function NavBarPage() {
     useEffect(() => {
         const handleClick = event => {
          
-            if(event.target.classList[1] != "hideShowNavMenu" && event.target.classList[0] != 'menuBtn2') {
+            if(event.target.classList[1] !== "hideShowNavMenu" && event.target.classList[0] !== 'menuBtn2') {
                 menuRef2.current.classList.remove("hideShowNavMenu")
             }
         };
@@ -48,12 +48,12 @@ export default function NavBarPage() {
 
                 <CodeContainer title={'NavBar'} id="navBarContainer">
 
-                    <nav className="navMenu">
+                    <nav className="navMenu2">
                         
                         <div>
                             <div className="navMenuLogo">
 
-                                <a href="">
+                                <a href="#">
                                     <ImgContainer src={SkullLogo} alt={'Icon'} style={{ width: '32px' }} />
                                     <p>Dev Lib</p>
                                 </a>
@@ -209,6 +209,10 @@ export default function NavBarPage() {
     .navMenuList a {
         color: white;
         width: 100%;
+    }
+    
+    .navMenuList p { /*this is for dark mode button*/
+        color: white;
     }
     
     .hideShowNavMenu {

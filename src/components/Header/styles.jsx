@@ -88,7 +88,7 @@ export const Header = styled.header`
                 top: 98%;
                 z-index: 3;
 
-                a {
+                a, p {
                     color: white;
                     width: 100%;
                 }
