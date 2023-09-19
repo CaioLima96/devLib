@@ -1,4 +1,4 @@
-import Teste from '../assets/img/teste.png'
+// import Teste from '../assets/img/teste.png'
 import Main from '../assets/img/screenshots/main1.png'
 import Modal from '../assets/img/screenshots/modal.png'
 import BTTBTN from '../assets/img/screenshots/backToTopBtn2.png'
@@ -7,11 +7,14 @@ import NavBar from '../assets/img/screenshots/navbarMobile.png'
 import Footer from '../assets/img/screenshots/footer.png'
 import Summary from '../assets/img/screenshots/summary.png'
 import DarkMode from '../assets/img/screenshots/darkModeBtn.png'
+import Card1 from '../assets/img/screenshots/card1.png'
 
 
 export default [
 
     { id: 'bttbtnCard', name: 'Back to Top Btn', src: `${BTTBTN}`, linkTo: '/components/backtotopbtn'},
+
+    { id: 'cardsComp', name: 'Cards', src: `${Card1}`, linkTo: '/components/cardspage'},
 
     { id: 'darkModeCard', name: 'Dark Mode', src: `${DarkMode}`, linkTo: '/components/darkmode'},
 

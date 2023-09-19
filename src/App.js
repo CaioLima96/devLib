@@ -15,6 +15,7 @@ import NavBarPage from "./pages/Comps/Exemples/NavBarPage";
 import FooterPage from "./pages/Comps/Exemples/FooterPage";
 import SummaryPage from "./pages/Comps/Exemples/SummaryPage";
 import DarkModePage from "./pages/Comps/Exemples/DarkModePage";
+import CardsPage from "./pages/Comps/Exemples/CardsPage";
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
                         <Route path="/components/footer" element={<FooterPage/>}/>
                         <Route path="/components/navbar" element={<NavBarPage/>}/>
                         <Route path="/components/summary" element={<SummaryPage/>}/>
+                        <Route path="/components/cardspage" element={<CardsPage/>}/>
 
                     </Routes>
 
