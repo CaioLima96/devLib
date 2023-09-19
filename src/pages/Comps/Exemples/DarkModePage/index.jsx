@@ -6,6 +6,7 @@ import CodeContainer from "../../../../components/CodeContainer";
 import CodeTabs from "../../../../components/CodeTabs";
 import CopyButton from "../../../../components/CopyButton";
 import ImgContainer from "../../../../components/ImgContainer";
+import Summary from "../../../../components/Summary"
 
 import { GlobalStyle } from './styles'
 import Sun from '../../../../assets/img/icon/sun.png'
@@ -32,7 +33,12 @@ export default function DarkModePage() {
 
                 <CodeContainer title={'Dark Mode'}>
 
-                    <div className='darkModeBtn2' onClick={toggleSunMoon}>
+                    <Summary list={[
+                        {name:'Button', anchor: '#dmbtn'},
+                        {name:'Theme', anchor: '#dmcolors'},
+                    ]}/>
+
+                    <div id="dmbtn" className='darkModeBtn2' onClick={toggleSunMoon}>
                         <p>Dark Mode</p>
 
                         <div ref={sunMonRef}>
@@ -256,6 +262,73 @@ darkModeBtn.addEventListener('click', darkModeFunc)`
 .darkMode {
     background-color: #202020;
 }`
+}</pre>
+
+                        </TabPanel>
+
+                    </CodeTabs>
+
+                    <p style={{margin: '4.375rem 0 2.5rem'}} id="dmcolors">Theme (customize if you want).</p>
+
+                    <CodeTabs tabs={['Css']}>
+
+
+                        {/* CSS */}
+                        <TabPanel>
+
+                            <CopyButton copyRef={copyCssRef} />
+
+<pre ref={copyCssRef}>{
+`/*======================== DARK MODE ========================*/
+
+:root {
+    --grey1: #F2F2F2;
+    --darkModeGray1: #121212;
+    --darkModeGray2: #202020;
+    --darkModeGray3: #BDBDBD;
+}
+
+.darkMode {
+    background-color: var(--darkModeGray2);
+}
+
+.darkMode .navMenu {
+    background-color: var(--darkModeGray1) !important;
+}
+
+.darkMode .darkModeBtn {
+    color: white;
+}
+
+.darkMode .darkModeBtn:hover p{
+    color: black !important;
+}
+
+.darkMode .navMenu > div:first-child > div:last-child { /*This is for menu icon/img*/
+    filter: brightness(0) invert(1);
+}
+
+.darkMode .navMenuList a, .darkMode header p {
+    color: white !important;
+}
+
+.darkMode .navMenuList li:hover {
+    background-color: white !important;
+}
+
+.darkMode .navMenuList li:hover a{
+    color: black !important;
+}
+
+.darkMode footer {
+    background-color: var(--darkModeGray1) !important;
+    color: var(--darkModeGray3);
+}
+
+.darkMode footer a {
+    color: var(--darkModeGray3);
+}
+`
 }</pre>
 
                         </TabPanel>
