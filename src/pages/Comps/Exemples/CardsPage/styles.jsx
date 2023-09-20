@@ -7,56 +7,74 @@ export const GlobalStyle = createGlobalStyle`
 
 `
 
-export const SimpleRectangleCard = styled.li`
+export const SimpleRectangleList = styled.ul`
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
-    width: 202px;
-    list-style: none;
-    margin-right: 2%;
-    margin-bottom: 2%;
+    li {
+        width: 202px;
+        list-style: none;
+        margin-right: 2%;
+        margin-bottom: 2%;
 
 
-    > div:first-child {
-        width: 100%;
-        height: 248px;
-        padding: 0.625rem;
+        > div:first-child {
+            width: 100%;
+            height: 248px;
+            padding: 0.625rem;
 
-        background-image: url(${Retangulo1});
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-color: black;
+            background-image: url(${Retangulo1});
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: black;
 
-        overflow: hidden;
+            overflow: hidden;
 
-        img {
-            object-fit: contain !important;
+            img {
+                object-fit: contain !important;
+            }
+        }
+
+        .cardDescription {
+            text-align: center;
+            font-size: 1.25rem;
+        }
+
+        .cardDescription a {
+            color: black;
+        }
+
+        .cardDescription a:hover {
+            font-style: italic;
+        }
+
+        .cardDescription p {
+            margin: 0.5rem 0;
+            pointer-events: none;
+            display: inline-block;
+        }
+
+        @media (min-width: 1024px) {
+            
+            > div:first-child:hover {
+                transition: 1s all;
+                transform: scale(1.2);
+                z-index: 5 !important;
+            }    
         }
     }
 
-    .cardDescription {
-        text-align: center;
-        font-size: 1.25rem;
-    }
-
-    .cardDescription a {
-        color: black;
-    }
-
-    .cardDescription a:hover {
-        font-style: italic;
-    }
-
-    .cardDescription p {
-        margin: 0.5rem 0;
-        pointer-events: none;
-        display: inline-block;
-    }
-
-    @media (min-width: 1024px) {
+    // @media (max-width: 505px) {
+    
+    //     li {
+    //         width: 250px;
+    //     }   
         
-        > div:first-child:hover {
-            transition: 1s all;
-            transform: scale(1.2);
-            z-index: 5 !important;
-        }    
-    }
+    //     li > div:first-child {
+    //         height: 308px;
+    //     }
+    // }
 `

@@ -10,7 +10,7 @@ import DarkMode from '../assets/img/screenshots/darkModeBtn.png'
 import Card1 from '../assets/img/screenshots/card1.png'
 
 
-export default [
+let Data = [
 
     { id: 'bttbtnCard', name: 'Back to Top Btn', src: `${BTTBTN}`, linkTo: '/components/backtotopbtn'},
 
@@ -32,3 +32,5 @@ export default [
 
     // { id: 'comp', name: '', src: `${}`, linkTo: '/components/'},
 ]
+
+export default Data
