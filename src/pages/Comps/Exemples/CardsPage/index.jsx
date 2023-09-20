@@ -1,7 +1,7 @@
 import React, { useRef }  from "react";
 import { TabPanel } from '@chakra-ui/react'
 
-import { SimpleRectangleList } from './styles'
+import { SimpleRectangleList, SimpleSquareList } from './styles'
 
 import MainComp from "../../../../components/MainComp";
 import CodeContainer from "../../../../components/CodeContainer";
@@ -11,6 +11,8 @@ import ImgContainer from "../../../../components/ImgContainer";
 import Summary from "../../../../components/Summary";
 
 import Dig from '../../../../assets/img/digFullBody.png'
+import Mumbra from '../../../../assets/img/mumbra03.png'
+import PlatNume from '../../../../assets/img/PlatinumNumemon03.png' 
 import Diamante from '../../../../assets/img/diamante-(classico)-1.png'
 import Calafrio from '../../../../assets/img/calafrio1.png'
 import Feedback from '../../../../assets/img/feedback1.png'
@@ -20,6 +22,8 @@ export default function CardsPage () {
 
     let copyHtmlRef = useRef()
     let copyCssRef = useRef()
+    let copyHtmlRef2 = useRef()
+    let copyCssRef2 = useRef()
 
     return(
         <>
@@ -34,6 +38,8 @@ export default function CardsPage () {
                         {name:'Card 4', anchor: '#card3'},
                     ]}/>
 
+
+                    {/* CARD 1 */}
                     <SimpleRectangleList id='card1'>
                         
                         <li>
@@ -46,9 +52,9 @@ export default function CardsPage () {
                             </div>
                         </li>
 
-                        <li style={{width: '250px'}}>
+                        <li>
 
-                            <ImgContainer style={{height: '308px'}} src={Calafrio} alt={'Calafrio'}/>
+                            <ImgContainer src={Calafrio} alt={'Calafrio'}/>
 
                             <div class="cardDescription">
                                 <a href="#">
@@ -169,7 +175,7 @@ export default function CardsPage () {
 @media (max-width: 505px) {
     
     .simpleRectangleCard  {
-        width: 250px;
+        width: 251px;
     }   
     
     .simpleRectangleCard .imgContainer {
@@ -184,6 +190,150 @@ export default function CardsPage () {
         transform: scale(1.2);
         z-index: 5 !important;
     }    
+}`
+}</pre>
+
+                        </TabPanel>
+
+                    </CodeTabs>
+
+
+                    {/* CARD 2 */}
+                    <SimpleSquareList id='card2'>
+
+                        <li>
+
+                            <a href="#">
+
+                                <ImgContainer src={Dig} alt={'Dig'}/>
+
+                                <p>Dig</p>
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#">
+
+                                <ImgContainer src={PlatNume} alt={'PlatNume'}/>
+
+                                <p>PlatinumNumemon</p>
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#">
+
+                                <ImgContainer src={Mumbra} alt={'Mumbra'}/>
+
+                                <p>Mumbra</p>
+
+                            </a>
+
+                        </li>
+
+                    </SimpleSquareList>
+
+                    <CodeTabs tabs={['Html', 'Css']}>
+
+                        {/* HTML */}
+                        <TabPanel>
+
+                            <CopyButton copyRef={copyHtmlRef2} />
+
+<pre ref={copyHtmlRef2}>{
+`<ul class="simpleSquareList">
+
+    <li class='simpleSquareCard'>
+
+        <a href="#">
+
+            <div class="imgContainer">
+                <img src="YOUR IMG HERE" alt="alt">
+            </div>
+
+            <p>aaaa</p>
+
+        </a>
+
+    </li>
+
+</ul>`
+}</pre>
+
+                        </TabPanel>
+
+                        {/* CSS */}
+                        <TabPanel>
+
+                            <CopyButton copyRef={copyCssRef2} />
+
+<pre ref={copyCssRef2}>{
+`/* ========================= CARD ========================= */
+
+.simpleSquareList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.625rem;
+}
+
+.simpleSquareCard {
+    max-width: 270px;
+    width: 100%;
+    height: 250px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(163, 163, 163);
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.4s ease 0s;
+}
+
+.simpleSquareCard:hover {
+    transform: scale(1.05); 
+}
+
+.simpleSquareCard a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    user-select: none;
+    color: black;
+}
+
+.simpleSquareCard:hover a {
+    color: black !important;
+}
+
+.simpleSquareCard a > div:first-child {
+    align-self: center;
+    flex: 1;
+    padding: 0.625rem;
+    height: 206px;
+}
+
+.simpleSquareCard a > div:first-child img {
+    object-fit: contain !important;
+}
+
+.simpleSquareCard a:visited {
+    color: #6036f3;
+}
+
+.simpleSquareCard p {
+    font-size: 1.125rem;
+    padding: 0.625rem 0;
+    background-color: #D9D9D9;
+}
+
+.simpleSquareCard:hover p {
+    background-color: rgb(150, 176, 96);
 }`
 }</pre>
 
