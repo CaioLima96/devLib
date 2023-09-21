@@ -1,7 +1,7 @@
 import React, { useRef }  from "react";
 import { TabPanel } from '@chakra-ui/react'
 
-import { SimpleRectangleList, SimpleSquareList } from './styles'
+import { SimpleRectangleList, SimpleSquareList, RectangleHovDescList } from './styles'
 
 import MainComp from "../../../../components/MainComp";
 import CodeContainer from "../../../../components/CodeContainer";
@@ -340,6 +340,34 @@ export default function CardsPage () {
                         </TabPanel>
 
                     </CodeTabs>
+
+
+                    {/* CARD 3 */}
+                    <RectangleHovDescList id='card3'>
+
+                        <li class="rectangleHovDescCard">
+
+                            <ImgContainer src={'https://m.media-amazon.com/images/I/91fR0oBKxbL._AC_UF1000,1000_QL80_.jpg'} alt={'aaaa'}/>
+
+                            <div class="cardInfo">
+
+                                <div>
+                                    <a href="" target="_blank"></a>
+
+                                    <a href="" target="_blank"></a>
+
+                                    <a href="" target="_blank"></a>
+                                </div>
+
+                                <a href="" target="_blank">
+                                    <p>aaaa</p>
+                                </a>
+
+                            </div>
+                            
+                        </li>
+
+                    </RectangleHovDescList>
 
                 </CodeContainer>
 

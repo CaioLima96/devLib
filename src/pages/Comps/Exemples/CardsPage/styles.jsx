@@ -138,3 +138,69 @@ export const SimpleSquareList = styled.ul`
         }
     }
 `
+
+export const RectangleHovDescList = styled.ul`
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .rectangleHovDescCard {
+        position: relative;
+        width: 280px;
+        list-style: none;
+        margin: 1%;
+        border-radius: 0.125rem;
+    }
+
+    .rectangleHovDescCard .imgContainer {
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+        border-radius: 2px;
+    }
+
+    .rectangleHovDescCard .cardInfo {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 10px;
+        position: absolute;
+        top: 76%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 24%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #96B060;
+        border-top-left-radius: 247% !important;
+        border-top-right-radius: 247% !important;
+    }
+
+    .rectangleHovDescCard:hover .cardInfo {
+        opacity: 1;
+    }
+
+    .rectangleHovDescCard .cardInfo > div:first-child {
+        line-height: 0%
+    }
+
+    .rectangleHovDescCard .cardInfo > div:first-child a {
+        display: inline-flex;
+    }
+
+    .rectangleHovDescCard .cardInfo > div:first-child a {
+        width: 20px;
+        height: 20px;
+        background-color: black;
+        border: 1px solid red;
+    }
+
+    .rectangleHovDescCard .cardInfo p {
+        color: white;
+    }
+`
