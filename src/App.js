@@ -40,7 +40,7 @@ function App() {
                         <Route path="/components/footer" element={<FooterPage/>}/>
                         <Route path="/components/navbar" element={<NavBarPage/>}/>
                         <Route path="/components/summary" element={<SummaryPage/>}/>
-                        <Route path="/components/cardspage" element={<CardsPage/>}/>
+                        <Route path="/components/cards" element={<CardsPage/>}/>
 
                     </Routes>
 

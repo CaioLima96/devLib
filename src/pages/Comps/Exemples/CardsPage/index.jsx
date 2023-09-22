@@ -17,6 +17,9 @@ import Diamante from '../../../../assets/img/diamante-(classico)-1.png'
 import Calafrio from '../../../../assets/img/calafrio1.png'
 import Feedback from '../../../../assets/img/feedback1.png'
 import QuatroBracos from '../../../../assets/img/4-bracos1.png'
+import FacebookIcon from '../../../../assets/img/icon/deviantartIcon.png'
+import LinkedinIcon from '../../../../assets/img/icon/linkedinIcon.png'
+import GithubIcon from '../../../../assets/img/icon/githubIcon.png'
 
 export default function CardsPage () {
 
@@ -24,6 +27,8 @@ export default function CardsPage () {
     let copyCssRef = useRef()
     let copyHtmlRef2 = useRef()
     let copyCssRef2 = useRef()
+    let copyHtmlRef3 = useRef()
+    let copyCssRef3 = useRef()
 
     return(
         <>
@@ -352,15 +357,53 @@ export default function CardsPage () {
                             <div class="cardInfo">
 
                                 <div>
-                                    <a href="" target="_blank"></a>
-
-                                    <a href="" target="_blank"></a>
-
-                                    <a href="" target="_blank"></a>
+                                    <img src={FacebookIcon} alt={'FacebookIcon'} />
+                                    <img src={LinkedinIcon} alt={'LinkedinIcon'} />
+                                    <img src={GithubIcon} alt={'GithubIcon'}/>
                                 </div>
 
                                 <a href="" target="_blank">
-                                    <p>aaaa</p>
+                                    Wolfenstein 2
+                                </a>
+
+                            </div>
+                            
+                        </li>
+
+                        <li class="rectangleHovDescCard">
+
+                            <ImgContainer src={'https://thumbnails.pcgamingwiki.com/c/ce/High_on_Life_cover.png/300px-High_on_Life_cover.png'} alt={'aaaa'}/>
+
+                            <div class="cardInfo">
+
+                                <div>
+                                    <img src={FacebookIcon} alt={'FacebookIcon'} />
+                                    <img src={LinkedinIcon} alt={'LinkedinIcon'} />
+                                    <img src={GithubIcon} alt={'GithubIcon'}/>
+                                </div>
+
+                                <a href="" target="_blank">
+                                    High on Life
+                                </a>
+
+                            </div>
+                            
+                        </li>
+
+                        <li class="rectangleHovDescCard">
+
+                            <ImgContainer src={'https://assets.altarofgaming.com/wp-content/uploads/2021/11/star-wars-jedi-fallen-order-poster-art-altar-of-gaming-727x1024.jpg'} alt={'aaaa'}/>
+
+                            <div class="cardInfo">
+
+                                <div>
+                                    <img src={FacebookIcon} alt={'FacebookIcon'} />
+                                    <img src={LinkedinIcon} alt={'LinkedinIcon'} />
+                                    <img src={GithubIcon} alt={'GithubIcon'}/>
+                                </div>
+
+                                <a href="" target="_blank">
+                                    Jedi Fallen Order
                                 </a>
 
                             </div>
@@ -368,6 +411,124 @@ export default function CardsPage () {
                         </li>
 
                     </RectangleHovDescList>
+
+                    <CodeTabs tabs={['Html', 'Css']}>
+
+                        {/* HTML */}
+                        <TabPanel>
+
+                            <CopyButton copyRef={copyHtmlRef3} />
+
+<pre ref={copyHtmlRef3}>{
+`<ul class="rectangleHovDescList">
+
+    <li class="rectangleHovDescCard">
+
+        <div class="imgContainer">
+            <img src="YOUR IMG HERE" alt="">
+        </div>
+
+        <div class="cardInfo">
+
+            <div>
+                <img src="YOUR IMG HERE" alt=""/>
+                <img src="YOUR IMG HERE" alt=""/>
+                <img src="YOUR IMG HERE" alt=""/>
+            </div>
+
+            <a href="" target="_blank">
+                Lorem Ipsum
+            </a>
+
+        </div>
+        
+    </li>
+
+</ul>`
+}</pre>
+
+                        </TabPanel>
+
+                        {/* CSS */}
+                        <TabPanel>
+
+                            <CopyButton copyRef={copyCssRef3} />
+
+<pre ref={copyCssRef3}>{
+`/* ========================= CARD ========================= */
+
+.rectangleHovDescList {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.rectangleHovDescCard {
+    position: relative;
+    width: 280px;
+    list-style: none;
+    margin: 1%;
+    border-radius: 0.125rem;
+}
+
+.rectangleHovDescCard > .imgContainer {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.rectangleHovDescCard .cardInfo {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 0.5rem;
+    position: absolute;
+    top: 76%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 24%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #96B060;
+    border-top-left-radius: 247% !important;
+    border-top-right-radius: 247% !important;
+}
+
+.rectangleHovDescCard:hover .cardInfo {
+    opacity: 1;
+}
+
+.rectangleHovDescCard .cardInfo > div:first-child {
+    margin-bottom: 0.125rem;
+}
+
+.rectangleHovDescCard .cardInfo > div:first-child img {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+}
+
+.rectangleHovDescCard .cardInfo > div:first-child img:not(img:last-child) {
+    margin-right: 0.313rem;
+}
+
+.rectangleHovDescCard .cardInfo a {
+    color: white;
+}
+
+.rectangleHovDescCard .cardInfo img:hover, .rectangleHovDescCard .cardInfo a:hover {
+    cursor: pointer;
+}`
+}</pre>
+
+                        </TabPanel>
+
+                    </CodeTabs>
 
                 </CodeContainer>
 

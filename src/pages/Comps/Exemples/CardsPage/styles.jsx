@@ -143,7 +143,7 @@ export const RectangleHovDescList = styled.ul`
 
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 
     .rectangleHovDescCard {
@@ -154,7 +154,7 @@ export const RectangleHovDescList = styled.ul`
         border-radius: 0.125rem;
     }
 
-    .rectangleHovDescCard .imgContainer {
+    .rectangleHovDescCard > .imgContainer {
         width: 100%;
         height: 350px;
         overflow: hidden;
@@ -166,7 +166,7 @@ export const RectangleHovDescList = styled.ul`
         justify-content: end;
         align-items: center;
         flex-direction: column;
-        padding-bottom: 10px;
+        padding-bottom: 0.5rem;
         position: absolute;
         top: 76%;
         bottom: 0;
@@ -186,21 +186,24 @@ export const RectangleHovDescList = styled.ul`
     }
 
     .rectangleHovDescCard .cardInfo > div:first-child {
-        line-height: 0%
+        margin-bottom: 0.125rem;
     }
 
-    .rectangleHovDescCard .cardInfo > div:first-child a {
-        display: inline-flex;
-    }
-
-    .rectangleHovDescCard .cardInfo > div:first-child a {
+    .rectangleHovDescCard .cardInfo > div:first-child img {
         width: 20px;
         height: 20px;
-        background-color: black;
-        border: 1px solid red;
+        display: inline-flex;
+    }
+    
+    .rectangleHovDescCard .cardInfo > div:first-child img:not(img:last-child) {
+        margin-right: 0.313rem;
     }
 
-    .rectangleHovDescCard .cardInfo p {
+    .rectangleHovDescCard .cardInfo a {
         color: white;
+    }
+
+    .rectangleHovDescCard .cardInfo img:hover, .rectangleHovDescCard .cardInfo a:hover {
+        cursor: pointer;
     }
 `

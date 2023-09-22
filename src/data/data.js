@@ -14,7 +14,7 @@ let Data = [
 
     { id: 'bttbtnCard', name: 'Back to Top Btn', src: `${BTTBTN}`, linkTo: '/components/backtotopbtn'},
 
-    { id: 'cardsComp', name: 'Cards', src: `${Card1}`, linkTo: '/components/cardspage'},
+    { id: 'cardsComp', name: 'Cards', src: `${Card1}`, linkTo: '/components/cards'},
 
     { id: 'darkModeCard', name: 'Dark Mode', src: `${DarkMode}`, linkTo: '/components/darkmode'},
 
