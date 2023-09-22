@@ -431,9 +431,9 @@ export default function CardsPage () {
         <div class="cardInfo">
 
             <div>
-                <img src="YOUR IMG HERE" alt=""/>
-                <img src="YOUR IMG HERE" alt=""/>
-                <img src="YOUR IMG HERE" alt=""/>
+                <a href="" target="_blank"><img src="YOUR IMG HERE" alt=""></a>
+                <a href="" target="_blank"><img src="YOUR IMG HERE" alt=""></a>
+                <a href="" target="_blank"><img src="YOUR IMG HERE" alt=""></a>
             </div>
 
             <a href="" target="_blank">
@@ -460,7 +460,7 @@ export default function CardsPage () {
 .rectangleHovDescList {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -523,6 +523,17 @@ export default function CardsPage () {
 
 .rectangleHovDescCard .cardInfo img:hover, .rectangleHovDescCard .cardInfo a:hover {
     cursor: pointer;
+}
+
+@media (max-width: 694px) {
+
+    .rectangleHovDescList {
+        justify-content: center !important;
+    }
+
+    .rectangleHovDescCard:not(.rectangleHovDescCard:last-child) {
+        margin-bottom: 0.625rem;
+    }
 }`
 }</pre>
 

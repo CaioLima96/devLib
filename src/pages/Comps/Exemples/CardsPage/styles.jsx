@@ -143,7 +143,7 @@ export const RectangleHovDescList = styled.ul`
 
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 
     .rectangleHovDescCard {
@@ -205,5 +205,14 @@ export const RectangleHovDescList = styled.ul`
 
     .rectangleHovDescCard .cardInfo img:hover, .rectangleHovDescCard .cardInfo a:hover {
         cursor: pointer;
+    }
+
+    @media (max-width: 694px) {
+
+        justify-content: center !important;
+
+        .rectangleHovDescCard:not(.rectangleHovDescCard:last-child) {
+            margin-bottom: 0.625rem;
+        }
     }
 `
