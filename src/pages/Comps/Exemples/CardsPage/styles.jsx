@@ -7,6 +7,14 @@ export const GlobalStyle = createGlobalStyle`
 
 `
 
+export const CardWrapper = styled.span`
+
+    ul:not(ul:nth-child(2)) {
+        margin-top: 3.125rem;
+        margin-bottom: 1rem;
+    }
+`
+
 export const SimpleRectangleList = styled.ul`
 
     display: flex;
@@ -16,8 +24,7 @@ export const SimpleRectangleList = styled.ul`
     li {
         width: 202px;
         list-style: none;
-        margin-right: 2%;
-        margin-bottom: 2%;
+        margin: 1%;
 
 
         > div:first-child {
@@ -153,9 +160,7 @@ export const RectangleHovDescList = styled.ul`
     }
 
     .rectangleHovDescCard > .imgContainer {
-        width: 100%;
         height: 350px;
-        overflow: hidden;
         border-radius: 2px;
     }
 
@@ -224,7 +229,7 @@ export const SquareHovDescList = styled.ul`
     .squareHovDescCard {
         max-width: 300px;
         width: 100%;
-        overflow: hidden;
+        height: 300px
         margin: 1%;
         position: relative;
         border-radius: 5px;

@@ -1,7 +1,7 @@
 import React, { useRef }  from "react";
 import { TabPanel } from '@chakra-ui/react'
 
-import { SimpleRectangleList, SimpleSquareList, RectangleHovDescList,SquareHovDescList } from './styles'
+import { CardWrapper, SimpleRectangleList, SimpleSquareList, RectangleHovDescList,SquareHovDescList } from './styles'
 
 import MainComp from "../../../../components/MainComp";
 import CodeContainer from "../../../../components/CodeContainer";
@@ -36,68 +36,70 @@ export default function CardsPage () {
         <>
             <MainComp to={'/components'}>
 
-                <CodeContainer title={'Cards'}>
+                <CardWrapper>
 
-                    <Summary list={[
-                        {name:'Card 1', anchor: '#card1'},
-                        {name:'Card 2', anchor: '#card2'},
-                        {name:'Card 3', anchor: '#card3'},
-                        {name:'Card 4', anchor: '#card4'},
-                    ]}/>
+                    <CodeContainer title={'Cards'}>
+
+                        <Summary list={[
+                            {name:'Card 1', anchor: '#card1'},
+                            {name:'Card 2', anchor: '#card2'},
+                            {name:'Card 3', anchor: '#card3'},
+                            {name:'Card 4', anchor: '#card4'},
+                        ]}/>
 
 
-                    {/* CARD 1 */}
-                    <SimpleRectangleList id='card1'>
-                        
-                        <li>
-                            <ImgContainer src={Diamante} alt={'Diamante'}/>
+                        {/* CARD 1 */}
+                        <SimpleRectangleList id='card1'>
+                            
+                            <li>
+                                <ImgContainer src={Diamante} alt={'Diamante'}/>
 
-                            <div class="cardDescription">
-                                <a href="#">
-                                    <p>DiamondHead</p>
-                                </a>
-                            </div>
-                        </li>
+                                <div class="cardDescription">
+                                    <a href="#">
+                                        <p>DiamondHead</p>
+                                    </a>
+                                </div>
+                            </li>
 
-                        <li>
+                            <li>
 
-                            <ImgContainer src={Calafrio} alt={'Calafrio'}/>
+                                <ImgContainer src={Calafrio} alt={'Calafrio'}/>
 
-                            <div class="cardDescription">
-                                <a href="#">
-                                    <p>Calafrio</p>
-                                </a>
-                            </div>
-                        </li>
+                                <div class="cardDescription">
+                                    <a href="#">
+                                        <p>Calafrio</p>
+                                    </a>
+                                </div>
+                            </li>
 
-                        <li>
-                            <ImgContainer src={Feedback} alt={'Feedback'}/>
+                            <li>
+                                <ImgContainer src={Feedback} alt={'Feedback'}/>
 
-                            <div class="cardDescription">
-                                <a href="#">
-                                    <p>Feedback</p>
-                                </a>
-                            </div>
-                        </li>
+                                <div class="cardDescription">
+                                    <a href="#">
+                                        <p>Feedback</p>
+                                    </a>
+                                </div>
+                            </li>
 
-                        <li>
-                            <ImgContainer src={QuatroBracos} alt={'QuatroBracos'}/>
+                            <li>
+                                <ImgContainer src={QuatroBracos} alt={'QuatroBracos'}/>
 
-                            <div class="cardDescription">
-                                <a href="#">
-                                    <p>Quatro Bracos</p>
-                                </a>
-                            </div>
-                        </li>
+                                <div class="cardDescription">
+                                    <a href="#">
+                                        <p>Quatro Bracos</p>
+                                    </a>
+                                </div>
+                            </li>
 
-                    </SimpleRectangleList>
+                        </SimpleRectangleList>
 
-                    <CodeTabs tabs={['Html', 'Css']}>
+                        <CodeTabs tabs={['Html', 'Css']}>
 
-                        {/* HTML */}
-                        <TabPanel>
+                            {/* HTML */}
+                            <TabPanel>
 
-                            <CopyButton copyRef={copyHtmlRef} />
+                                <CopyButton copyRef={copyHtmlRef} />
 
 <pre ref={copyHtmlRef}>{
 `<ul class="simpleRetangleList">
@@ -119,12 +121,12 @@ export default function CardsPage () {
 </ul>`
 }</pre>
 
-                        </TabPanel>
+                            </TabPanel>
 
-                        {/* CSS */}
-                        <TabPanel>
+                            {/* CSS */}
+                            <TabPanel>
 
-                            <CopyButton copyRef={copyCssRef} />
+                                <CopyButton copyRef={copyCssRef} />
 
 <pre ref={copyCssRef}>{
 `/* ========================= CARD ========================= */
@@ -138,9 +140,7 @@ export default function CardsPage () {
 .simpleRectangleCard {
     width: 202px;
     list-style: none;
-    margin-right: 2%;
-    margin-bottom: 2%;
-    border: 1px solid red;
+    margin: 1%;
 }
 
 .simpleRectangleCard .imgContainer {
@@ -199,58 +199,58 @@ export default function CardsPage () {
 }`
 }</pre>
 
-                        </TabPanel>
+                            </TabPanel>
 
-                    </CodeTabs>
+                        </CodeTabs>
 
 
-                    {/* CARD 2 */}
-                    <SimpleSquareList id='card2'>
+                        {/* CARD 2 */}
+                        <SimpleSquareList id='card2'>
 
-                        <li>
+                            <li>
 
-                            <a href="#">
+                                <a href="#">
 
-                                <ImgContainer src={Dig} alt={'Dig'}/>
+                                    <ImgContainer src={Dig} alt={'Dig'}/>
 
-                                <p>Dig</p>
+                                    <p>Dig</p>
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
-                        <li>
+                            <li>
 
-                            <a href="#">
+                                <a href="#">
 
-                                <ImgContainer src={PlatNume} alt={'PlatNume'}/>
+                                    <ImgContainer src={PlatNume} alt={'PlatNume'}/>
 
-                                <p>PlatinumNumemon</p>
+                                    <p>PlatinumNumemon</p>
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
-                        <li>
+                            <li>
 
-                            <a href="#">
+                                <a href="#">
 
-                                <ImgContainer src={Mumbra} alt={'Mumbra'}/>
+                                    <ImgContainer src={Mumbra} alt={'Mumbra'}/>
 
-                                <p>Mumbra</p>
+                                    <p>Mumbra</p>
 
-                            </a>
+                                </a>
 
-                        </li>
+                            </li>
 
-                    </SimpleSquareList>
+                        </SimpleSquareList>
 
-                    <CodeTabs tabs={['Html', 'Css']}>
+                        <CodeTabs tabs={['Html', 'Css']}>
 
-                        {/* HTML */}
-                        <TabPanel>
+                            {/* HTML */}
+                            <TabPanel>
 
-                            <CopyButton copyRef={copyHtmlRef2} />
+                                <CopyButton copyRef={copyHtmlRef2} />
 
 <pre ref={copyHtmlRef2}>{
 `<ul class="simpleSquareList">
@@ -272,12 +272,12 @@ export default function CardsPage () {
 </ul>`
 }</pre>
 
-                        </TabPanel>
+                            </TabPanel>
 
-                        {/* CSS */}
-                        <TabPanel>
+                            {/* CSS */}
+                            <TabPanel>
 
-                            <CopyButton copyRef={copyCssRef2} />
+                                <CopyButton copyRef={copyCssRef2} />
 
 <pre ref={copyCssRef2}>{
 `/* ========================= CARD ========================= */
@@ -343,82 +343,82 @@ export default function CardsPage () {
 }`
 }</pre>
 
-                        </TabPanel>
+                            </TabPanel>
 
-                    </CodeTabs>
+                        </CodeTabs>
 
 
-                    {/* CARD 3 */}
-                    <RectangleHovDescList id='card3'>
+                        {/* CARD 3 */}
+                        <RectangleHovDescList id='card3'>
 
-                        <li class="rectangleHovDescCard">
+                            <li class="rectangleHovDescCard">
 
-                            <ImgContainer src={'https://m.media-amazon.com/images/I/91fR0oBKxbL._AC_UF1000,1000_QL80_.jpg'} alt={'aaaa'}/>
+                                <ImgContainer src={'https://m.media-amazon.com/images/I/91fR0oBKxbL._AC_UF1000,1000_QL80_.jpg'} alt={'aaaa'}/>
 
-                            <div class="cardInfo">
+                                <div class="cardInfo">
 
-                                <div>
-                                    <img src={FacebookIcon} alt={'FacebookIcon'} />
-                                    <img src={LinkedinIcon} alt={'LinkedinIcon'} />
-                                    <img src={GithubIcon} alt={'GithubIcon'}/>
+                                    <div>
+                                        <img src={FacebookIcon} alt={'FacebookIcon'} />
+                                        <img src={LinkedinIcon} alt={'LinkedinIcon'} />
+                                        <img src={GithubIcon} alt={'GithubIcon'}/>
+                                    </div>
+
+                                    <a href="" target="_blank">
+                                        Wolfenstein 2
+                                    </a>
+
                                 </div>
+                                
+                            </li>
 
-                                <a href="" target="_blank">
-                                    Wolfenstein 2
-                                </a>
+                            <li class="rectangleHovDescCard">
 
-                            </div>
-                            
-                        </li>
+                                <ImgContainer src={'https://thumbnails.pcgamingwiki.com/c/ce/High_on_Life_cover.png/300px-High_on_Life_cover.png'} alt={'aaaa'}/>
 
-                        <li class="rectangleHovDescCard">
+                                <div class="cardInfo">
 
-                            <ImgContainer src={'https://thumbnails.pcgamingwiki.com/c/ce/High_on_Life_cover.png/300px-High_on_Life_cover.png'} alt={'aaaa'}/>
+                                    <div>
+                                        <img src={FacebookIcon} alt={'FacebookIcon'} />
+                                        <img src={LinkedinIcon} alt={'LinkedinIcon'} />
+                                        <img src={GithubIcon} alt={'GithubIcon'}/>
+                                    </div>
 
-                            <div class="cardInfo">
+                                    <a href="" target="_blank">
+                                        High on Life
+                                    </a>
 
-                                <div>
-                                    <img src={FacebookIcon} alt={'FacebookIcon'} />
-                                    <img src={LinkedinIcon} alt={'LinkedinIcon'} />
-                                    <img src={GithubIcon} alt={'GithubIcon'}/>
                                 </div>
+                                
+                            </li>
 
-                                <a href="" target="_blank">
-                                    High on Life
-                                </a>
+                            <li class="rectangleHovDescCard">
 
-                            </div>
-                            
-                        </li>
+                                <ImgContainer src={'https://assets.altarofgaming.com/wp-content/uploads/2021/11/star-wars-jedi-fallen-order-poster-art-altar-of-gaming-727x1024.jpg'} alt={'aaaa'}/>
 
-                        <li class="rectangleHovDescCard">
+                                <div class="cardInfo">
 
-                            <ImgContainer src={'https://assets.altarofgaming.com/wp-content/uploads/2021/11/star-wars-jedi-fallen-order-poster-art-altar-of-gaming-727x1024.jpg'} alt={'aaaa'}/>
+                                    <div>
+                                        <img src={FacebookIcon} alt={'FacebookIcon'} />
+                                        <img src={LinkedinIcon} alt={'LinkedinIcon'} />
+                                        <img src={GithubIcon} alt={'GithubIcon'}/>
+                                    </div>
 
-                            <div class="cardInfo">
+                                    <a href="" target="_blank">
+                                        Jedi Fallen Order
+                                    </a>
 
-                                <div>
-                                    <img src={FacebookIcon} alt={'FacebookIcon'} />
-                                    <img src={LinkedinIcon} alt={'LinkedinIcon'} />
-                                    <img src={GithubIcon} alt={'GithubIcon'}/>
                                 </div>
+                                
+                            </li>
 
-                                <a href="" target="_blank">
-                                    Jedi Fallen Order
-                                </a>
+                        </RectangleHovDescList>
 
-                            </div>
-                            
-                        </li>
+                        <CodeTabs tabs={['Html', 'Css']}>
 
-                    </RectangleHovDescList>
+                            {/* HTML */}
+                            <TabPanel>
 
-                    <CodeTabs tabs={['Html', 'Css']}>
-
-                        {/* HTML */}
-                        <TabPanel>
-
-                            <CopyButton copyRef={copyHtmlRef3} />
+                                <CopyButton copyRef={copyHtmlRef3} />
 
 <pre ref={copyHtmlRef3}>{
 `<ul class="rectangleHovDescList">
@@ -448,12 +448,12 @@ export default function CardsPage () {
 </ul>`
 }</pre>
 
-                        </TabPanel>
+                            </TabPanel>
 
-                        {/* CSS */}
-                        <TabPanel>
+                            {/* CSS */}
+                            <TabPanel>
 
-                            <CopyButton copyRef={copyCssRef3} />
+                                <CopyButton copyRef={copyCssRef3} />
 
 <pre ref={copyCssRef3}>{
 `/* ========================= CARD ========================= */
@@ -473,9 +473,7 @@ export default function CardsPage () {
 }
 
 .rectangleHovDescCard > .imgContainer {
-    width: 100%;
     height: 350px;
-    overflow: hidden;
     border-radius: 2px;
 }
 
@@ -533,92 +531,93 @@ export default function CardsPage () {
 }`
 }</pre>
 
-                        </TabPanel>
+                            </TabPanel>
 
-                    </CodeTabs>
+                        </CodeTabs>
 
-                    {/* CARD 4 */}
-                    <SquareHovDescList id='card4'>
 
-                        <li class="squareHovDescCard">
+                        {/* CARD 4 */}
+                        <SquareHovDescList id='card4'>
 
-                            <ImgContainer src={'https://www.revolvermag.com/sites/default/files/styles/original_image__844px_x_473px_/public/media/section-media/master_cover.jpg?itok=L1JgJGah&timestamp=1508341064'} alt={'cover'}/>
+                            <li class="squareHovDescCard">
 
-                            <div class="cardInfo">
-                                <div>
-                                    <p>Metallica</p>
+                                <ImgContainer src={'https://www.revolvermag.com/sites/default/files/styles/original_image__844px_x_473px_/public/media/section-media/master_cover.jpg?itok=L1JgJGah&timestamp=1508341064'} alt={'cover'}/>
 
-                                    <span></span>
+                                <div class="cardInfo">
+                                    <div>
+                                        <p>Metallica</p>
+
+                                        <span></span>
+                                        
+                                        <img src={FacebookIcon} alt={'FacebookIcon'} />
+                                        <img src={LinkedinIcon} alt={'LinkedinIcon'} />
+                                        <img src={GithubIcon} alt={'GithubIcon'}/>
                                     
-                                    <img src={FacebookIcon} alt={'FacebookIcon'} />
-                                    <img src={LinkedinIcon} alt={'LinkedinIcon'} />
-                                    <img src={GithubIcon} alt={'GithubIcon'}/>
-                                
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
+                            </li>
 
-                        <li class="squareHovDescCard">
+                            <li class="squareHovDescCard">
 
-                            <ImgContainer src={'https://m.media-amazon.com/images/I/81vKx0wr+DL._AC_UF1000,1000_QL80_.jpg'} alt={'cover'}/>
+                                <ImgContainer src={'https://i.discogs.com/kNB5I8ovO_Fc79Ys_xmIVLyHA9oBPNZjxrLusAKtMgA/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwNzIw/NDAwLTE1ODcxMjY3/MTUtODA1My5qcGVn.jpeg'} alt={'cover'}/>
 
-                            <div class="cardInfo">
-                                <div>
-                                    <p>Tenacious D</p>
+                                <div class="cardInfo">
+                                    <div>
+                                        <p>Tenacious D</p>
 
-                                    <span></span>
+                                        <span></span>
+                                        
+                                        <img src={FacebookIcon} alt={'FacebookIcon'} />
+                                        <img src={LinkedinIcon} alt={'LinkedinIcon'} />
+                                        <img src={GithubIcon} alt={'GithubIcon'}/>
                                     
-                                    <img src={FacebookIcon} alt={'FacebookIcon'} />
-                                    <img src={LinkedinIcon} alt={'LinkedinIcon'} />
-                                    <img src={GithubIcon} alt={'GithubIcon'}/>
-                                
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
+                            </li>
 
-                        <li class="squareHovDescCard">
+                            <li class="squareHovDescCard">
 
-                            <ImgContainer src={'https://i.pinimg.com/originals/60/52/9f/60529fffa71e790ded04b0bd92c9ac8a.jpg'} alt={'cover'}/>
+                                <ImgContainer src={'https://i.pinimg.com/originals/60/52/9f/60529fffa71e790ded04b0bd92c9ac8a.jpg'} alt={'cover'}/>
 
-                            <div class="cardInfo">
-                                <div>
-                                    <p>Queen</p>
+                                <div class="cardInfo">
+                                    <div>
+                                        <p>Queen</p>
 
-                                    <span></span>
+                                        <span></span>
+                                        
+                                        <img src={FacebookIcon} alt={'FacebookIcon'} />
+                                        <img src={LinkedinIcon} alt={'LinkedinIcon'} />
+                                        <img src={GithubIcon} alt={'GithubIcon'}/>
                                     
-                                    <img src={FacebookIcon} alt={'FacebookIcon'} />
-                                    <img src={LinkedinIcon} alt={'LinkedinIcon'} />
-                                    <img src={GithubIcon} alt={'GithubIcon'}/>
-                                
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
+                            </li>
 
-                        <li class="squareHovDescCard">
+                            <li class="squareHovDescCard">
 
-                            <ImgContainer src={'https://m.media-amazon.com/images/I/51QGSN5L3iL.jpg'} alt={'cover'}/>
+                                <ImgContainer src={'https://m.media-amazon.com/images/I/51QGSN5L3iL.jpg'} alt={'cover'}/>
 
-                            <div class="cardInfo">
-                                <div>
-                                    <p>Rolling Stones</p>
+                                <div class="cardInfo">
+                                    <div>
+                                        <p>Rolling Stones</p>
 
-                                    <span></span>
+                                        <span></span>
+                                        
+                                        <img src={FacebookIcon} alt={'FacebookIcon'} />
+                                        <img src={LinkedinIcon} alt={'LinkedinIcon'} />
+                                        <img src={GithubIcon} alt={'GithubIcon'}/>
                                     
-                                    <img src={FacebookIcon} alt={'FacebookIcon'} />
-                                    <img src={LinkedinIcon} alt={'LinkedinIcon'} />
-                                    <img src={GithubIcon} alt={'GithubIcon'}/>
-                                
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                    </SquareHovDescList>
+                            </li>
+                        </SquareHovDescList>
 
-                    <CodeTabs tabs={['Html', 'Css']}>
+                        <CodeTabs tabs={['Html', 'Css']}>
 
-                        {/* HTML */}
-                        <TabPanel>
+                            {/* HTML */}
+                            <TabPanel>
 
-                            <CopyButton copyRef={copyHtmlRef4} />
+                                <CopyButton copyRef={copyHtmlRef4} />
 
 <pre ref={copyHtmlRef4}>{
 `<ul class="squareHovDescList">
@@ -652,12 +651,12 @@ export default function CardsPage () {
 </ul>`
 }</pre>
 
-                        </TabPanel>
+                            </TabPanel>
 
-                        {/* CSS */}
-                        <TabPanel>
+                            {/* CSS */}
+                            <TabPanel>
 
-                            <CopyButton copyRef={copyCssRef4} />
+                                <CopyButton copyRef={copyCssRef4} />
 
 <pre ref={copyCssRef4}>{
 `/* ========================= CARD ========================= */
@@ -671,7 +670,7 @@ export default function CardsPage () {
 .squareHovDescCard {
     max-width: 300px;
     width: 100%;
-    overflow: hidden;
+    height: 300px
     margin: 1%;
     position: relative;
     border-radius: 5px;
@@ -739,12 +738,13 @@ export default function CardsPage () {
 }`
 }</pre>
 
-                        </TabPanel>
+                            </TabPanel>
 
-                    </CodeTabs>
+                        </CodeTabs>
 
-                </CodeContainer>
+                    </CodeContainer>
 
+                </CardWrapper>
             </MainComp>
         </>
     )
