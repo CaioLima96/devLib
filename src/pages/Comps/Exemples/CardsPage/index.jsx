@@ -673,6 +673,7 @@ export default function CardsPage () {
     height: 300px
     margin: 1%;
     position: relative;
+    overflow: hidden;
     border-radius: 5px;
 }
 
