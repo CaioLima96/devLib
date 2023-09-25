@@ -5,6 +5,7 @@ import MainComp from "../../components/MainComp";
 import ImgContainer from "../../components/ImgContainer";
 import CodeContainer from "../../components/CodeContainer";
 import CopyButton from "../../components/CopyButton";
+import DownloadBtn from '../../components/DownloadBtn'
 
 import { GlobalStyle, List } from './styles'
 
@@ -43,7 +44,20 @@ export default function Comps() {
                 
                 <CodeContainer>
 
-                    <p>To use these components, you will need a reset css and some classes. Use the ones provided below.</p>
+                    <p>To use these components, you will need a reset css and some icons. Use the ones provided below.</p>
+
+                    <div 
+                        style={{
+                            display: 'flex',
+                            justifyContent: 'flex-start',
+                            alignItems: 'center',
+                            flexWrap: 'wrap',
+                            marginTop: '5px'
+                        }}
+                    >
+                        <p style={{marginRight: '6px'}}>You can download the icons </p>
+                        <DownloadBtn/>
+                    </div>
 
                     <div  className="preContainer">
 

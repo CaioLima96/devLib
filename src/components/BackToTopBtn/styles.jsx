@@ -23,6 +23,10 @@ export const Div = styled.div`
         background-color: black;
         color: white;
         border-color: black;
+
+        div{
+            filter: brightness(0) invert(1);
+        }
     }
 
     @media (max-width: 850px) {

@@ -21,9 +21,9 @@ export default function BackToTopBtnPage() {
 
                 <CodeContainer title={'Back to Top Button'} id="codeContainer">
 
-                    <p>To use this component's arrow-up icon, you will need Font Awesome library, just copy the link below and paste it in your &lt;head&gt;.</p>
+                    <p>To use this component's arrow-up icon, you will need <b>Font Awesome</b> library, just copy the link below and paste it in your &lt;head&gt;.</p>
                   
-                    <div className='preContainer' 
+                    {/* <div className='preContainer' 
                         style={{marginBottom: '67px'}}
                     >
 
@@ -34,7 +34,7 @@ export default function BackToTopBtnPage() {
                     
                         <CopyButton copyRef={copyFontAweRef} alignSelf={'self-start'} style={{ marginLeft: '0.625rem', marginTop: '0.5rem'}}/>
 
-                    </div>
+                    </div> */}
 
                     <CodeTabs>
                         

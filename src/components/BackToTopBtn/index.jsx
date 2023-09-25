@@ -2,6 +2,9 @@ import React, { useState } from "react";
 
 import { Div } from './styles'
 
+import ArrowUp from '../../assets/img/icon/arrowUp1.png'
+import ImgContainer from "../ImgContainer";
+
 export default function BackToTopBtn() {
 
     const [visible, setVisible] = useState(false)
@@ -32,11 +35,9 @@ export default function BackToTopBtn() {
                 onClick={scrollToTop} 
                 style={{display: visible ? 'block' : 'none'}}
             >
-
-                <div>
-                    <i className="fas fa-arrow-up"></i>
-                </div>
-
+               
+                <ImgContainer src={ArrowUp}/>
+                
             </Div>
 
         </>
