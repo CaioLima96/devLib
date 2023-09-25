@@ -11,6 +11,9 @@ export const CardWrapper = styled.span`
 
     ul:not(ul:nth-child(2)) {
         margin-top: 3.125rem;
+    }
+
+    ul{
         margin-bottom: 1rem;
     }
 `
