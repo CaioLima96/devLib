@@ -8,8 +8,7 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 export const SimpleRectangleList = styled.ul`
-    
-    width: 100%;
+
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -141,9 +140,8 @@ export const SimpleSquareList = styled.ul`
 
 export const RectangleHovDescList = styled.ul`
 
-    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 
     .rectangleHovDescCard {
@@ -209,10 +207,87 @@ export const RectangleHovDescList = styled.ul`
 
     @media (max-width: 694px) {
 
-        justify-content: center !important;
-
         .rectangleHovDescCard:not(.rectangleHovDescCard:last-child) {
             margin-bottom: 0.625rem;
+        }
+    }
+`
+
+export const SquareHovDescList = styled.ul`
+
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+
+    .squareHovDescCard {
+        max-width: 300px;
+        width: 100%;
+        overflow: hidden;
+        margin: 1%;
+        position: relative;
+        border-radius: 5px;
+    }
+
+    .squareHovDescCard .imgContainer img {
+        border-radius: 3px;
+    }
+
+    .squareHovDescCard .cardInfo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        position: absolute;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        top: 0;
+        left: 0;
+        padding: 0.313rem;
+        color: white;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #000000a1;
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+    }
+
+    .squareHovDescCard:hover .cardInfo {
+        opacity: 1;
+    }
+
+    .squareHovDescCard .cardInfo img:not(img:last-child) {
+        margin-right: 5px;
+    }
+
+    .squareHovDescCard .cardInfo img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .squareHovDescCard .cardInfo p {
+        pointer-events: none;
+        margin-bottom: 1rem;
+    }
+
+    .squareHovDescCard .cardInfo span {
+        width: 100%;
+    }
+
+    .squareHovDescCard .cardInfo > div:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: 705px) {
+
+        .squareHovDescCard {
+            margin: 0 0.313rem 1rem !important;
         }
     }
 `

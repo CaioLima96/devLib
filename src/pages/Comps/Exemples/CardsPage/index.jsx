@@ -1,7 +1,7 @@
 import React, { useRef }  from "react";
 import { TabPanel } from '@chakra-ui/react'
 
-import { SimpleRectangleList, SimpleSquareList, RectangleHovDescList } from './styles'
+import { SimpleRectangleList, SimpleSquareList, RectangleHovDescList,SquareHovDescList } from './styles'
 
 import MainComp from "../../../../components/MainComp";
 import CodeContainer from "../../../../components/CodeContainer";
@@ -29,6 +29,8 @@ export default function CardsPage () {
     let copyCssRef2 = useRef()
     let copyHtmlRef3 = useRef()
     let copyCssRef3 = useRef()
+    let copyHtmlRef4 = useRef()
+    let copyCssRef4 = useRef()
 
     return(
         <>
@@ -40,7 +42,7 @@ export default function CardsPage () {
                         {name:'Card 1', anchor: '#card1'},
                         {name:'Card 2', anchor: '#card2'},
                         {name:'Card 3', anchor: '#card3'},
-                        {name:'Card 4', anchor: '#card3'},
+                        {name:'Card 4', anchor: '#card4'},
                     ]}/>
 
 
@@ -128,7 +130,6 @@ export default function CardsPage () {
 `/* ========================= CARD ========================= */
 
 .simpleRetangleList {
-    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -458,9 +459,8 @@ export default function CardsPage () {
 `/* ========================= CARD ========================= */
 
 .rectangleHovDescList {
-    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -527,12 +527,214 @@ export default function CardsPage () {
 
 @media (max-width: 694px) {
 
-    .rectangleHovDescList {
-        justify-content: center !important;
-    }
-
     .rectangleHovDescCard:not(.rectangleHovDescCard:last-child) {
         margin-bottom: 0.625rem;
+    }
+}`
+}</pre>
+
+                        </TabPanel>
+
+                    </CodeTabs>
+
+                    {/* CARD 4 */}
+                    <SquareHovDescList id='card4'>
+
+                        <li class="squareHovDescCard">
+
+                            <ImgContainer src={'https://www.revolvermag.com/sites/default/files/styles/original_image__844px_x_473px_/public/media/section-media/master_cover.jpg?itok=L1JgJGah&timestamp=1508341064'} alt={'cover'}/>
+
+                            <div class="cardInfo">
+                                <div>
+                                    <p>Metallica</p>
+
+                                    <span></span>
+                                    
+                                    <img src={FacebookIcon} alt={'FacebookIcon'} />
+                                    <img src={LinkedinIcon} alt={'LinkedinIcon'} />
+                                    <img src={GithubIcon} alt={'GithubIcon'}/>
+                                
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="squareHovDescCard">
+
+                            <ImgContainer src={'https://m.media-amazon.com/images/I/81vKx0wr+DL._AC_UF1000,1000_QL80_.jpg'} alt={'cover'}/>
+
+                            <div class="cardInfo">
+                                <div>
+                                    <p>Tenacious D</p>
+
+                                    <span></span>
+                                    
+                                    <img src={FacebookIcon} alt={'FacebookIcon'} />
+                                    <img src={LinkedinIcon} alt={'LinkedinIcon'} />
+                                    <img src={GithubIcon} alt={'GithubIcon'}/>
+                                
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="squareHovDescCard">
+
+                            <ImgContainer src={'https://i.pinimg.com/originals/60/52/9f/60529fffa71e790ded04b0bd92c9ac8a.jpg'} alt={'cover'}/>
+
+                            <div class="cardInfo">
+                                <div>
+                                    <p>Queen</p>
+
+                                    <span></span>
+                                    
+                                    <img src={FacebookIcon} alt={'FacebookIcon'} />
+                                    <img src={LinkedinIcon} alt={'LinkedinIcon'} />
+                                    <img src={GithubIcon} alt={'GithubIcon'}/>
+                                
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="squareHovDescCard">
+
+                            <ImgContainer src={'https://m.media-amazon.com/images/I/51QGSN5L3iL.jpg'} alt={'cover'}/>
+
+                            <div class="cardInfo">
+                                <div>
+                                    <p>Rolling Stones</p>
+
+                                    <span></span>
+                                    
+                                    <img src={FacebookIcon} alt={'FacebookIcon'} />
+                                    <img src={LinkedinIcon} alt={'LinkedinIcon'} />
+                                    <img src={GithubIcon} alt={'GithubIcon'}/>
+                                
+                                </div>
+                            </div>
+                        </li>
+                    </SquareHovDescList>
+
+                    <CodeTabs tabs={['Html', 'Css']}>
+
+                        {/* HTML */}
+                        <TabPanel>
+
+                            <CopyButton copyRef={copyHtmlRef4} />
+
+<pre ref={copyHtmlRef4}>{
+`<ul class="squareHovDescList">
+
+    <li class="squareHovDescCard">
+
+        <div class="imgContainer">
+            <img src="YOUR IMG HERE" alt="">
+        </div>
+        
+        <div class="cardInfo">
+            <div>
+                <p>name</p>
+
+                <span></span>
+                
+                <a href="" target="_blank">
+                    <img src="./assets/img/icon/deviantart-icon.png" alt="icone">
+                </a>
+                <a href="" target="_blank">
+                    <img src="./assets/img/icon/insta-icon.png" alt="icone">
+                </a>
+                <a href="" target="_blank">
+                    <img src="./assets/img/icon/linkedinIcon.png" alt="icone">
+                </a>
+            </div>
+        </div>
+
+    </li>
+
+</ul>`
+}</pre>
+
+                        </TabPanel>
+
+                        {/* CSS */}
+                        <TabPanel>
+
+                            <CopyButton copyRef={copyCssRef4} />
+
+<pre ref={copyCssRef4}>{
+`/* ========================= CARD ========================= */
+
+.squareHovDescList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.squareHovDescCard {
+    max-width: 300px;
+    width: 100%;
+    overflow: hidden;
+    margin: 1%;
+    position: relative;
+    border-radius: 5px;
+}
+
+.squareHovDescCard .imgContainer img {
+    border-radius: 3px;
+}
+
+.squareHovDescCard .cardInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+    padding: 0.313rem;
+    color: white;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #000000a1;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.squareHovDescCard:hover .cardInfo {
+    opacity: 1;
+}
+
+.squareHovDescCard .cardInfo a:not(a:last-child) {
+    margin-right: 5px;
+}
+
+.squareHovDescCard .cardInfo img {
+    width: 30px;
+    height: 30px;
+}
+
+.squareHovDescCard .cardInfo p {
+    pointer-events: none;
+    margin-bottom: 1rem;
+}
+
+.squareHovDescCard .cardInfo span {
+    width: 100%;
+}
+
+.squareHovDescCard .cardInfo > div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 705px) {
+
+    .squareHovDescCard {
+        margin: 0 0.313rem 1rem !important;
     }
 }`
 }</pre>
