@@ -53,12 +53,20 @@ I've created this website to gather the codes/components I usually use and help 
 
 - #### <p id="dLightMode">Light Mode</p>
 
-<!-- <img src="./assets/img/screenshots/homeLightMode1.jpg" width="80%" alt="Home Light Mode"> -->
+<img src="./src/assets/img/screenshots/pages1.png" width="80%" alt="Home Light Mode">
+
+<img src="./src/assets/img/screenshots/pages2.png" width="80%" alt="Home Light Mode">
+
+<img src="./src/assets/img/screenshots/pages3.png" width="80%" alt="Home Light Mode">
 
 
 <br>
 
 - #### <p id="dDarkMode">Dark Mode</p>
+
+<img src="./src/assets/img/screenshots/pages4.png" width="80%" alt="Home Dark Mode">
+
+<img src="./src/assets/img/screenshots/pages5.png" width="80%" alt="Home Dark Mode">
 
 
 <br>
@@ -67,12 +75,15 @@ I've created this website to gather the codes/components I usually use and help 
 
 - #### <p id="mLightMode">Light Mode</p>
 
-<!-- <img src="./assets/img/screenshots/mobileHomeLightMode2.jpg" width="200px" alt="Home Light Mode"> -->
-
+<img src="./src/assets/img/screenshots/pages6.png" width="200px" alt="Home Light Mode">
 
 <br>
 
 - #### <p id="mDarkMode">Dark Mode</p>
+
+<img src="./src/assets/img/screenshots/pages7.png" width="200px" alt="Home Light Mode">
+
+<img src="./src/assets/img/screenshots/pages8.png" width="200px" alt="Home Light Mode">
 
 
 <br>

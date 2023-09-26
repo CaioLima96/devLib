@@ -34,7 +34,6 @@ export const Div = styled.div`
         #backToTopButton {
             bottom: 9px;
             right: 10px;
-            background-color: red;
         }
     }
 `
