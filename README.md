@@ -36,13 +36,14 @@ I've created this website to gather the codes/components I usually use and help 
 
 ### How it works
 
-
+You copy the reset css and download the icons, then click on the desired component and copy the provided codes.
 
 <br>
 
 ### What users can do
 
-
+-> Copy the providade codes.<br>
+-> Change from light to dark mode, and vice versa.
 
 <br>
 <br>
