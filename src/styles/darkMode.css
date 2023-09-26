@@ -76,8 +76,12 @@
     box-shadow: 4px 4px 0px -1px white;
 }
 
-.darkMode .summary p, .darkMode .summary li a {
+.darkMode .summary p, .darkMode .summary li a, .darkMode .downBtn  {
     color: white !important;
+}
+
+.darkMode .downBtn a { 
+    color: #07c907;
 }
 
 .darkMode #backToTopButton:hover {

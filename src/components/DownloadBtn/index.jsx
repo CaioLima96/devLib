@@ -9,7 +9,7 @@ export default function DownloadBtn(props) {
 
     return (
 
-        <Div>
+        <Div className="downBtn">
 
             &gt;&gt;&gt;
                 <Link
