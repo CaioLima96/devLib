@@ -13,7 +13,6 @@ export default function LoadingPage() {
 
     let copyHtmlRef = useRef()
     let copyCssRef = useRef()
-    let copyJsRef = useRef()
 
     return (
 
@@ -30,7 +29,7 @@ export default function LoadingPage() {
 
                     <LoadingComp/>
 
-                    <CodeTabs>
+                    <CodeTabs tabs={['Html', 'Css']}>
 
                         {/* HTML */}
                         <TabPanel>
@@ -79,50 +78,6 @@ export default function LoadingPage() {
     to {
     transform: rotate(359deg);
     }
-}`
-}</pre>
-
-                        </TabPanel>
-
-                        {/* JS */}
-                        <TabPanel>
-
-                            <CopyButton copyRef={copyJsRef} />
-
-<pre ref={copyJsRef}>{
-`//This codes only serve to change the loading icon according to a value, this isnt necessary for the "default" loading to work.
-
-
-/* ========================= LOADING ========================= */
-
-//change loading img according to the selected value
-function loading(value) {
-
-	let loading = document.getElementsByClassName('loading')[0]
-
-	let loadingImgContainer = loading.getElementsByClassName('imgContainer')[0]
-
-	let loadingImg = loading.getElementsByClassName('imgContainer')[0].getElementsByTagName('img')[0]
-
-
-    //adding the rotate class is optional.
-
-	switch (value) {
-
-		case 1:
-
-			loadingImgContainer.classList.add('rotate')
-			loadingImg.src = './assets/img/icons/YOURLOADINGICON.png'
-
-			break
-
-		case 2:
-
-			loadingImgContainer.classList.add('rotate')
-			loadingImg.src = './assets/img/icon/YOURLOADINGICON.png'
-
-			break
-	}
 }`
 }</pre>
 

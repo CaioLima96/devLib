@@ -61,7 +61,7 @@ export default function NavBarPage() {
                             </div>
 
                             <div className="imgContainer" ref={menuBtnRef2} style={{width: '30px'}} onClick={toggleMenu}>
-                                <img src={MenuIcon} className="menuBtn2"/>
+                                <img src={MenuIcon} className="menuBtn2" alt=""/>
                             </div>
                             
                         </div>
@@ -122,7 +122,7 @@ export default function NavBarPage() {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2.125rem;
+    margin-bottom: 3.125rem;
     background-color: rgb(150, 176, 96);
 }
 

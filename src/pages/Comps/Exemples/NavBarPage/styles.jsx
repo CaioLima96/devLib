@@ -88,8 +88,6 @@ export const GlobalStyle = createGlobalStyle`
                 }
             }
 
-            
-
             .navMenuList {
                 display: none;
                 width: 100%;

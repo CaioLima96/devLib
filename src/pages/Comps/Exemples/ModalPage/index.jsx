@@ -60,13 +60,7 @@ export default function ModalPage() {
                             <CopyButton  copyRef={copyHtmlRef}/>
 
 <pre ref={copyHtmlRef}>{
-`<button 
-    id="openModalBtn" 
-    onclick="openModal()" 
-    style="border: none; background-color: rgb(121, 129, 199); 
-        padding: 0.375rem 0.563rem; border-radius: 
-        5px; font-size: 1rem;  margin: 10px auto;"
->Open Modal</button>
+`<button class="openModalBtn" onclick="openModal()">Open Modal</button>
 
 <!-- The Modal -->
 <div class="modal">

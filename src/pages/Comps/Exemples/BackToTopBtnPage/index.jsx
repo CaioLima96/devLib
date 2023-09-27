@@ -12,7 +12,6 @@ export default function BackToTopBtnPage() {
     let copyHtmlRef = useRef()
     let copyCssRef = useRef()
     let copyJsRef = useRef()
-    let copyFontAweRef = useRef()
 
     return (
 
@@ -33,7 +32,7 @@ export default function BackToTopBtnPage() {
 
     <div class="imgContainer">
 
-        <img scr="YOUR IMG HERE" alt="">
+        <img src="YOUR IMG HERE" alt="">
 
     </div>
 

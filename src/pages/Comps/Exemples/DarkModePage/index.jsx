@@ -19,6 +19,9 @@ export default function DarkModePage() {
     let copyCssRef = useRef()
     let copyJsRef = useRef()
     let sunMonRef = useRef()
+    let copyHtmlRef2 = useRef()
+    let copyCssRef2 = useRef()
+    let copyCssRef3 = useRef()
 
     const toggleSunMoon = () => {
         sunMonRef.current.classList.toggle('toggleSunMoon')
@@ -62,8 +65,8 @@ export default function DarkModePage() {
 
     <div>
 
-        <div class="dmMoon imgContainer"><img src='./assets/img/icon/moon1.png' alt='moon'></div>
-        <div class="dmSun imgContainer"><img src='./assets/img/icon/sun1.png' alt='sun'></div>
+        <div class="dmMoon imgContainer"><img src='YOUR IMG HERE' alt='moon'></div>
+        <div class="dmSun imgContainer"><img src='YOUR IMG HERE' alt='sun'></div>
 
     </div>
 </li>`
@@ -124,10 +127,6 @@ export default function DarkModePage() {
 
 .toggleSunMoon {
     transform: rotateY(180deg);
-}
-
-.darkMode {
-    background-color: #202020;
 }`
 }</pre>
 
@@ -174,16 +173,16 @@ darkModeBtn.addEventListener('click', darkModeFunc)`
                         {/* HTML */}
                         <TabPanel>
 
-                            <CopyButton copyRef={copyHtmlRef} />
+                            <CopyButton copyRef={copyHtmlRef2} />
 
-<pre ref={copyHtmlRef}>{
+<pre ref={copyHtmlRef2}>{
 `<div class='darkModeBtn'>
     <p>Dark Mode</p>
 
     <div>
 
-        <div class="dmMoon imgContainer"><img src='./assets/img/icon/moon1.png' alt='moon'></div>
-        <div class="dmSun imgContainer"><img src='./assets/img/icon/sun1.png' alt='sun'></div>
+        <div class="dmMoon imgContainer"><img src='YOUR IMG HERE' alt='moon'></div>
+        <div class="dmSun imgContainer"><img src='YOUR IMG HERE' alt='sun'></div>
 
     </div>
 </div>`
@@ -194,9 +193,9 @@ darkModeBtn.addEventListener('click', darkModeFunc)`
                         {/* CSS */}
                         <TabPanel>
 
-                            <CopyButton copyRef={copyCssRef} />
+                            <CopyButton copyRef={copyCssRef2} />
 
-<pre ref={copyCssRef}>{
+<pre ref={copyCssRef2}>{
 `/*======================== DARK MODE BTN ========================*/
 
 .darkModeBtn {
@@ -257,10 +256,6 @@ darkModeBtn.addEventListener('click', darkModeFunc)`
 
 .toggleSunMoon {
     transform: rotateY(180deg);
-}
-
-.darkMode {
-    background-color: #202020;
 }`
 }</pre>
 
@@ -276,9 +271,9 @@ darkModeBtn.addEventListener('click', darkModeFunc)`
                         {/* CSS */}
                         <TabPanel>
 
-                            <CopyButton copyRef={copyCssRef} />
+                            <CopyButton copyRef={copyCssRef3} />
 
-<pre ref={copyCssRef}>{
+<pre ref={copyCssRef3}>{
 `/*======================== DARK MODE ========================*/
 
 :root {
@@ -320,6 +315,23 @@ darkModeBtn.addEventListener('click', darkModeFunc)`
     color: black !important;
 }
 
+.darkMode .summary {
+    border-color: white;
+    box-shadow: 4px 4px 0px -1px white;
+}
+
+.darkMode .summary p, .darkMode .summary li a, .darkMode .downBtn  {
+    color: white !important;
+}
+
+.darkMode .loading .imgContainer {
+    filter: invert(85%);
+}
+
+.darkMode .loading p {
+    color: white;
+}
+
 .darkMode footer {
     background-color: var(--darkModeGray1) !important;
     color: var(--darkModeGray3);
@@ -327,8 +339,7 @@ darkModeBtn.addEventListener('click', darkModeFunc)`
 
 .darkMode footer a {
     color: var(--darkModeGray3);
-}
-`
+}`
 }</pre>
 
                         </TabPanel>

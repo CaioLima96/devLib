@@ -65,8 +65,4 @@ export const GlobalStyle = createGlobalStyle`
     .toggleSunMoon {
         transform: rotateY(180deg);
     }
-
-    .darkMode {
-        background-color: #202020;
-    }
 `

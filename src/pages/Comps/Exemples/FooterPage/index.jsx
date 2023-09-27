@@ -104,6 +104,7 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     padding: 0.5rem;
+    margin-top: 3.125rem;
     background-color: #96b060;
 }
 
@@ -113,16 +114,14 @@ footer p {
 }
 
 footer ul {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    li:not(li:last-child) {
-        margin-right: 0.375rem;
-    }
 }
-`
+
+footer ul li:not(li:last-child) {
+    margin-right: 0.375rem;
+}`
 }</pre>
 
                         </TabPanel>

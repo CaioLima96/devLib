@@ -670,7 +670,7 @@ export default function CardsPage () {
 .squareHovDescCard {
     max-width: 300px;
     width: 100%;
-    height: 300px
+    height: 300px;
     margin: 1%;
     position: relative;
     overflow: hidden;
