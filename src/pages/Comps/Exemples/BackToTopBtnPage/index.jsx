@@ -69,14 +69,17 @@ export default function BackToTopBtnPage() {
     border: 1px solid #c0c0c0;
 }
 
-#backToTopButton:hover, #backToTopButton:active {
-    background-color: black;
-    color: white;
-    border-color: black;
-}
+@media (min-width: 700px) {
 
-#backToTopButton:hover div {
-    filter: brightness(0) invert(1);
+    #backToTopButton:hover{
+        background-color: black;
+        color: white;
+        border-color: black;
+    }
+
+    #backToTopButton:hover div {
+        filter: brightness(0) invert(1);
+    }
 }
 
 @media (max-width: 850px) {

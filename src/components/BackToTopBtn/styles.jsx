@@ -19,13 +19,16 @@ export const Div = styled.div`
     transition: .5s ease;
     border: 1px solid #c0c0c0;
 
-    :hover, :active {
-        background-color: black;
-        color: white;
-        border-color: black;
+    @media (min-width: 700px) {
 
-        div{
-            filter: brightness(0) invert(1);
+        :hover {
+            background-color: black;
+            color: white;
+            border-color: black;
+    
+            div{
+                filter: brightness(0) invert(1);
+            }
         }
     }
 
