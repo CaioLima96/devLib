@@ -1,6 +1,6 @@
 # Dev Lib
 
-I've created this website to gather the codes/components I usually use and help who want some already made codes/components.
+I've created this website to gather the codes/components I usually use and help who want some codes/components.
 
 
 <br>
