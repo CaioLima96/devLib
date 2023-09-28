@@ -1,11 +1,6 @@
-import { createGlobalStyle } from 'styled-components'
 import styled from 'styled-components'
 import Retangulo1 from '../../../../assets/img/retangulo1.jpg'
 
-
-export const GlobalStyle = createGlobalStyle`
-
-`
 
 export const CardWrapper = styled.span`
 
@@ -232,7 +227,6 @@ export const SquareHovDescList = styled.ul`
     .squareHovDescCard {
         max-width: 300px;
         width: 100%;
-        height: 300px;
         margin: 1%;
         position: relative;
         border-radius: 5px;
@@ -262,6 +256,7 @@ export const SquareHovDescList = styled.ul`
         width: 100%;
         height: 100%;
         border-radius: 3px;
+        text-align: center;
     }
 
     .squareHovDescCard:hover .cardInfo {
@@ -291,6 +286,13 @@ export const SquareHovDescList = styled.ul`
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+    }
+
+    @media (min-width: 370px) {
+        
+        .squareHovDescCard  {
+            height: 300px;
+        }
     }
 
     @media (max-width: 705px) {

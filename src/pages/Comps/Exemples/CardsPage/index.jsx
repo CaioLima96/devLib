@@ -54,7 +54,7 @@ export default function CardsPage () {
                             <li>
                                 <ImgContainer src={Diamante} alt={'Diamante'}/>
 
-                                <div class="cardDescription">
+                                <div className="cardDescription">
                                     <a href="#">
                                         <p>DiamondHead</p>
                                     </a>
@@ -65,7 +65,7 @@ export default function CardsPage () {
 
                                 <ImgContainer src={Calafrio} alt={'Calafrio'}/>
 
-                                <div class="cardDescription">
+                                <div className="cardDescription">
                                     <a href="#">
                                         <p>Calafrio</p>
                                     </a>
@@ -75,7 +75,7 @@ export default function CardsPage () {
                             <li>
                                 <ImgContainer src={Feedback} alt={'Feedback'}/>
 
-                                <div class="cardDescription">
+                                <div className="cardDescription">
                                     <a href="#">
                                         <p>Feedback</p>
                                     </a>
@@ -85,7 +85,7 @@ export default function CardsPage () {
                             <li>
                                 <ImgContainer src={QuatroBracos} alt={'QuatroBracos'}/>
 
-                                <div class="cardDescription">
+                                <div className="cardDescription">
                                     <a href="#">
                                         <p>Quatro Bracos</p>
                                     </a>
@@ -351,11 +351,11 @@ export default function CardsPage () {
                         {/* CARD 3 */}
                         <RectangleHovDescList id='card3'>
 
-                            <li class="rectangleHovDescCard">
+                            <li className="rectangleHovDescCard">
 
                                 <ImgContainer src={'https://m.media-amazon.com/images/I/91fR0oBKxbL._AC_UF1000,1000_QL80_.jpg'} alt={'aaaa'}/>
 
-                                <div class="cardInfo">
+                                <div className="cardInfo">
 
                                     <div>
                                         <img src={FacebookIcon} alt={'FacebookIcon'} />
@@ -371,11 +371,11 @@ export default function CardsPage () {
                                 
                             </li>
 
-                            <li class="rectangleHovDescCard">
+                            <li className="rectangleHovDescCard">
 
                                 <ImgContainer src={'https://thumbnails.pcgamingwiki.com/c/ce/High_on_Life_cover.png/300px-High_on_Life_cover.png'} alt={'aaaa'}/>
 
-                                <div class="cardInfo">
+                                <div className="cardInfo">
 
                                     <div>
                                         <img src={FacebookIcon} alt={'FacebookIcon'} />
@@ -391,11 +391,11 @@ export default function CardsPage () {
                                 
                             </li>
 
-                            <li class="rectangleHovDescCard">
+                            <li className="rectangleHovDescCard">
 
                                 <ImgContainer src={'https://assets.altarofgaming.com/wp-content/uploads/2021/11/star-wars-jedi-fallen-order-poster-art-altar-of-gaming-727x1024.jpg'} alt={'aaaa'}/>
 
-                                <div class="cardInfo">
+                                <div className="cardInfo">
 
                                     <div>
                                         <img src={FacebookIcon} alt={'FacebookIcon'} />
@@ -539,11 +539,11 @@ export default function CardsPage () {
                         {/* CARD 4 */}
                         <SquareHovDescList id='card4'>
 
-                            <li class="squareHovDescCard">
+                            <li className="squareHovDescCard">
 
                                 <ImgContainer src={'https://www.revolvermag.com/sites/default/files/styles/original_image__844px_x_473px_/public/media/section-media/master_cover.jpg?itok=L1JgJGah&timestamp=1508341064'} alt={'cover'}/>
 
-                                <div class="cardInfo">
+                                <div className="cardInfo">
                                     <div>
                                         <p>Metallica</p>
 
@@ -557,11 +557,11 @@ export default function CardsPage () {
                                 </div>
                             </li>
 
-                            <li class="squareHovDescCard">
+                            <li className="squareHovDescCard">
 
                                 <ImgContainer src={'https://i.discogs.com/kNB5I8ovO_Fc79Ys_xmIVLyHA9oBPNZjxrLusAKtMgA/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwNzIw/NDAwLTE1ODcxMjY3/MTUtODA1My5qcGVn.jpeg'} alt={'cover'}/>
 
-                                <div class="cardInfo">
+                                <div className="cardInfo">
                                     <div>
                                         <p>Tenacious D</p>
 
@@ -575,11 +575,11 @@ export default function CardsPage () {
                                 </div>
                             </li>
 
-                            <li class="squareHovDescCard">
+                            <li className="squareHovDescCard">
 
                                 <ImgContainer src={'https://i.pinimg.com/originals/60/52/9f/60529fffa71e790ded04b0bd92c9ac8a.jpg'} alt={'cover'}/>
 
-                                <div class="cardInfo">
+                                <div className="cardInfo">
                                     <div>
                                         <p>Queen</p>
 
@@ -593,11 +593,11 @@ export default function CardsPage () {
                                 </div>
                             </li>
 
-                            <li class="squareHovDescCard">
+                            <li className="squareHovDescCard">
 
                                 <ImgContainer src={'https://m.media-amazon.com/images/I/51QGSN5L3iL.jpg'} alt={'cover'}/>
 
-                                <div class="cardInfo">
+                                <div className="cardInfo">
                                     <div>
                                         <p>Rolling Stones</p>
 
@@ -670,7 +670,6 @@ export default function CardsPage () {
 .squareHovDescCard {
     max-width: 300px;
     width: 100%;
-    height: 300px;
     margin: 1%;
     position: relative;
     overflow: hidden;
@@ -729,6 +728,13 @@ export default function CardsPage () {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+@media (min-width: 370px) {
+        
+    .squareHovDescCard  {
+        height: 300px;
+    }
 }
 
 @media (max-width: 705px) {
