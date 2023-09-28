@@ -69,7 +69,7 @@ export default function BackToTopBtnPage() {
     border: 1px solid #c0c0c0;
 }
 
-#backToTopButton:hover {
+#backToTopButton:hover, #backToTopButton:active {
     background-color: black;
     color: white;
     border-color: black;

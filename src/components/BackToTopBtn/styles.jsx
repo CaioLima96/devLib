@@ -19,7 +19,7 @@ export const Div = styled.div`
     transition: .5s ease;
     border: 1px solid #c0c0c0;
 
-    :hover {
+    :hover, :active {
         background-color: black;
         color: white;
         border-color: black;
