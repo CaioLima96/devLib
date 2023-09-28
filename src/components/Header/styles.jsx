@@ -61,7 +61,7 @@ export const Header = styled.header`
         }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
 
         .navMenu {
             position: relative;

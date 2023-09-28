@@ -30,4 +30,11 @@ export const GlobalStyle = createGlobalStyle`
     .darkMode main h1 {
         color: white;
     }
+
+    @media (max-width: 359px) {
+
+        main h1 {
+            font-size: 46px;
+        }
+    }
 `
